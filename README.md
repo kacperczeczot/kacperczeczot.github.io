@@ -1,7 +1,3 @@
-[Strona główna](README.md)
-
----
-
 # Kacper Czeczot — Oficjalne Portfolio Artystyczne
 
 > **Dyrygent · Multiinstrumentalista · Aranżer**  
