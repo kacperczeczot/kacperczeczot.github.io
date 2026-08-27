@@ -13,4 +13,9 @@ photos: []
 order: 2
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [cantores-varmienses](cantores-varmienses.md)
+
+---
+
+
 Występy w składzie oratoryjno-symfonicznym przy Filharmonii Warmińsko-Mazurskiej: wielkie dzieła wokalno-instrumentalne, widowiska promujące region oraz uroczystości jubileuszowe.

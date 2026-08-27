@@ -22,6 +22,11 @@ videoHeading: "Zapis wideo"
 order: 2
 ---
 
+[Strona główna](../../../README.md) > [works](README.md) > [echo-epok](echo-epok.md)
+
+---
+
+
 ## Dzieło dyplomowe „Echo Epok”
 
 Autorski projekt audiowizualny stanowiący integralną część dyplomu artystycznego na kierunku Produkcja Muzyczna i Realizacja Dźwięku (Wydział Sztuki UWM). Promotor dzieła: [dr hab. Tomasz Szymuś](https://ws.uwm.edu.pl/pracownicy-ogloszenia-i-aktualnosci/dr-habtomasz-szymus). Materiał opublikowany w 2026 roku.

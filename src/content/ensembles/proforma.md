@@ -13,4 +13,9 @@ photos: []
 order: 4
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [proforma](proforma.md)
+
+---
+
+
 Skład projektowy na widowiska estradowe i edukacyjne: współpraca z solistami i chórami regionu oraz realizacja koncertów scenicznych.

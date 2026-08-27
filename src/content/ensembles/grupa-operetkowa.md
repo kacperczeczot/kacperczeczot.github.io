@@ -15,4 +15,9 @@ photos:
 order: 1
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [grupa-operetkowa](grupa-operetkowa.md)
+
+---
+
+
 Kreacje solowe i aktorskie w klasyce operetkowej i teatrze muzycznym, kierownictwo muzyczne spektakli oraz regularna działalność objazdowa w regionie.

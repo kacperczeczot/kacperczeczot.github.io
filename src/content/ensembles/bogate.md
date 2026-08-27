@@ -12,4 +12,9 @@ photos: []
 order: 7
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [bogate](bogate.md)
+
+---
+
+
 Występy plenerowe, praca instruktorska z członkami orkiestry oraz wykonawstwo w sekcji klarnetów.

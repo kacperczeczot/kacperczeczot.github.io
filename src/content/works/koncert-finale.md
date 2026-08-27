@@ -29,6 +29,11 @@ youtubeVideos:
     youtubeId: cCIYrbOIUHE
 videoHeading: Nagrania z koncertu
 ---
+
+[Strona główna](../../../README.md) > [works](README.md) > [koncert-finale](koncert-finale.md)
+
+---
+
 ## Koncert Dyplomowy w Filharmonii Warmińsko-Mazurskiej
 
 Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu dyrygenckiego na Wydziale Sztuki UWM:

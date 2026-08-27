@@ -14,4 +14,9 @@ photos:
 order: 3
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [ars-vocale](ars-vocale.md)
+
+---
+
+
 Polifonia dawna i sakralna, śpiew w głosie tenora oraz partie klarnetu w repertuarze a cappella i wokalno-instrumentalnym.

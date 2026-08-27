@@ -15,4 +15,9 @@ photos:
 order: 1
 ---
 
+[Strona główna](../../../README.md) > [ensembles](README.md) > [opinogora](opinogora.md)
+
+---
+
+
 Kierownictwo artystyczne i dyrygentura orkiestry dętej: prowadzenie prób całego aparatu orkiestrowego, praca nad intonacją i zgraniem sekcyjnym oraz kompleksowa realizacja bieżącego programu koncertowego.
