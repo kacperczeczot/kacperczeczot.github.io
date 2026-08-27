@@ -12,6 +12,6 @@
 - [ ] Weryfikacja wizualna podstron i komponentów w przeglądarce
 
 ## Zgodność ze Standardami
-- [ ] Zmiany przestrzegają zasad czystości root i architektury Single-App (`devex-standards`)
+- [ ] Zmiany są zgodne z wytycznymi w `.agents/rules/project.md`
 - [ ] Zastosowano konwencję Conventional Commits
 - [ ] Brak porzuconych plików tymczasowych (`*.bak`, `*.tmp`)
