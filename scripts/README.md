@@ -1,8 +1,11 @@
-# 🛠️ scripts/ — Skrypty Narzędziowe
-
-[🏠 Główny README](../README.md) / **scripts**
+[Strona główna](../README.md) > [scripts](README.md)
 
 ---
+
+# `scripts/` (Skrypty Automatyzacji i Generatory)
+
+* **Status:** ⚪ `[OPCJONALNY]`
+
 
 Katalog `scripts/` gromadzi skrypty deweloperskie i generatory assetów graficznych.
 

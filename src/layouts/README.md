@@ -1,8 +1,9 @@
-# 📐 src/layouts/ — Szablony Bazowe
-
-[🏠 Główny README](../../README.md) / [src](../README.md) / **layouts**
+[Strona główna](../../README.md) > [src](../README.md) > [layouts](README.md)
 
 ---
+
+# `src/layouts/` (Szablony Bazowe)
+
 
 W tym katalogu znajduje się główny layout strony odpowiedzialny za strukturę dokumentu HTML, metadane Open Graph, typografię oraz osadzenie globalnych komponentów.
 

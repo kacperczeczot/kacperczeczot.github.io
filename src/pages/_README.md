@@ -1,8 +1,9 @@
-# 📄 src/pages/ — Routing i Strony Witryny
-
-[🏠 Główny README](../../README.md) / [src](../README.md) / **pages**
+[Strona główna](../../README.md) > [src](../README.md) > [pages](_README.md)
 
 ---
+
+# `src/pages/` (Trasy i Strony Serwisu)
+
 
 W oparciu o system routingu plikowego frameworka Astro, każdy plik w tym katalogu odpowiada konkretnemu adresowi URL w witrynie.
 

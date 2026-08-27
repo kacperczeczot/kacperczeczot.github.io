@@ -1,8 +1,9 @@
-# 🧩 src/components/ — Komponenty Interfejsu
-
-[🏠 Główny README](../../README.md) / [src](../README.md) / **components**
+[Strona główna](../../README.md) > [src](../README.md) > [components](README.md)
 
 ---
+
+# `src/components/` (Komponenty Interfejsu)
+
 
 Modularne komponenty interfejsu użytkownika w formacie Astro:
 

@@ -1,8 +1,11 @@
-# 📁 src/ — Kod źródłowy aplikacji
-
-[🏠 Główny README](../README.md) / **src**
+[Strona główna](../README.md) > [src](README.md)
 
 ---
+
+# `src/` (Kod Źródłowy)
+
+* **Status:** 🔴 `[WYMAGANY]`
+
 
 Katalog `src/` stanowi rdzeń projektu portfolio Kacpra Czeczota opartego na frameworku Astro.
 

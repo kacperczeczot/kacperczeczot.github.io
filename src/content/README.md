@@ -1,10 +1,10 @@
-# 📚 src/content/ — Content Collections
-
-[🏠 Główny README](../../README.md) / [src](../README.md) / **content**
+[Strona główna](../../README.md) > [src](../README.md) > [content](README.md)
 
 ---
 
-Katalog zarządza kolekcjami treści w formacie Markdown z walidacją typów przez Zod ([`config.ts`](config.ts)). Treści mogą być edytowane bezpośrednio w plikach `.md` lub przez [Pages CMS](../../CMS.md).
+# `src/content/` (Kolekcje Treści)
+
+Katalog zarządza kolekcjami treści w formacie Markdown z walidacją typów przez Zod ([`config.ts`](config.ts)). Treści mogą być edytowane bezpośrednio w plikach `.md` lub przez [Pages CMS](../../docs/CMS.md).
 
 ## 📂 Kolekcje
 

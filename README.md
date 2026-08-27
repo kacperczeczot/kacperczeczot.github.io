@@ -1,3 +1,7 @@
+[Strona główna](README.md)
+
+---
+
 # Kacper Czeczot — Oficjalne Portfolio Artystyczne
 
 > **Dyrygent · Multiinstrumentalista · Aranżer**  
@@ -5,7 +9,22 @@
 
 ---
 
-## 🗺️ Mapa Repozytorium
+## 1. Dokumentacja i Standardy
+
+Projekt został zbudowany w oparciu o model architektoniczny **Single-App** ([`template-single-app`](https://github.com/kacperczeczot/template-single-app)) i przestrzega standardów inżynieryjnych ekosystemu:
+
+| Dokument / Sekcja | Opis |
+| :--- | :--- |
+| [Standardy Projektu (`docs/STANDARDS.md`)](docs/STANDARDS.md) | Deklaracja zgodności ze standardami DevEx i progi testów |
+| [Dokumentacja Projektu (`docs/README.md`)](docs/README.md) | Centralny hub dokumentacji technicznej i instrukcji CMS |
+| [Rejestr Decyzji ADR (`docs/adr/`)](docs/adr/README.md) | Rejestr Decyzji Architektonicznych (wybór Astro, Tailwind, CMS) |
+| [Zarządzanie Treścią Pages CMS (`docs/CMS.md`)](docs/CMS.md) | Instrukcja obsługi bezserwerowego panelu redakcyjnego CMS |
+| [Globalne Standardy DevEx (`devex-standards`)](https://github.com/kacperczeczot/devex-standards) | Nadrzędna Konstytucja inżynieryjna ekosystemu |
+| [Reguły AI Projektu (`.agents/rules/project.md`)](.agents/rules/project.md) | Wytyczne domenowe dla asystentów AI |
+
+---
+
+## 2. Mapa Repozytorium
 
 * 📁 [**`src/components/`**](src/components/README.md) — Komponenty interfejsu (Hero, diagram radialny, nawigacja, stopka)
 * 📁 [**`src/content/`**](src/content/README.md) — Baza danych Markdown i Content Collections (formacje, dzieła)
@@ -17,56 +36,41 @@
 
 ---
 
-## ⚡ Stos Technologiczny
+## 3. Stos Technologiczny
 
 * **Framework:** [Astro 5](https://astro.build/) (Static Site Generation / SSG)
 * **Styling:** [Tailwind CSS](https://tailwindcss.com/) + Vanilla CSS
 * **Typografia:** `Plus Jakarta Sans` (Google Fonts)
 * **Ikony:** [lucide-astro](https://lucide.dev/)
 * **Fizyka ruchu:** Natywny silnik interpolacji sprężystości (*Spring Lerp*) i przyciągania magnetycznego (*Magnetic Parallax*)
-* **Zarządzanie treścią:** [Pages CMS](https://pagescms.org) — edycja w przeglądarce ([app.pagescms.org](https://app.pagescms.org)), logowanie GitHub, zapis do repozytorium bez lokalnego klona. Skrót: [`CMS.md`](CMS.md)
+* **Zarządzanie treścią:** [Pages CMS](https://pagescms.org) — edycja w przeglądarce ([app.pagescms.org](https://app.pagescms.org)), logowanie GitHub, zapis do repozytorium bez lokalnego klona. Instrukcja: [`docs/CMS.md`](docs/CMS.md)
 
 ---
 
-## 🚀 Uruchomienie i Budowanie
+## 4. Uruchomienie i Budowanie
 
 ### Wymagania
 * Node.js `>= 18.17.0`
-* npm `>= 9.0.0`
+* pnpm `>= 9.0.0` (lub npm)
 
 ### Komendy
 
 ```bash
 # Instalacja zależności
-npm install
+pnpm install
 
 # Uruchomienie serwera deweloperskiego (http://localhost:4321)
-npm run dev
-
-# Edycja treści bez lokalnego repo:
-# https://app.pagescms.org  (logowanie GitHub)
-# https://kacperczeczot.github.io/admin/
+pnpm run dev
 
 # Kompilacja produkcyjna (katalog dist/)
-npm run build
+pnpm run build
 
 # Podgląd zbudowanej wersji
-npm run preview
+pnpm run preview
 ```
 
 ---
 
-## 📐 Architektura i Kluczowe Moduły
-
-1. **[Hero Section](src/components/README.md#1-heroastro):**
-   * Prezentacja sylwetki artystycznej, tytułów oraz wskaźników dorobku scenicznego i akademickiego.
-2. **[Radial Graph](src/components/README.md#2-radialgraphastro):**
-   * Trójpoziomowy interaktywny diagram konstelacji formacji muzycznych z płynnym zoomem, fizyką magnetyczną i kartami szczegółów.
-3. **[Content Collections](src/content/README.md):**
-   * Baza Markdown z walidacją typów dla formacji muzycznych oraz dzieł autorskich i dyplomowych.
-
----
-
-## 📄 Prawa autorskie
+## 5. Prawa autorskie
 
 © 2026 Kacper Czeczot. Wszelkie prawa zastrzeżone.

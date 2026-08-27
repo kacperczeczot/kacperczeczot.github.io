@@ -1,3 +1,7 @@
+[Strona główna](../README.md) > [Dokumentacja](README.md) > [Pages CMS](CMS.md)
+
+---
+
 # Zarządzanie Treścią (Pages CMS)
 
 Witryna korzysta z bezserwerowego systemu [Pages CMS](https://pagescms.org), który umożliwia aktualizację tekstów, danych oraz multimediów bezpośrednio przez przeglądarkę z automatycznym zapisem do repozytorium GitHub.

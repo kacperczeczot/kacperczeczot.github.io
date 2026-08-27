@@ -1,8 +1,9 @@
-# 🛠️ src/utils/ — Moduły Pomocnicze
-
-[🏠 Główny README](../../README.md) / [src](../README.md) / **utils**
+[Strona główna](../../README.md) > [src](../README.md) > [utils](README.md)
 
 ---
+
+# `src/utils/` (Moduły Pomocnicze)
+
 
 W tym katalogu znajdują się uniwersalne funkcje pomocnicze i narzędzia wykorzystywane w projekcie.
 
