@@ -14,7 +14,6 @@ Niniejszy projekt został zainicjalizowany na bazie szablonu **[template-single-
 | :--- | :--- | :--- |
 | **Conventional Commits** | Commitlint + Husky (język angielski w commitach) | [conventionalcommits.org](https://www.conventionalcommits.org/pl/v1.0.0/) |
 | **Semantic Versioning** | SemVer (`MAJOR.MINOR.PATCH`) + tagi `vX.Y.Z` | [semver.org](https://semver.org/lang/pl/) |
-| **Keep a Changelog** | [`CHANGELOG.md`](../CHANGELOG.md) wg specyfikacji 1.1.0 | [keepachangelog.com](https://keepachangelog.com/pl/1.1.0/) |
 | **ADR** | Rejestr w [`docs/adr/`](adr/README.md) na podstawie wzorca `0000-*.md` | [adr.github.io](https://adr.github.io/) |
 | **EditorConfig** | [`.editorconfig`](../.editorconfig) w root dla spójności IDE | [editorconfig.org](https://editorconfig.org/) |
 | **TSDoc / JSDoc** | Dokumentacja narzędzi w `src/utils/` i komponentów | [tsdoc.org](https://tsdoc.org/) |
