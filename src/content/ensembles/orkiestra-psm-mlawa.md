@@ -13,9 +13,4 @@ photos: []
 order: 6
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [orkiestra-psm-mlawa](orkiestra-psm-mlawa.md)
-
----
-
-
 Współpraca z orkiestrą macierzystej szkoły muzycznej: koncerty szkolne i środowiskowe, opracowania partytur na skład dęty oraz wykonawstwo w sekcji dętej i perkusyjnej.

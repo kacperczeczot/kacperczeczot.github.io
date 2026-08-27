@@ -13,9 +13,4 @@ photos: []
 order: 2
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [dyplomy-uwm](dyplomy-uwm.md)
-
----
-
-
 Regularne wspieranie koncertów dyplomowych studentów Wydziału Sztuki: akompaniament, składy kameralne i partie wokalne.

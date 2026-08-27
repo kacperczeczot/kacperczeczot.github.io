@@ -12,9 +12,4 @@ photos: []
 order: 1
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [muzoteka](muzoteka.md)
-
----
-
-
 Autorskie projekty koncertowe w Muzotece: kierownictwo muzyczne, aranżacje, fortepian i śpiew na potrzeby programów tematycznych.

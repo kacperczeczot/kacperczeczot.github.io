@@ -29,9 +29,7 @@ youtubeVideos:
     youtubeId: cCIYrbOIUHE
 videoHeading: Nagrania z koncertu
 ---
-[Strona główna](../../../README.md) > [works](README.md) > [koncert-finale](koncert-finale.md)
 
----
 
 ## Koncert Dyplomowy w Filharmonii Warmińsko-Mazurskiej
 

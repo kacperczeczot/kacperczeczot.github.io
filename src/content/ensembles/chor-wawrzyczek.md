@@ -17,9 +17,4 @@ photos:
 order: 1
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [chor-wawrzyczek](chor-wawrzyczek.md)
-
----
-
-
 Główny akademicki zespół wokalny: partie tenorowe, prowadzenie prób i dyrygentura w projektach dyplomowych, zarządzanie biblioteką nutową oraz udział w międzynarodowych trasach festiwalowych.

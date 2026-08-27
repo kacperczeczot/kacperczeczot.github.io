@@ -14,9 +14,4 @@ photos:
 order: 5
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [chorzele](chorzele.md)
-
----
-
-
 Wykonawstwo instrumentalne w sekcji klarnetów, oprawa organowa podczas uroczystości oraz występy na festiwalach krajowych i zagranicznych.

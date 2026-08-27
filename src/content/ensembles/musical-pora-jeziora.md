@@ -14,9 +14,4 @@ photos:
 order: 3
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [musical-pora-jeziora](musical-pora-jeziora.md)
-
----
-
-
 Udział w profesjonalnej produkcji musicalowej opartej na warmińskich legendach: kreacja sceniczna Drwala na deskach Filharmonii Warmińsko-Mazurskiej w Olsztynie oraz Opery Krakowskiej.

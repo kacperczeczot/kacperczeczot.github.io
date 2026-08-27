@@ -13,9 +13,4 @@ photos: []
 order: 3
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [chociszewo](chociszewo.md)
-
----
-
-
 Samodzielne prowadzenie zespołu i dyrygentura podczas uroczystości w regionie Czerwińska nad Wisłą, praca warsztatowa oraz gra w sekcji klarnetów.

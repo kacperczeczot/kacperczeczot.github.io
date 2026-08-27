@@ -13,9 +13,4 @@ photos: []
 order: 4
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [wieczfnia](wieczfnia.md)
-
----
-
-
 Regularna oprawa uroczystości w regionie, praca instruktorska z młodzieżą oraz autorskie opracowania utworów na orkiestrę dętą.

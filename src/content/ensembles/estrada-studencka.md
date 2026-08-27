@@ -14,9 +14,4 @@ photos: []
 order: 3
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [estrada-studencka](estrada-studencka.md)
-
----
-
-
 Występy solowe i w składach rozrywkowych na przeglądach uczelnianych oraz koncertach w regionie.

@@ -13,9 +13,4 @@ photos: []
 order: 2
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [teatr-muzyczny-uwm](teatr-muzyczny-uwm.md)
-
----
-
-
 Akademicka grupa teatralna Wydziału Sztuki UWM: role aktorskie, muzyka na żywo i zaplecze techniczne spektakli na trasie po Warmii, Mazurach i Mazowszu.

@@ -15,9 +15,4 @@ photos:
 order: 2
 ---
 
-[Strona główna](../../../README.md) > [ensembles](README.md) > [rebowo](rebowo.md)
-
----
-
-
 Prowadzenie prób sekcyjnych i przygotowanie młodego aparatu orkiestrowego w roli zastępcy kapelmistrza. Praca warsztatowa z dziećmi i młodzieżą, oprawa uroczystości oraz realizacja wyjazdów koncertowych.
