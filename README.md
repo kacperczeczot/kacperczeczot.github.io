@@ -7,7 +7,7 @@
 
 ## 1. Dokumentacja i Standardy
 
-Projekt został zbudowany w oparciu o model architektoniczny **Single-App** ([`template-single-app`](https://github.com/kacperczeczot/template-single-app)) i przestrzega standardów inżynieryjnych ekosystemu:
+Projekt został zbudowany przestrzega standardów inżynieryjnych ekosystemu:
 
 | Dokument / Sekcja | Opis |
 | :--- | :--- |
