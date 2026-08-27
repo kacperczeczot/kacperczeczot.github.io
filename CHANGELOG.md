@@ -9,7 +9,7 @@ Wszystkie istotne zmiany w projekcie są dokumentowane w tym pliku zgodnie ze st
 ### Added
 - Wdrożenie standardów DevEx (Single-App).
 - Struktura dokumentacji `docs/` z certyfikatem `docs/STANDARDS.md` oraz rejestrem `docs/adr/`.
-- Pliki konfiguracyjne: `.editorconfig`, `.cursorrules`, `.agents/rules/project.md`, `.github/pull_request_template.md`.
+- Pliki konfiguracyjne: `.editorconfig`, `.agents/rules/project.md`, `.github/pull_request_template.md`.
 - Migracja menedżera pakietów na `pnpm`.
 
 ### Changed
