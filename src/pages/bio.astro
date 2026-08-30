@@ -7,252 +7,288 @@ import { base, cmsImage } from '../utils/cms';
 const higherEducation = bioData.higherEducation || [];
 const musicSchoolEducation = bioData.musicSchoolEducation || [];
 const individualAwards = bioData.individualAwards || [];
-const mainInstruments = bioData.mainInstruments || [];
-const additionalInstruments = bioData.additionalInstruments || [];
 const currentRoles = bioData.currentRoles || [];
-const stageText = bioData.stageText || '';
 
 const profilePageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
-  name: 'Bio, Edukacja & Osiągnięcia — Kacper Czeczot',
-  description: 'Zweryfikowana sylwetka artystyczna: wykształcenie na UWM i w PSM w Mławie z wyróżnieniem, nagrody, instrumentarium oraz dorobek dyrygencki.',
+  name: 'Życiorys artystyczny — Kacper Czeczot',
+  description: 'Biografia artystyczna: dyrygentura, wykonawstwo sceniczne, praca z orkiestrami dętymi i chórami oraz wykształcenie na UWM i w PSM w Mławie.',
   mainEntity: {
     '@type': 'Person',
     name: 'Kacper Czeczot',
-    jobTitle: 'Dyrygent',
+    jobTitle: 'Dyrygent i Muzyk',
     url: 'https://kacperczeczot.github.io'
   }
 };
 ---
 
 <BaseLayout
-  title="Bio, Edukacja & Osiągnięcia — Kacper Czeczot"
-  description="Zweryfikowana sylwetka artystyczna: wykształcenie na UWM i w PSM w Mławie z wyróżnieniem, nagrody, instrumentarium oraz dorobek dyrygencki."
+  title="Życiorys artystyczny — Kacper Czeczot"
+  description="Biografia artystyczna: dyrygentura, wykonawstwo sceniczne, praca z orkiestrami dętymi i chórami oraz wykształcenie na UWM i w PSM w Mławie."
   jsonLd={profilePageSchema}
 >
+  <!-- Hero Section -->
   <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 border-b border-white/10 bg-ocean-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
-        badge="Sylwetka & Doświadczenie"
-        title={bioData.bioTitle || "Bio, Edukacja & Osiągnięcia"}
-        subtitle={bioData.bioSubtitle || "Wykształcenie dyrygenckie, wokalne i instrumentalne poparte dyplomami z wyróżnieniem oraz nagrodami akademickimi i festiwalowymi."}
+        badge="Sylwetka & Życiorys"
+        title="Życiorys artystyczny"
+        subtitle="Dyrygent, kierownik muzyczny, aranżer i wokalista. Najlepszy Absolwent Wydziału Sztuki Uniwersytetu Warmińsko-Mazurskiego w Olsztynie."
         align="left"
       />
     </div>
   </section>
 
   <article class="bg-ocean-950">
-    <section class="py-20 border-b border-white/10">
+    <!-- Wprowadzenie & Portret Główny -->
+    <section class="py-16 md:py-24 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div class="lg:col-span-7 space-y-6">
-            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Biogram artystyczny</p>
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">O artyście</p>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-white leading-tight">
-              {bioData.bioHeadline || "Dyrygentura, wykonawstwo sceniczne i produkcja dźwięku"}
+              Muzyka jako przestrzeń dialogu, dyscypliny i pasji
             </h2>
             <div class="space-y-5 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
               <p>
-                {bioData.bioLeadText || "Absolwent studiów licencjackich z wyróżnieniem oraz Najlepszy Absolwent Wydziału Sztuki Uniwersytetu Warmińsko-Mazurskiego w Olsztynie (2024/2025). Kontynuuje studia magisterskie na kierunku Edukacja artystyczna w zakresie sztuki muzycznej oraz równoległe studia licencjackie na kierunku Produkcja Muzyczna i Realizacja Dźwięku."}
+                <strong class="text-white font-medium">Kacper Czeczot</strong> to wszechstronny dyrygent, pedagog i instrumentalista młodej generacji, łączący rzetelny akademicki warsztat dyrygencki z bogatym doświadczeniem scenicznym i estradowym. Jego droga artystyczna obejmuje ponad 300 występów koncertowych w salach filharmonicznych, teatrach, świątyniach oraz na estradach plenerowych w Polsce i za granicą.
               </p>
               <p>
-                {bioData.bioSecondaryText || "Absolwent Państwowej Szkoły Muzycznej I i II st. im. A. Krzanowskiego w Mławie (I stopień w klasie fortepianu z wyróżnieniem, II stopień na wydziale wokalnym z tytułem zawodowym muzyka z wyróżnieniem)."}
+                Wyróżniony tytułem <strong class="text-white font-medium">Najlepszego Absolwenta Wydziału Sztuki UWM w Olsztynie (2024/2025)</strong> oraz prestiżową Nagrodą Dziekana za dyplomowe dzieło artystyczne, rozwija równolegle działalność kapelmistrzowską w orkiestrach dętych Mazowsza, wykonawstwo chóralne w czołowych zespołach akademickich oraz inżynierię dźwięku i produkcję muzyczną.
               </p>
             </div>
           </div>
 
           <figure class="lg:col-span-5 space-y-3">
-            <div class="border border-white/10 overflow-hidden">
+            <div class="border border-white/10 overflow-hidden shadow-2xl">
               <img
-                src={cmsImage(bioData.bioStageImage) || `${base}/images/bio-stage.svg`}
-                alt={bioData.bioStageCaption || "Kadr ze spektaklu operetkowego — scena teatralna"}
-                class="w-full aspect-[3/2] object-cover"
+                src={cmsImage(bioData.bioStageImage)}
+                alt={bioData.bioStageCaption || "120-lecie I LO w Mławie"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-              {bioData.bioStageCaption || "Scena teatralna · Operetka / musical"}
+              {bioData.bioStageCaption || "120-lecie I LO w Mławie"}
             </figcaption>
           </figure>
         </div>
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mt-16">
-          <figure class="lg:col-span-5 order-2 lg:order-1 space-y-3">
-            <div class="border border-white/10 overflow-hidden max-w-md">
+    <!-- Rozdział I: Korzenie w Mławie i fundament wykonawczy -->
+    <section class="py-16 md:py-24 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <figure class="lg:col-span-5 order-2 lg:order-1 space-y-4">
+            <div class="border border-white/10 overflow-hidden shadow-xl">
               <img
-                src={cmsImage(bioData.bioScoreImage) || `${base}/images/bio-score.svg`}
-                alt={bioData.bioScoreCaption || "Detal partytury orkiestrowej"}
-                class="w-full aspect-[3/2] object-cover"
+                src={cmsImage(bioData.bioTheatreImage)}
+                alt={bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
+                class="w-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
             <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-              {bioData.bioScoreCaption || "Warsztat aranżacyjny · Partytura"}
+              {bioData.bioTheatreCaption || "Operetka „Bal w Savoyu” (2023) — PSM w Mławie"}
             </figcaption>
           </figure>
 
-          <div class="lg:col-span-7 order-1 lg:order-2 space-y-5 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
-            <p>
-              {stageText}
-            </p>
-            <ul class="divide-y divide-white/10 border-t border-b border-white/10 text-sm">
-              {currentRoles.map((post) => (
-                <li class="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                  <span class="font-display text-lg text-white">{post.title}</span>
-                  <span class="text-xs uppercase tracking-wider text-slate-500 font-sans">{post.detail}</span>
-                </li>
-              ))}
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Początki & Edukacja</p>
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white leading-tight">
+              Mławskie korzenie i wszechstronny fundament wykonawczy
+            </h3>
+            <div class="space-y-4 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
+              <p>
+                Fundament edukacji muzycznej Kacpra Czeczota stanowi Państwowa Szkoła Muzyczna I i II st. im. Andrzeja Krzanowskiego w Mławie. W 2016 roku ukończył z wyróżnieniem szkołę I stopnia w klasie fortepianu pod kierunkiem Ireneusza Weredy (wcześniej kształcąc się także w klasie skrzypiec). W 2022 roku z wyróżnieniem ukończył Wydział Wokalny II stopnia w klasie śpiewu Michała Gogolewskiego, uzyskując tytuł zawodowy muzyka.
+              </p>
+              <p>
+                W latach szkolnych aktywnie animował życie kulturalne regionu — pełnił funkcję Przewodniczącego Samorządu Uczniowskiego, powołał do życia Orkiestrę Samorządu PSM, a także kreował główne partie wokalno-aktorskie w spektaklach Grupy Operetkowej (m.in. Bryndas i Bartłomiej w widowisku <em>„Cud mniemany, czyli Krakowiacy i Górale”</em> oraz produkcjach <em>„Bal w Savoyu”</em> czy <em>„Gondolierzy”</em>), z którymi występował w Mławie, Działdowie, Opinogórze i Szreńsku.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rozdział II: Formacja akademicka i dyrygentura -->
+    <section class="py-16 md:py-24 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Akademia & Mistrzostwo</p>
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white leading-tight">
+              Dyrygentura akademicka i Koncert Dyplomowy „Finale”
+            </h3>
+            <div class="space-y-4 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
+              <p>
+                Dalszy rozwój artystyczny związał z Wydziałem Sztuki Uniwersytetu Warmińsko-Mazurskiego w Olsztynie. W 2025 roku z wyróżnieniem obronił tytuł licencjata na kierunku <em>Edukacja artystyczna w zakresie sztuki muzycznej</em>, przygotowując pracę dyplomową poświęconą problematyce wykonawczej partytur dyplomowych oraz prowadząc monumentalny Koncert Dyplomowy <strong>„Finale” w Filharmonii Warmińsko-Mazurskiej</strong>.
+              </p>
+              <p>
+                Za wybitne osiągnięcia artystyczne i naukowe otrzymał tytuł <strong>Najlepszego Absolwenta Wydziału Sztuki UWM</strong> oraz prestiżową Nagrodę Dziekana. Swoje kompetencje stale poszerza na studiach magisterskich (II stopnia) oraz na równoległych studiach licencjackich na kierunku <em>Produkcja Muzyczna i Realizacja Dźwięku</em>, realizując autorski projekt audiowizualny <em>„Echo Epok”</em>.
+              </p>
+            </div>
+          </div>
+
+          <figure class="lg:col-span-5 space-y-3">
+            <div class="border border-white/10 overflow-hidden shadow-2xl">
+              <img
+                src={cmsImage(bioData.bioScoreImage)}
+                alt={bioData.bioScoreCaption || "Koncert Dyplomowy „Finale”"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+              {bioData.bioScoreCaption || "Koncert Dyplomowy „Finale” — Filharmonia Warmińsko-Mazurska"}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rozdział III: Praca z orkiestrami dętymi -->
+    <section class="py-16 md:py-24 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <figure class="lg:col-span-5 order-2 lg:order-1 space-y-4">
+            <div class="border border-white/10 overflow-hidden shadow-xl">
+              <img
+                src={cmsImage(bioData.bioBandImage)}
+                alt={bioData.bioBandCaption || "Koncert w Szydłowie"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+              {bioData.bioBandCaption || "Koncert orkiestry dętej w Szydłowie (2026)"}
+            </figcaption>
+          </figure>
+
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Dyrygentura & Orkiestry Dęte</p>
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white leading-tight">
+              Tradycja orkiestrowa, praca warsztatowa i autorskie partytury
+            </h3>
+            <div class="space-y-4 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
+              <p>
+                Szczególne miejsce w działalności Kacpra Czeczota zajmuje prowadzenie i rozwijanie orkiestr dętych na Mazowszu i w regionie północnym. Od grudnia 2025 roku pełni funkcję <strong>Kapelmistrza Orkiestry Dętej GOK w Opinogórze Górnej</strong>. Równolegle, od 2024 roku, sprawuje funkcję <strong>Zastępcy Kapelmistrza i Instruktora</strong> w Orkiestrze Dętej OSP w Rębowie, OSP Chociszewo oraz OSP Bogate.
+              </p>
+              <p>
+                W pracy z orkiestrami łączy dyscyplinę brzmieniową z autorskimi warsztatami sekcyjnymi dla młodzieży oraz tworzeniem własnych aranżacji marszowych, estradowych i okolicznościowych. Regularnie występuje również jako instrumentalista (klarnet, fortepian, instrumenty perkusyjne) i dyrygent gościnny m.in. w Młodzieżowej Orkiestrze Dętej w Wieczfni Kościelnej, MMOD w Chorzelach oraz OSP Przasnysz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rozdział IV: Wokalistyka, chóry i trasy międzynarodowe -->
+    <section class="py-16 md:py-24 border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Scena Chóralna & Międzynarodowa</p>
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white leading-tight">
+              Polifonia, dzieła oratoryjne i laury festiwalowe w Europie
+            </h3>
+            <div class="space-y-4 text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
+              <p>
+                Jako wokalista i chórzysta Kacper Czeczot związany jest z czołowymi zespołami chóralnymi regionu. W reprezentacyjnym <strong>Chórze im. prof. Wiktora Wawrzyczka UWM</strong> (ponad 70 występów pod batutą prof. Katarzyny Bojaruniec) pełnił funkcję śpiewaka, asystenta dyrygenta w projektach dyplomowych oraz opiekuna biblioteki nutowej, zdobywając m.in. Złoty i Srebrny Dyplom na XIV Międzynarodowym Festiwalu <em>„Cançó Mediterrània”</em> w Hiszpanii (Barcelona / Lloret de Mar, 2025) oraz Brązowy Dyplom na <em>„Kaunas Cantat”</em> na Litwie.
+              </p>
+              <p>
+                Współpracował także z Chórem <em>„Cantores Varmienses”</em> przy Filharmonii Warmińsko-Mazurskiej (wielkie formy oratoryjno-symfoniczne), Chórem Kameralnym <em>„Ars Vocale”</em> (muzyka dawna i sakralna, Złoty Dyplom w Olsztynie 2023, udział w <em>„Pomerania Cantat”</em> w Słupsku 2024), zespołem <em>ProForma Project</em> prof. Marcina Wawruka oraz Teatrem Muzycznym UWM i spektaklami musicalowymi (m.in. <em>„Pora Jeziora”</em> w Filharmonii i Operze Krakowskiej).
+              </p>
+            </div>
+          </div>
+
+          <figure class="lg:col-span-5 space-y-3">
+            <div class="border border-white/10 overflow-hidden shadow-2xl">
+              <img
+                src={cmsImage(bioData.bioPianoImage)}
+                alt={bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+              {bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zestawienie: Edukacja & Kluczowe Wyróżnienia -->
+    <section class="py-16 md:py-24 border-b border-white/10 bg-ocean-900/30">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Kalendarium</p>
+          <h3 class="text-2xl sm:text-3xl font-display font-semibold text-white">
+            Edukacja akademicka i muzyczna
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- UWM -->
+          <div class="border border-white/10 p-8 space-y-6 bg-ocean-950/60 backdrop-blur-sm">
+            <div class="space-y-1">
+              <p class="text-xs font-sans uppercase tracking-widest text-sky-400">Szkolnictwo Wyższe</p>
+              <h4 class="text-xl font-display text-white">Uniwersytet Warmińsko-Mazurski w Olsztynie</h4>
+              <p class="text-xs text-slate-400 font-sans">Wydział Sztuki · Instytut Muzyki</p>
+            </div>
+            <ul class="space-y-4 text-sm text-slate-300 font-sans font-light divide-y divide-white/5">
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2025 – obecnie</span>
+                <strong>Studia II stopnia (Magisterskie)</strong> — Edukacja artystyczna w zakresie sztuki muzycznej
+              </li>
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2023 – obecnie</span>
+                <strong>Studia I stopnia (Licencjackie, równoległe)</strong> — Produkcja Muzyczna i Realizacja Dźwięku
+              </li>
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2021 – 2025</span>
+                <strong>Dyplom z Wyróżnieniem (Licencjat)</strong> — Edukacja artystyczna w zakresie sztuki muzycznej (Tytuł Najlepszego Absolwenta Wydziału Sztuki)
+              </li>
+            </ul>
+          </div>
+
+          <!-- PSM -->
+          <div class="border border-white/10 p-8 space-y-6 bg-ocean-950/60 backdrop-blur-sm">
+            <div class="space-y-1">
+              <p class="text-xs font-sans uppercase tracking-widest text-sky-400">Szkoła Muzyczna</p>
+              <h4 class="text-xl font-display text-white">PSM I i II st. im. A. Krzanowskiego w Mławie</h4>
+              <p class="text-xs text-slate-400 font-sans">Kształcenie instrumentalne i wokalne</p>
+            </div>
+            <ul class="space-y-4 text-sm text-slate-300 font-sans font-light divide-y divide-white/5">
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2018 – 2022</span>
+                <strong>Dyplom z Wyróżnieniem (II Stopień)</strong> — Wydział Wokalny (tytuł zawodowy muzyka, klasa śpiewu M. Gogolewskiego)
+              </li>
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2010 – 2016</span>
+                <strong>Świadectwo z Wyróżnieniem (I Stopień)</strong> — Klasa fortepianu (I. Wereda) oraz skrzypce
+              </li>
+              <li class="pt-3">
+                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2019 – 2022</span>
+                Przewodniczący Samorządu Uczniowskiego PSM i inicjator Orkiestry Samorządu
+              </li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="py-20 border-b border-white/10">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        <div class="space-y-8">
-          <div class="space-y-2">
-            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Szkolnictwo wyższe</p>
-            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-white">
-              Uniwersytet Warmińsko-Mazurski w Olsztynie
-            </h3>
+        <!-- Nagrody -->
+        <div class="space-y-6 pt-4">
+          <div class="space-y-2 text-center">
+            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Uznanie</p>
+            <h4 class="text-2xl font-display font-semibold text-white">Wybrane nagrody i laury artystyczne</h4>
           </div>
-          <div class="divide-y divide-white/10 border-t border-b border-white/10">
-            {higherEducation.map((item) => (
-              <div class="py-7 space-y-3">
-                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                  <div>
-                    <p class="text-xs font-sans uppercase tracking-widest text-sky-400">{item.period}</p>
-                    <h4 class="text-xl font-display text-white mt-1">{item.degree}</h4>
-                  </div>
-                  <p class="text-xs text-slate-400 font-sans sm:text-right max-w-xs">{item.specialization}</p>
-                </div>
-                <ul class="space-y-1.5 text-sm text-slate-400 font-sans font-light">
-                  {item.highlights.map((h) => (
-                    <li>{h}</li>
-                  ))}
-                </ul>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {individualAwards.map((award) => (
+              <div class="border border-white/10 p-5 space-y-2 bg-ocean-950/40">
+                <span class="text-xs font-sans text-sky-400 font-medium">{award.year}</span>
+                <h5 class="font-display text-base text-white">{award.title}</h5>
+                <p class="text-xs text-slate-400 font-sans font-light">{award.issuer}</p>
               </div>
             ))}
           </div>
-        </div>
-
-        <div class="space-y-8">
-          <div class="space-y-2">
-            <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Szkoła muzyczna</p>
-            <h3 class="text-2xl sm:text-3xl font-display font-semibold text-white">
-              PSM im. A. Krzanowskiego w Mławie
-            </h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
-            {musicSchoolEducation.map((item) => (
-              <div class="bg-ocean-950 p-7 space-y-3 border border-white/10">
-                <p class="text-xs font-sans uppercase tracking-widest text-sky-400">{item.period}</p>
-                <h4 class="text-lg font-display text-white">{item.degree}</h4>
-                <p class="text-xs text-sky-200/70">{item.specialization}</p>
-                <ul class="space-y-1 text-sm text-slate-400 font-sans font-light pt-2 border-t border-white/10">
-                  {item.highlights.map((h) => (
-                    <li>{h}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {bioData.bioTheatreImage && (
-            <figure class="space-y-3 pt-2">
-              <div class="border border-white/10 overflow-hidden">
-                <img
-                  src={cmsImage(bioData.bioTheatreImage)}
-                  alt={bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
-                  class="w-full aspect-[16/9] object-cover"
-                />
-              </div>
-              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-                {bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
-              </figcaption>
-            </figure>
-          )}
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 border-b border-white/10">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div class="space-y-2">
-          <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Osiągnięcia</p>
-          <h2 class="text-3xl sm:text-4xl font-display font-semibold text-white">Nagrody & wyróżnienia</h2>
-        </div>
-        <ul class="divide-y divide-white/10 border-t border-b border-white/10">
-          {individualAwards.map((award) => (
-            <li class="py-5 grid grid-cols-[4.5rem_1fr] gap-6 items-baseline">
-              <span class="text-sm font-sans text-sky-400 tabular-nums">{award.year}</span>
-              <div>
-                <h4 class="font-display text-xl text-white">{award.title}</h4>
-                <p class="text-sm text-slate-500 font-sans mt-1">{award.issuer}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-
-    <section class="py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="space-y-2">
-          <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Dyscypliny</p>
-          <h2 class="text-3xl sm:text-4xl font-display font-semibold text-white">Instrumentarium & warsztat</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
-          {mainInstruments.map((inst) => (
-            <div class="bg-ocean-950 p-7 space-y-3">
-              <p class="text-[11px] font-sans uppercase tracking-widest text-sky-400">{inst.category}</p>
-              <h3 class="text-2xl font-display text-white">{inst.name}</h3>
-              <p class="text-sm text-slate-400 font-sans font-light leading-relaxed">{inst.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div class="border border-white/10 p-7 space-y-5">
-          <h3 class="text-xs font-sans uppercase tracking-[0.22em] text-white">Instrumentarium dodatkowe</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {additionalInstruments.map((item) => (
-              <div class="space-y-1 border-l border-white/10 pl-4">
-                <h4 class="text-base font-display text-white">{item.name}</h4>
-                <p class="text-xs text-slate-400 font-sans font-light">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-          {bioData.bioPianoImage && (
-            <figure class="space-y-3">
-              <div class="border border-white/10 overflow-hidden">
-                <img
-                  src={cmsImage(bioData.bioPianoImage)}
-                  alt={bioData.bioPianoCaption || "Fortepian"}
-                  class="w-full aspect-[3/2] object-cover"
-                />
-              </div>
-              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-                {bioData.bioPianoCaption}
-              </figcaption>
-            </figure>
-          )}
-          {bioData.bioBandImage && (
-            <figure class="space-y-3">
-              <div class="border border-white/10 overflow-hidden">
-                <img
-                  src={cmsImage(bioData.bioBandImage)}
-                  alt={bioData.bioBandCaption || "Orkiestra dęta"}
-                  class="w-full aspect-[3/2] object-cover"
-                />
-              </div>
-              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-                {bioData.bioBandCaption}
-              </figcaption>
-            </figure>
-          )}
         </div>
       </div>
     </section>
