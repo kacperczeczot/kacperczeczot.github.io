@@ -9,8 +9,7 @@ highlights:
   - "I Miejsce na Międzynarodowym Festiwalu „Karnolsky Summer Camp” w Bułgarii (2024)"
   - "Wykonawstwo w sekcji klarnetów, partie wokalne oraz oprawa organowa"
   - "Koncerty okolicznościowe i festiwalowe w kraju i za granicą"
-photos:
-  - "/images/ensembles/chorzele-1.svg"
+photos: []
 order: 5
 ---
 

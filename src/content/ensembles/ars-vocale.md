@@ -9,8 +9,7 @@ highlights:
   - "Złoty Dyplom na XIX Festiwalu „O, Warmio moja miła” w Olsztynie (2023)"
   - "Koncerty muzyki dawnej, pasyjnej i sakralnej w Bazylice archikatedralnej św. Jakuba"
   - "Udział konkursowy w VII Bałtyckim Konkursie Chórów „Pomerania Cantat” w Słupsku (2024)"
-photos:
-  - "/images/ensembles/arsvocale-1.svg"
+photos: []
 order: 3
 ---
 

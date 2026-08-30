@@ -11,9 +11,7 @@ highlights:
   - "Udział w XIV Międzynarodowym Festiwalu we Włoszech (Montecatini Terme, 2024)"
   - "Wyjazd festiwalowy do Czarnogóry (2026)"
   - "Zarządzanie archiwum nutowym i biblioteką chóru, dyrygowanie projektami dyplomowymi"
-photos:
-  - "/images/ensembles/wawrzyczek-1.svg"
-  - "/images/ensembles/wawrzyczek-2.svg"
+photos: []
 order: 1
 ---
 
