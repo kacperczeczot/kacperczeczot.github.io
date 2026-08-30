@@ -10,6 +10,8 @@ highlights:
   - "Koncert pieśni patriotycznych (listopad 2022)"
   - "Koncert kolęd i pastorałek (styczeń 2023)"
 photos:
+  - src: "/images/ensembles/muzoteka-patriotyczny-2022.jpg"
+    caption: "Koncert Pieśni Patriotycznych (2022) — Zespół wokalno-instrumentalny Muzoteka"
   - src: "/images/ensembles/piraci-uwm.jpg"
     caption: "Projekt edukacyjny „Muzyczna przygoda z piratami” — Wydział Sztuki UWM (Muzoteka)"
 order: 1
