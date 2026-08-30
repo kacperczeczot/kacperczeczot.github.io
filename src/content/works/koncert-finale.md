@@ -8,7 +8,7 @@ description: Koncert Dyplomowy „Finale” zrealizowany 13 maja 2025 roku w sal
   Olsztynie. Dyrygentura oraz autorskie opracowania symfoniczno-chóralne
   wykonane przez Chór im. prof. Wiktora Wawrzyczka UWM oraz orkiestrę (Nagroda
   Dziekana Wydziału Sztuki UWM za wybitne artystyczne dzieło dyplomowe).
-cover: "/images/work-finale.svg"
+cover: /images/works/dyplom6.jpg
 order: 1
 metrics:
   - label: Orkiestra
@@ -29,14 +29,13 @@ youtubeVideos:
     youtubeId: cCIYrbOIUHE
 videoHeading: Nagrania z koncertu
 ---
-
 [Strona główna](../../../README.md) > [works](README.md) > [koncert-finale](koncert-finale.md)
 
 ---
 
 ## Koncert Dyplomowy w Filharmonii Warmińsko-Mazurskiej
 
-Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu dyrygenckiego na Wydziale Sztuki UWM:
+Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu artystycnego na Wydziale Sztuki UWM:
 
 - **Kierownictwo muzyczne, dyrygentura & aranżacje:** Kacper Czeczot
 - **Promotor dzieła:** [dr hab. Katarzyna Bojaruniec, prof. UWM](https://ws.uwm.edu.pl/pracownicy-ogloszenia-i-aktualnosci/dr-hab-katarzyna-bojaruniec-prof-uwm)
