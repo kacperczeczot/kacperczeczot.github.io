@@ -1,17 +1,17 @@
 ---
-name: "Estrada studencka i solowa"
+name: "Estrada Studencka Wydziału Sztuki UWM"
 pillar: "estrada"
-role: "Solista (śpiew / fortepian)"
-leader: "Wydział Sztuki UWM / Inicjatywy własne"
-concertCount: "Przeglądy i koncerty"
+role: "Solista / Kameralista (fortepian / śpiew)"
+leader: "Wydział Sztuki UWM"
+concertCount: "Cykliczne edycje"
 years: "2023–obecnie"
 highlights:
   - "Dwa wyróżnienia na Estradzie Studenckiej UWM (2023) — trio fortepianowe oraz zespół rozrywkowy"
-  - "Kolejne występy na Estradzie Studenckiej: fortepian (2023), śpiew (2024, 2025)"
-  - "Koncert „Podróż po muzyce”, Bursa Szkolna w Mławie, z Olgą Sobolewską (2024)"
-  - "Festiwal Piosenki Powstańczej w Chorzelach (2025)"
+  - "Występ solowy: recital fortepianowy (2023)"
+  - "Występy wokalne podczas kolejnych edycji Estrady Studenckiej (2024, 2025)"
 photos: []
-order: 3
+order: 2
 ---
 
-Występy solowe i w składach rozrywkowych na przeglądach uczelnianych oraz koncertach w regionie.
+Cykliczne wydarzenie artystyczne i przegląd sceniczny Wydziału Sztuki Uniwersytetu Warmińsko-Mazurskiego w Olsztynie: prezentacje solowe, partie fortepianu oraz zespołowe formacje rozrywkowe.
+

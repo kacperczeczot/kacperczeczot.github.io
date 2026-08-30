@@ -10,7 +10,7 @@ highlights:
   - "Trio fortepianowe z Pauliną Szczech (2023, 2025)"
   - "Śpiew w oktetcie — dyplom Jakuba Maślanki (2025)"
 photos: []
-order: 2
+order: 3
 ---
 
 Regularne wspieranie koncertów dyplomowych studentów Wydziału Sztuki: akompaniament, składy kameralne i partie wokalne.
