@@ -8,7 +8,7 @@
   "currentRoles": [
     { "title": "Orkiestra GOK w Opinogórze Górnej", "detail": "Kapelmistrz (od grudnia 2025)" },
     { "title": "Orkiestra Dęta OSP Rębowo / Chociszewo", "detail": "Zastępca Kapelmistrza i Instruktor (od 2024)" },
-    { "title": "Chór im. prof. W. Wawrzyczka UWM", "detail": "Tenor, Dyrygent, Bibliotekarz (71 występów, od 2022)" },
+    { "title": "Chór im. prof. W. Wawrzyczka UWM", "detail": "Śpiewak, Dyrygent, Bibliotekarz (71 występów, od 2022)" },
     { "title": "Miejska Młodzieżowa Orkiestra Dęta w Chorzelach", "detail": "Klarnecista, organista, śpiewak (od 2022)" }
   ],
   "bioStageImage": "/images/bio-stage.svg",
@@ -113,9 +113,9 @@
       "desc": "Wykształcenie w klasie fortepianu, akompaniament oraz praca z wyciągami fortepianowymi."
     },
     {
-      "name": "Śpiew / Wokal (Tenor)",
-      "category": "Głos solowy & chóralny",
-      "desc": "Dyplom z wokalistyki z wyróżnieniem. Role operetkowe, musicalowe oraz partie tenorowe w chórach."
+      "name": "Śpiew / Wokalistyka",
+      "category": "Śpiew solowy & zespołowy",
+      "desc": "Dyplom z wokalistyki z wyróżnieniem. Role operetkowe, musicalowe oraz wykonawstwo w chórach i zespołach wokalnych."
     }
   ],
   "additionalInstruments": [

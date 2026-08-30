@@ -1,7 +1,7 @@
 ---
 name: "Chór im. prof. Wiktora Wawrzyczka UWM"
 pillar: "chory"
-role: "Tenor / Dyrygent / Bibliotekarz"
+role: "Śpiewak / Dyrygent / Bibliotekarz"
 leader: "dr hab. Katarzyna Bojaruniec, prof. UWM"
 concertCount: "71 występów"
 years: "2022–obecnie"
@@ -17,4 +17,4 @@ photos:
 order: 1
 ---
 
-Główny akademicki zespół wokalny: partie tenorowe, prowadzenie prób i dyrygentura w projektach dyplomowych, zarządzanie biblioteką nutową oraz udział w międzynarodowych trasach festiwalowych.
+Główny akademicki zespół wokalny: wykonawstwo wokalne, prowadzenie prób i dyrygentura w projektach dyplomowych, zarządzanie biblioteką nutową oraz udział w międzynarodowych trasach festiwalowych.

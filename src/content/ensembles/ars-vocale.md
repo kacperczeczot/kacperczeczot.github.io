@@ -1,7 +1,7 @@
 ---
 name: "Chór „Ars Vocale” Instytutu Muzyki"
 pillar: "chory"
-role: "Tenor / Klarnecista"
+role: "Śpiewak / Klarnecista"
 leader: "dr hab. Karol Kisiel, prof. UWM"
 concertCount: "8 występów"
 years: "2022–2025"
@@ -14,4 +14,4 @@ photos:
 order: 3
 ---
 
-Polifonia dawna i sakralna, śpiew w głosie tenora oraz partie klarnetu w repertuarze a cappella i wokalno-instrumentalnym.
+Polifonia dawna i sakralna, wykonawstwo wokalne oraz partie klarnetu w repertuarze a cappella i wokalno-instrumentalnym.
