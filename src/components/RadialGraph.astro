@@ -306,9 +306,9 @@ const categoriesPayload = categories.map(cat => ({
                     <span class="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">Występy</span>
                     <span id="level-3-meta-concerts" class="text-sky-300 font-medium text-xs block truncate">—</span>
                   </div>
-                  <div id="level-3-meta-leader-container" class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1 col-span-2 hidden">
+                  <div id="level-3-meta-leader-container" class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1.5 col-span-2 hidden">
                     <span class="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">Kierownictwo</span>
-                    <span id="level-3-meta-leader" class="text-sky-200 font-medium text-xs block truncate">—</span>
+                    <div id="level-3-meta-leader" class="space-y-1"></div>
                   </div>
                 </div>
               </div>
@@ -397,9 +397,18 @@ const categoriesPayload = categories.map(cat => ({
                     </span>
                   </div>
                   {ens.data.leader && (
-                    <p class="text-xs text-sky-400 font-sans font-medium">
-                      Kierownictwo: {ens.data.leader}
-                    </p>
+                    <div class="pt-1 space-y-1">
+                      <span class="text-slate-400 font-semibold uppercase text-[10px] block tracking-wider font-sans">
+                        Kierownictwo:
+                      </span>
+                      <div class="space-y-0.5">
+                        {ens.data.leader.split(/\s*\/\s*|\n+/).filter(Boolean).map((person) => (
+                          <div class="text-xs text-sky-200 font-sans font-medium leading-snug">
+                            {person.trim()}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
 
@@ -841,7 +850,14 @@ const categoriesPayload = categories.map(cat => ({
     if (metaConcerts) metaConcerts.textContent = ensemble.concertCount || 'Działalność sceniczna';
     if (metaLeader && metaLeaderContainer) {
       if (ensemble.leader) {
-        metaLeader.textContent = ensemble.leader;
+        metaLeader.innerHTML = '';
+        const leaders = String(ensemble.leader).split(/\s*\/\s*|\n+/).filter(Boolean);
+        leaders.forEach((person) => {
+          const row = document.createElement('div');
+          row.className = 'text-sky-200 font-medium text-xs leading-snug';
+          row.textContent = person.trim();
+          metaLeader.appendChild(row);
+        });
         metaLeaderContainer.classList.remove('hidden');
       } else {
         metaLeaderContainer.classList.add('hidden');
