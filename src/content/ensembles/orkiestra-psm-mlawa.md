@@ -6,10 +6,13 @@ leader: "Tomasz Wesołowski (Dyrygent)"
 concertCount: "7 występów"
 years: "2022–obecnie"
 highlights:
+  - "Koncert Wiosenny PSM w Mławie (2022)"
   - "Wsparcie sekcji instrumentalnych podczas koncertów szkolnych i występów okolicznościowych"
   - "Dyrygentura i aranżacje na skład dęty"
   - "Wykonawstwo na klarnecie i perkusji"
-photos: []
+photos:
+  - src: "/images/ensembles/psm-mlawa-wiosenny-2022.jpg"
+    caption: "Koncert Wiosenny (2022) — Orkiestra PSM I i II st. w Mławie"
 order: 6
 ---
 
