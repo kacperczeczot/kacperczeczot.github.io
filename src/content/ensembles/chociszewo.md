@@ -1,7 +1,7 @@
 ---
 name: "Orkiestra Dęta OSP Chociszewo"
 pillar: "orkiestry"
-role: "Zastępca Dyrygenta / Klarnecista"
+role: "Zastępca Kapelmistrza / Klarnecista"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
 concertCount: "11 występów"
 years: "2024–obecnie"

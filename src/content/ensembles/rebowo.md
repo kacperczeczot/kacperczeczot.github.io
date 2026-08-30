@@ -1,7 +1,7 @@
 ---
 name: "Orkiestra Dęta OSP w Rębowie"
 pillar: "orkiestry"
-role: "Zastępca Dyrygenta / Instruktor"
+role: "Zastępca Kapelmistrza / Instruktor"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
 concertCount: "18 występów"
 years: "2024–obecnie"

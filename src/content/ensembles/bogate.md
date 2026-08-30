@@ -1,7 +1,7 @@
 ---
 name: "Orkiestra Dęta OSP Bogate"
 pillar: "orkiestry"
-role: "Klarnecista / Instruktor"
+role: "Zastępca Kapelmistrza / Klarnecista / Instruktor"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
 concertCount: "3 występy"
 years: "2025–obecnie"
