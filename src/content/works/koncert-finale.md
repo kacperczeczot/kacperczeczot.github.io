@@ -35,7 +35,7 @@ videoHeading: Nagrania z koncertu
 
 ## Koncert Dyplomowy w Filharmonii Warmińsko-Mazurskiej
 
-Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu artystycnego na Wydziale Sztuki UWM:
+Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu artystycznego na Wydziale Sztuki UWM:
 
 - **Kierownictwo muzyczne, dyrygentura & aranżacje:** Kacper Czeczot
 - **Promotor dzieła:** [dr hab. Katarzyna Bojaruniec, prof. UWM](https://ws.uwm.edu.pl/pracownicy-ogloszenia-i-aktualnosci/dr-hab-katarzyna-bojaruniec-prof-uwm)
