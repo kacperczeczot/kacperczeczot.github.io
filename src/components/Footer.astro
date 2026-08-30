@@ -1,5 +1,5 @@
 ---
-import { Github, Mail, Copy, Check, Youtube } from 'lucide-astro';
+import { Github, Mail, Copy, Check, Youtube, Facebook, Instagram, Music2 } from 'lucide-astro';
 import homeData from '../data/home.json';
 
 const currentYear = new Date().getFullYear();
@@ -7,6 +7,9 @@ const contactEmail = homeData.contactEmail || 'kacperczeczot7@gmail.com';
 const contactInvitation = homeData.contactInvitation || 'Projekty orkiestrowe, opracowania partytur oraz współpraca koncertowa.';
 const githubUrl = homeData.githubUrl || 'https://github.com/kacperczeczot';
 const youtubeUrl = homeData.youtubeUrl || 'https://youtube.com/@kacperczeczot3530';
+const facebookUrl = homeData.facebookUrl || 'https://www.facebook.com/kacper.czeczot/';
+const instagramUrl = homeData.instagramUrl || 'https://www.instagram.com/kapi_negatywistczny/';
+const musescoreUrl = homeData.musescoreUrl || 'https://musescore.com/user/4841481';
 ---
 
 <footer id="kontakt" class="relative border-t border-white/10 bg-ocean-950 py-16 sm:py-20">
@@ -50,28 +53,61 @@ const youtubeUrl = homeData.youtubeUrl || 'https://youtube.com/@kacperczeczot353
       </p>
     </div>
 
-    <!-- Rząd minimalistycznych linków społecznościowych -->
-    <div class="flex items-center justify-center gap-4 pt-2">
+    <!-- Rząd minimalistycznych linków społecznościowych i branżowych -->
+    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+      <a
+        href={youtubeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Kanał YouTube Kacpra Czeczota"
+        class="inline-flex items-center gap-2 px-3.5 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
+      >
+        <Youtube class="w-4 h-4 text-sky-400" />
+        <span>YouTube</span>
+      </a>
+
+      <a
+        href={musescoreUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profil MuseScore Kacpra Czeczota (Partytury)"
+        class="inline-flex items-center gap-2 px-3.5 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
+      >
+        <Music2 class="w-4 h-4 text-sky-400" />
+        <span>MuseScore</span>
+      </a>
+
+      <a
+        href={facebookUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profil Facebook Kacpra Czeczota"
+        class="inline-flex items-center gap-2 px-3.5 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
+      >
+        <Facebook class="w-4 h-4 text-sky-400" />
+        <span>Facebook</span>
+      </a>
+
+      <a
+        href={instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Profil Instagram Kacpra Czeczota"
+        class="inline-flex items-center gap-2 px-3.5 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
+      >
+        <Instagram class="w-4 h-4 text-sky-400" />
+        <span>Instagram</span>
+      </a>
+
       <a
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Profil GitHub Kacpra Czeczota"
-        class="inline-flex items-center gap-2 px-4 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
+        class="inline-flex items-center gap-2 px-3.5 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
       >
         <Github class="w-4 h-4 text-sky-400" />
         <span>GitHub</span>
-      </a>
-
-      <a
-        href={youtubeUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Kanał YouTube"
-        class="inline-flex items-center gap-2 px-4 py-2 border border-white/15 text-slate-300 hover:text-sky-300 hover:border-sky-400/40 transition-all text-xs font-semibold font-sans bg-ocean-900"
-      >
-        <Youtube class="w-4 h-4 text-sky-400" />
-        <span>YouTube</span>
       </a>
     </div>
 
