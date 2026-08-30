@@ -11,10 +11,10 @@
     { "title": "Chór im. prof. W. Wawrzyczka UWM", "detail": "Śpiewak, Dyrygent, Bibliotekarz (71 występów, od 2022)" },
     { "title": "Miejska Młodzieżowa Orkiestra Dęta w Chorzelach", "detail": "Klarnecista, organista, śpiewak (od 2022)" }
   ],
-  "bioStageImage": "/images/bio-stage.svg",
-  "bioStageCaption": "Scena teatralna · Operetka / musical",
-  "bioScoreImage": "/images/bio-score.svg",
-  "bioScoreCaption": "Warsztat aranżacyjny · Partytura",
+  "bioStageImage": "/images/kacper-fortepian-mlawa.jpg",
+  "bioStageCaption": "Wykonawstwo fortepianowe — Park Miejski w Mławie",
+  "bioScoreImage": "/images/ensembles/wawrzyczek-finale-2025.jpg",
+  "bioScoreCaption": "Koncert Dyplomowy „Finale” — Filharmonia Warmińsko-Mazurska",
   "higherEducation": [
     {
       "period": "2025 – obecnie",
