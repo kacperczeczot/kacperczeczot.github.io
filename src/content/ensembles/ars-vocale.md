@@ -11,7 +11,7 @@ highlights:
   - "Udział konkursowy w VII Bałtyckim Konkursie Chórów „Pomerania Cantat” w Słupsku (2024)"
 photos:
   - src: "/images/ensembles/ars-vocale-pomerania-2024.jpg"
-    caption: "Pomerania Cantat 2024 (Słupsk) — Chór „Ars Vocale”"
+    caption: "VII Bałtycki Konkurs Chórów „Pomerania Cantat”, Słupsk (2024) — Chór „Ars Vocale”"
 order: 3
 ---
 
