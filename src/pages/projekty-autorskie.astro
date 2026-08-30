@@ -11,11 +11,29 @@ const typeLabel = {
   conducting: 'Dyrygentura symfoniczno-chóralna',
   production: 'Produkcja muzyczna',
 };
+
+const worksPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Dzieła Autorskie & Projekty Dyplomowe — Kacper Czeczot',
+  description: 'Dzieła dyplomowe Kacpra Czeczota: Koncert Dyplomowy „Finale” (dyrygentura) oraz „Echo Epok” (produkcja muzyczna i realizacja dźwięku).',
+  hasPart: works.map((w) => ({
+    '@type': 'CreativeWork',
+    name: w.data.title,
+    headline: w.data.subtitle,
+    description: w.data.description,
+    author: {
+      '@type': 'Person',
+      name: 'Kacper Czeczot'
+    }
+  }))
+};
 ---
 
 <BaseLayout
   title="Dzieła Autorskie & Projekty Dyplomowe — Kacper Czeczot"
   description="Dzieła dyplomowe Kacpra Czeczota: Koncert Dyplomowy „Finale” (dyrygentura) oraz „Echo Epok” (produkcja muzyczna i realizacja dźwięku)."
+  jsonLd={worksPageSchema}
 >
   <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 border-b border-white/10 bg-ocean-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

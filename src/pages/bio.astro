@@ -11,11 +11,25 @@ const mainInstruments = bioData.mainInstruments || [];
 const additionalInstruments = bioData.additionalInstruments || [];
 const currentRoles = bioData.currentRoles || [];
 const stageText = bioData.stageText || '';
+
+const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  name: 'Bio, Edukacja & Osiągnięcia — Kacper Czeczot',
+  description: 'Zweryfikowana sylwetka artystyczna: wykształcenie na UWM i w PSM w Mławie z wyróżnieniem, nagrody, instrumentarium oraz dorobek dyrygencki.',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Kacper Czeczot',
+    jobTitle: 'Dyrygent',
+    url: 'https://kacperczeczot.github.io'
+  }
+};
 ---
 
 <BaseLayout
   title="Bio, Edukacja & Osiągnięcia — Kacper Czeczot"
   description="Zweryfikowana sylwetka artystyczna: wykształcenie na UWM i w PSM w Mławie z wyróżnieniem, nagrody, instrumentarium oraz dorobek dyrygencki."
+  jsonLd={profilePageSchema}
 >
   <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 border-b border-white/10 bg-ocean-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

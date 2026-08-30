@@ -34,32 +34,90 @@ const defaultPersonSchema = {
   '@type': 'Person',
   '@id': `${siteUrl}/#person`,
   name: 'Kacper Czeczot',
+  givenName: 'Kacper',
+  familyName: 'Czeczot',
   url: siteUrl,
   image: `${siteUrl}/images/dyplomhero.jpeg`,
-  jobTitle: ['Dyrygent', 'Multiinstrumentalista', 'Aranżer', 'Kierownik muzyczny'],
-  description: 'Dyrygent symfoniczny i chóralny, multiinstrumentalista, aranżer oraz realizator dźwięku.',
+  jobTitle: ['Dyrygent', 'Kapelmistrz', 'Multiinstrumentalista', 'Aranżer', 'Kierownik muzyczny', 'Realizator dźwięku'],
+  description: 'Oficjalne portfolio artystyczne Kacpra Czeczota: dyrygentura symfoniczna i chóralna, prowadzenie orkiestr i chórów, wykonawstwo sceniczne, opracowania partytur oraz realizacja dźwięku.',
   email: homeData.contactEmail,
+  gender: 'https://schema.org/Male',
+  nationality: {
+    '@type': 'Country',
+    name: 'Polska'
+  },
   sameAs: [
     homeData.youtubeUrl,
     homeData.githubUrl,
   ].filter(Boolean),
+  hasOccupation: [
+    {
+      '@type': 'Occupation',
+      name: 'Dyrygent / Conductor',
+      description: 'Dyrygentura symfoniczna i chóralna, prowadzenie orkiestr i chórów, interpretacja dzieł muzycznych.'
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Kapelmistrz / Bandmaster',
+      description: 'Kierownictwo muzyczne i dyrygentura orkiestr dętych.'
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Aranżer / Arranger & Orchestrator',
+      description: 'Autorskie opracowania partytur symfonicznych, chóralnych i orkiestrowych.'
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Multiinstrumentalista / Multi-instrumentalist',
+      description: 'Wykonawstwo sceniczne: fortepian, klarnet, śpiew tenorowy, organy.'
+    },
+    {
+      '@type': 'Occupation',
+      name: 'Realizator dźwięku / Sound Engineer',
+      description: 'Produkcja muzyczna, inżynieria dźwięku i realizacja sesyjna.'
+    }
+  ],
+  award: [
+    'Tytuł Najlepszego Absolwenta Wydziału Sztuki UWM (rok akademicki 2024/2025)',
+    'Nagroda Dziekana Wydziału Sztuki UWM za wybitne artystyczne dzieło dyplomowe (Koncert „Finale” w Filharmonii Warmińsko-Mazurskiej)',
+    'Dyplom ukończenia studiów z wyróżnieniem na Uniwersytecie Warmińsko-Mazurskim w Olsztynie',
+    'Dyplom z wyróżnieniem i tytuł zawodowy muzyka — PSM I i II st. im. A. Krzanowskiego w Mławie',
+    'Złoty i Srebrny Dyplom — XIV Międzynarodowy Festiwal Chóralny Canco Mediterrania (Hiszpania)',
+    'Brązowy Dyplom — XIII Międzynarodowy Festiwal Kaunas Cantat (Litwa)',
+    'I Miejsce w kategorii instrumentalnej — Karnolsky Summer Camp (Bułgaria)'
+  ],
+  memberOf: [
+    { '@type': 'MusicGroup', name: 'Orkiestra GOK w Opinogórze Górnej' },
+    { '@type': 'MusicGroup', name: 'Orkiestra Dęta OSP Rębowo' },
+    { '@type': 'MusicGroup', name: 'Orkiestra Dęta OSP Chociszewo' },
+    { '@type': 'MusicGroup', name: 'Chór im. prof. Wiktora Wawrzyczka UWM' },
+    { '@type': 'MusicGroup', name: 'Miejska Młodzieżowa Orkiestra Dęta w Chorzelach' },
+    { '@type': 'MusicGroup', name: 'Chór Cantores Varmienses' },
+    { '@type': 'MusicGroup', name: 'Kameralny Zespół Wokalny Ars Vocale' }
+  ],
   alumniOf: [
     {
       '@type': 'EducationalOrganization',
       name: 'Uniwersytet Warmińsko-Mazurski w Olsztynie',
-      description: 'Instytut Muzyki — Dyrygentura (studia ukończone z wyróżnieniem)'
+      url: 'https://uwm.edu.pl',
+      description: 'Wydział Sztuki, Instytut Muzyki — Dyrygentura (studia ukończone z wyróżnieniem i tytułem Najlepszego Absolwenta)'
     },
     {
       '@type': 'EducationalOrganization',
-      name: 'Państwowa Szkoła Muzyczna I i II st. im. A. Krzanowskiego w Mławie'
+      name: 'Państwowa Szkoła Muzyczna I i II st. im. Andrzeja Krzanowskiego w Mławie',
+      description: 'Wydział Wokalny (dyplom z wyróżnieniem, tytuł zawodowy muzyka) oraz Klasa Fortepianu (I stopień z wyróżnieniem)'
     }
   ],
   knowsAbout: [
     'Dyrygentura symfoniczna',
     'Dyrygentura chóralna',
+    'Kapelmistrzostwo i orkiestry dęte',
     'Aranżacja muzyczna',
     'Orkiestracja i opracowanie partytur',
-    'Teatr muzyczny i estrada',
+    'Wokalistyka klasyczna (Tenor)',
+    'Fortepian',
+    'Klarnet',
+    'Teatr muzyczny, operetka i musical',
     'Produkcja muzyczna i realizacja dźwięku'
   ]
 };
@@ -70,8 +128,19 @@ const defaultWebsiteSchema = {
   '@id': `${siteUrl}/#website`,
   url: siteUrl,
   name: 'Kacper Czeczot',
-  alternateName: ['Kacper Czeczot Portfolio', 'kacperczeczot.github.io'],
+  alternateName: [
+    'Kacper Czeczot — Dyrygent · Multiinstrumentalista · Aranżer',
+    'Kacper Czeczot — Oficjalna strona',
+    'Kacper Czeczot Portfolio',
+    'kacperczeczot.github.io'
+  ],
   description: 'Oficjalne portfolio artystyczne Kacpra Czeczota: dyrygentura symfoniczna i chóralna, wykonawstwo sceniczne, opracowania partytur oraz realizacja dźwięku.',
+  about: {
+    '@id': `${siteUrl}/#person`
+  },
+  creator: {
+    '@id': `${siteUrl}/#person`
+  },
   publisher: {
     '@id': `${siteUrl}/#person`
   },
@@ -106,7 +175,7 @@ const schemas = [
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Kacper Czeczot" />
-    <meta name="keywords" content="Kacper Czeczot, dyrygent, multiinstrumentalista, aranżer, dyrygentura symfoniczna, chór, orkiestra, teatr muzyczny, produkcja muzyczna, partytury, Olsztyn, Mława" />
+    <meta name="keywords" content="Kacper Czeczot, Kacper Czeczot dyrygent, Kacper Czeczot kapelmistrz, Kacper Czeczot aranżer, Kacper Czeczot multiinstrumentalista, Kacper Czeczot portfolio, dyrygent, kapelmistrz, aranżer, multiinstrumentalista, dyrygentura symfoniczna, dyrygentura chóralna, orkiestra dęta, chór Wawrzyczka, UWM Olsztyn, PSM Mława, Filharmonia Warmińsko-Mazurska, produkcja muzyczna, partytury, Olsztyn, Mława" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#070d1a" />
     <meta name="google-site-verification" content="zxKFZNbYi5E_0F0shQqNW9Rf6kDSELiFvr4S9znB82M" />

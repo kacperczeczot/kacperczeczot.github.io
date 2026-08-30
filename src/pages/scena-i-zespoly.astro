@@ -1,11 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import RadialGraph from '../components/RadialGraph.astro';
+const ensemblesPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Scena i Zespoły — Kacper Czeczot',
+  description: 'Działalność sceniczna i zespołowa: orkiestry, chóry, teatr muzyczny i zespoły estradowe.',
+  about: {
+    '@type': 'Person',
+    name: 'Kacper Czeczot'
+  }
+};
 ---
 
 <BaseLayout
   title="Scena i Zespoły — Kacper Czeczot"
   description="Działalność sceniczna i zespołowa: orkiestry, chóry, teatr muzyczny i zespoły estradowe."
+  jsonLd={ensemblesPageSchema}
 >
   <RadialGraph />
 </BaseLayout>
