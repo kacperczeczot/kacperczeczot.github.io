@@ -6,12 +6,11 @@ leader: "Tomasz Wesołowski (Kapelmistrz)"
 concertCount: "18 występów"
 years: "2024–obecnie"
 highlights:
-  - "Prowadzenie występów galowych, państwowych i festiwalowych"
+  - "Koncerty i występy plenerowe, m.in. Dni Wisły w Wyszogrodzie (2025)"
   - "Autorski program warsztatów sekcyjnych dla młodych adeptów instrumentów dętych"
   - "Opracowanie i wdrożenie nowych aranżacji marszowych do stałego repertuaru"
 photos:
-  - "/images/ensembles/rebowo-1.svg"
-  - "/images/ensembles/rebowo-2.svg"
+  - "/images/ensembles/rebowo-wyszogrod-2025.jpg"
 order: 2
 ---
 

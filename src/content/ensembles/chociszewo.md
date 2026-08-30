@@ -6,10 +6,11 @@ leader: "Tomasz Wesołowski (Kapelmistrz)"
 concertCount: "11 występów"
 years: "2024–obecnie"
 highlights:
-  - "Regularne dyrygowanie podczas uroczystości religijnych i lokalnych"
-  - "Projekty plenerowe, m.in. procesja na wodzie w Czerwińsku nad Wisłą"
+  - "Koncerty i uroczystości plenerowe, m.in. Dożynki w Czerwińsku nad Wisłą (2026)"
+  - "Regularne dyrygowanie podczas uroczystości lokalnych i religijnych (m.in. procesja na wodzie na Wiśle)"
   - "Wykonawstwo w sekcji klarnetów"
-photos: []
+photos:
+  - "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
 order: 3
 ---
 

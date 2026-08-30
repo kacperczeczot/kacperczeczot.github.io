@@ -1,15 +1,16 @@
 ---
 name: "Chór „ProForma Project”"
 pillar: "chory"
-role: "Chórzysta (bas)"
+role: "Śpiewak / Chórzysta"
 leader: "prof. dr hab. Marcin Wawruk"
 concertCount: "3 występy"
 years: "2023–2024"
 highlights:
-  - "Widowiska estradowe i edukacyjne, m.in. „Era śpiewa. Warmia Mazury — Gwiazdy i Chóry”"
-  - "„Opowieści z Afryki”"
+  - "Widowisko „Era śpiewu. Warmia Mazury — Gwiazdy i Chóry” w Filharmonii Warmińsko-Mazurskiej (2023)"
+  - "Spektakl edukacyjny „Opowieści z Afryki”"
   - "Koncert świąteczny „Stare telefony działają cuda” (Manufaktura, Łódź)"
-photos: []
+photos:
+  - "/images/ensembles/proforma-era-spiewu-2023.jpg"
 order: 4
 ---
 

@@ -6,10 +6,11 @@ leader: "dr hab. Grzegorz Lewandowski (Reżyseria)"
 concertCount: "15 spektakli"
 years: "2022–2024"
 highlights:
-  - "Gala Disney (2023–2024) — role: Tygrys, Książę; trasa m.in. Olsztyn i Płock"
+  - "Gala Disney (2023) w Centrum Konferencyjnym UWM oraz spektakle wyjazdowe (m.in. Płock)"
   - "Szalone Lata Retro — aktor, pianista na żywo, obsługa techniczna"
   - "„Smerfowisko, czyli Gargamel złapany” (2022) — Smerf Zgrywus"
-photos: []
+photos:
+  - "/images/ensembles/teatr-muzyczny-disney-2023.jpg"
 order: 2
 ---
 

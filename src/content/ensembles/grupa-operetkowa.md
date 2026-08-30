@@ -6,12 +6,12 @@ leader: "Michał Gogolewski (Reżyseria) / Anna Chocholska"
 concertCount: "ok. 70 spektakli"
 years: "2016–2024"
 highlights:
+  - "„Cud mniemany, czyli Krakowiacy i Górale” w PSM w Mławie (2022) — role: Bryndas / Bartłomiej, kierownictwo muzyczne"
   - "Główne role solowe i aktorskie w klasyce operetkowej i teatrze muzycznym"
-  - "„Cud mniemany, czyli Krakowiacy i Górale” (2022) — role: Bryndas / Bartłomiej, kierownictwo muzyczne"
   - "„Bal w Savoyu” (2023), „A kim ty naprawdę jesteś?” (2019), „Gondolierzy” (2016)"
   - "Trasy i występy w Mławie, Działdowie, Opinogórze, Radzanowie i Szreńsku"
 photos:
-  - "/images/ensembles/operetka-1.svg"
+  - "/images/ensembles/krakowiacy-i-gorale-2022.jpg"
 order: 1
 ---
 
