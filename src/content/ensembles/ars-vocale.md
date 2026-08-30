@@ -8,8 +8,10 @@ years: "2022–2025"
 highlights:
   - "Złoty Dyplom na XIX Festiwalu „O, Warmio moja miła” w Olsztynie (2023)"
   - "Koncerty muzyki dawnej, pasyjnej i sakralnej w Bazylice archikatedralnej św. Jakuba"
-  - "Udział konkursowy w VII Bałtyckim Konkursie Chórów „Pomerania Cantat” w Słupsku (2024)"
-photos: []
+  - "Udział w Festiwalu Chóralnym „Pomerania Cantat” (Koszalin 2024)"
+photos:
+  - src: "/images/ensembles/ars-vocale-pomerania-2024.jpg"
+    caption: "Pomerania Cantat 2024 (Koszalin) — Chór „Ars Vocale”"
 order: 3
 ---
 
