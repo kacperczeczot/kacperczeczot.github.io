@@ -11,7 +11,8 @@ highlights:
   - "„Bal w Savoyu” (2023), „A kim ty naprawdę jesteś?” (2019), „Gondolierzy” (2016)"
   - "Trasy i występy w Mławie, Działdowie, Opinogórze, Radzanowie i Szreńsku"
 photos:
-  - "/images/ensembles/krakowiacy-i-gorale-2022.jpg"
+  - src: "/images/ensembles/krakowiacy-i-gorale-2022.jpg"
+    caption: "„Cud mniemany, czyli Krakowiacy i Górale” (2022) w PSM w Mławie — Grupa Operetkowa"
 order: 1
 ---
 

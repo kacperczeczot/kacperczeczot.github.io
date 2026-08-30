@@ -10,7 +10,8 @@ highlights:
   - "Autorski program warsztatów sekcyjnych dla młodych adeptów instrumentów dętych"
   - "Opracowanie i wdrożenie nowych aranżacji marszowych do stałego repertuaru"
 photos:
-  - "/images/ensembles/rebowo-wyszogrod-2025.jpg"
+  - src: "/images/ensembles/rebowo-wyszogrod-2025.jpg"
+    caption: "Dni Wisły w Wyszogrodzie (2025) — Orkiestra Dęta OSP w Rębowie"
 order: 2
 ---
 

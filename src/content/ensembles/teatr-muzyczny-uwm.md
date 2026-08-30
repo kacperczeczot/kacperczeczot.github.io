@@ -10,7 +10,8 @@ highlights:
   - "Szalone Lata Retro — aktor, pianista na żywo, obsługa techniczna"
   - "„Smerfowisko, czyli Gargamel złapany” (2022) — Smerf Zgrywus"
 photos:
-  - "/images/ensembles/teatr-muzyczny-disney-2023.jpg"
+  - src: "/images/ensembles/teatr-muzyczny-disney-2023.jpg"
+    caption: "Gala Disney (2023) w Centrum Konferencyjnym UWM — Teatr Muzyczny UWM"
 order: 2
 ---
 

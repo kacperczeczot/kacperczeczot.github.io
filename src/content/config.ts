@@ -1,5 +1,14 @@
 import { defineCollection, z } from 'astro:content';
 
+const photoItemSchema = z.union([
+  z.string(),
+  z.object({
+    src: z.string(),
+    caption: z.string().optional(),
+    alt: z.string().optional(),
+  }),
+]);
+
 const ensemblesCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -10,7 +19,7 @@ const ensemblesCollection = defineCollection({
     years: z.string().optional().default(''),
     leader: z.string().optional().default(''),
     highlights: z.array(z.string()).default([]),
-    photos: z.array(z.string()).default([]),
+    photos: z.array(photoItemSchema).default([]),
     order: z.number(),
   }),
 });

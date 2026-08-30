@@ -79,7 +79,18 @@ const categoriesPayload = categories.map(cat => ({
     concertCount: ens.data.concertCount || '',
     highlights: ens.data.highlights,
     body: ens.body,
-    photos: (ens.data.photos || []).filter(Boolean).map(p => (p.startsWith('/') ? `${base}${p}` : p)),
+    photos: (ens.data.photos || []).filter(Boolean).map(p => {
+      if (typeof p === 'string') {
+        const fullSrc = p.startsWith('/') ? `${base}${p}` : p;
+        return { src: fullSrc, caption: '', alt: ens.data.name };
+      }
+      const fullSrc = p.src.startsWith('/') ? `${base}${p.src}` : p.src;
+      return {
+        src: fullSrc,
+        caption: p.caption || '',
+        alt: p.caption || p.alt || ens.data.name,
+      };
+    }),
   })),
 }));
 ---
@@ -433,15 +444,17 @@ const categoriesPayload = categories.map(cat => ({
               {ens.data.photos && ens.data.photos.length > 0 && (
                 <div class="mt-4 pt-3 border-t border-white/10 grid grid-cols-2 gap-2">
                   {ens.data.photos.slice(0, 2).map((p) => {
-                    const fullPhotoUrl = p.startsWith('/') ? `${base}${p}` : p;
+                    const pSrc = typeof p === 'string' ? p : p.src;
+                    const fullPhotoUrl = pSrc.startsWith('/') ? `${base}${pSrc}` : pSrc;
+                    const captionText = (typeof p !== 'string' && (p.caption || p.alt)) ? (p.caption || p.alt) : `${ens.data.name}`;
                     return (
                       <button
                         type="button"
                         data-lightbox-src={fullPhotoUrl}
-                        data-lightbox-alt={`${ens.data.name} — kadr`}
+                        data-lightbox-alt={captionText}
                         class="aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400"
                       >
-                        <img src={fullPhotoUrl} alt={ens.data.name} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
+                        <img src={fullPhotoUrl} alt={captionText} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
                       </button>
                     );
                   })}
@@ -880,14 +893,16 @@ const categoriesPayload = categories.map(cat => ({
       if (photos.length === 0) {
         level3Photos.innerHTML = `<p class="text-xs text-slate-500 col-span-2">Brak materiałów archiwalnych dla tej formacji.</p>`;
       } else {
-        photos.slice(0, 4).forEach((p, pIdx) => {
+        photos.slice(0, 4).forEach((p) => {
+          const pSrc = typeof p === 'string' ? p : p.src;
+          const pAlt = typeof p === 'string' ? `${ensemble.name}` : (p.caption || p.alt || `${ensemble.name}`);
           const btn = document.createElement('button');
           btn.type = 'button';
-          btn.setAttribute('data-lightbox-src', p);
-          btn.setAttribute('data-lightbox-alt', `${ensemble.name} — fotografia archiwalna`);
+          btn.setAttribute('data-lightbox-src', pSrc);
+          btn.setAttribute('data-lightbox-alt', pAlt);
           btn.className = 'group relative aspect-[16/10] overflow-hidden rounded-xl border border-white/15 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left shadow-lg';
           btn.innerHTML = `
-            <img src="${p}" alt="${ensemble.name}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
+            <img src="${pSrc}" alt="${pAlt}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-transparent flex flex-col justify-end p-2.5">
               <div class="flex items-center gap-1.5 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>

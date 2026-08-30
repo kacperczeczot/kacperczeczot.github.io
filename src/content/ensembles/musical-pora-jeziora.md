@@ -10,7 +10,8 @@ highlights:
   - "Wystawienie w Filharmonii Warmińsko-Mazurskiej w Olsztynie (14.12.2022)"
   - "Wystawienie w Operze Krakowskiej (21–22.12.2022)"
 photos:
-  - "/images/ensembles/pora-jeziora-2022.jpg"
+  - src: "/images/ensembles/pora-jeziora-2022.jpg"
+    caption: "Musical „Pora Jeziora” (2022) — Filharmonia Warmińsko-Mazurska w Olsztynie"
 order: 3
 ---
 

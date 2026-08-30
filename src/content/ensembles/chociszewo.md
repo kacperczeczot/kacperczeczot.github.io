@@ -10,7 +10,8 @@ highlights:
   - "Regularne dyrygowanie podczas uroczystości lokalnych i religijnych (m.in. procesja na wodzie na Wiśle)"
   - "Wykonawstwo w sekcji klarnetów"
 photos:
-  - "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
+  - src: "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
+    caption: "Dożynki w Czerwińsku nad Wisłą (2026) — Orkiestra Dęta OSP Chociszewo"
 order: 3
 ---
 
