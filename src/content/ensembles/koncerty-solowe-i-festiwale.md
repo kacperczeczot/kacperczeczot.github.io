@@ -1,16 +1,17 @@
 ---
-name: "Recitale, koncerty i festiwale solowe"
+name: "Występy solowe, kameralne i festiwale"
 pillar: "estrada"
-role: "Solista (śpiew / fortepian)"
-leader: "Inicjatywy własne i zaproszenia festiwalowe"
-concertCount: "Koncerty i recitale"
+role: "Solista / Kameralista (śpiew / fortepian)"
+leader: "Inicjatywy własne i zaproszenia koncertowe"
+concertCount: "Koncerty i festiwale"
 years: "2024–obecnie"
 highlights:
-  - "Koncert „Podróż po muzyce” — Bursa Szkolna w Mławie, recital wokalno-instrumentalny z Olgą Sobolewską (2024)"
+  - "Koncert „Podróż po muzyce” — Bursa Szkolna w Mławie, wykonawstwo wokalno-instrumentalne z Olgą Sobolewską (2024)"
   - "Festiwal Piosenki Powstańczej w Chorzelach (2025)"
-  - "Udział w uroczystościach miejskich, koncertach okolicznościowych i inicjatywach artystycznych w regionie"
+  - "Udział w uroczystościach okolicznościowych i inicjatywach artystycznych w regionie"
 photos: []
 order: 4
 ---
 
-Działalność koncertowa poza strukturami uczelni: autorskie recitale kameralne, występy gościnne, duety oraz udział w regionalnych i ogólnopolskich festiwalach muzycznych.
+Działalność koncertowa poza strukturami uczelni: występy kameralne, duety wokalno-instrumentalne oraz udział w regionalnych festiwalach muzycznych.
+

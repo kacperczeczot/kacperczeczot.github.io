@@ -7,8 +7,8 @@ concertCount: "Cykliczne edycje"
 years: "2023–obecnie"
 highlights:
   - "Dwa wyróżnienia na Estradzie Studenckiej UWM (2023) — trio fortepianowe oraz zespół rozrywkowy"
-  - "Występ solowy: recital fortepianowy (2023)"
-  - "Występy wokalne podczas kolejnych edycji Estrady Studenckiej (2024, 2025)"
+  - "Występ na fortepianie solo (2023)"
+  - "Występy wokalne podczas kolejnych edycji (2024, 2025)"
 photos: []
 order: 2
 ---
