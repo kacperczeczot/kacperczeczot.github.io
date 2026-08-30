@@ -13,6 +13,8 @@ highlights:
 photos:
   - src: "/images/ensembles/krakowiacy-i-gorale-2022.jpg"
     caption: "„Cud mniemany, czyli Krakowiacy i Górale” (2022) w PSM w Mławie — Grupa Operetkowa"
+  - src: "/images/ensembles/bal-w-savoyu-2023.jpg"
+    caption: "Operetka „Bal w Savoyu” (2023) w PSM w Mławie — Grupa Operetkowa"
 order: 1
 ---
 
