@@ -156,6 +156,21 @@ const profilePageSchema = {
               </div>
             ))}
           </div>
+
+          {bioData.bioTheatreImage && (
+            <figure class="space-y-3 pt-2">
+              <div class="border border-white/10 overflow-hidden">
+                <img
+                  src={cmsImage(bioData.bioTheatreImage)}
+                  alt={bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
+                  class="w-full aspect-[16/9] object-cover"
+                />
+              </div>
+              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+                {bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
+              </figcaption>
+            </figure>
+          )}
         </div>
       </div>
     </section>
@@ -207,6 +222,37 @@ const profilePageSchema = {
               </div>
             ))}
           </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+          {bioData.bioPianoImage && (
+            <figure class="space-y-3">
+              <div class="border border-white/10 overflow-hidden">
+                <img
+                  src={cmsImage(bioData.bioPianoImage)}
+                  alt={bioData.bioPianoCaption || "Fortepian"}
+                  class="w-full aspect-[3/2] object-cover"
+                />
+              </div>
+              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+                {bioData.bioPianoCaption}
+              </figcaption>
+            </figure>
+          )}
+          {bioData.bioBandImage && (
+            <figure class="space-y-3">
+              <div class="border border-white/10 overflow-hidden">
+                <img
+                  src={cmsImage(bioData.bioBandImage)}
+                  alt={bioData.bioBandCaption || "Orkiestra dęta"}
+                  class="w-full aspect-[3/2] object-cover"
+                />
+              </div>
+              <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+                {bioData.bioBandCaption}
+              </figcaption>
+            </figure>
+          )}
         </div>
       </div>
     </section>
