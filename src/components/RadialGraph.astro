@@ -284,7 +284,7 @@ const categoriesPayload = categories.map(cat => ({
               <div class="space-y-3">
                 <div class="flex items-center justify-between">
                   <h4 class="text-sm font-sans font-bold uppercase tracking-[0.2em] text-sky-400">
-                    Kadry i materiały archiwalne
+                    Fotografie i materiały archiwalne
                   </h4>
                 </div>
                 <div id="level-3-photos-grid" class="grid grid-cols-2 gap-3">
@@ -888,13 +888,10 @@ const categoriesPayload = categories.map(cat => ({
           btn.className = 'group relative aspect-[16/10] overflow-hidden rounded-xl border border-white/15 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left shadow-lg';
           btn.innerHTML = `
             <img src="${p}" alt="${ensemble.name}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
-            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-black/30 flex flex-col justify-between p-2.5">
-              <span class="self-start text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-sky-300 border border-white/10">
-                Kadr ${pIdx + 1}
-              </span>
+            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-transparent flex flex-col justify-end p-2.5">
               <div class="flex items-center gap-1.5 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                <span>Powiększ</span>
+                <span>Powiększ zdjęcie</span>
               </div>
             </div>
           `;
