@@ -242,7 +242,20 @@ const profilePageSchema = {
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div class="lg:col-span-7 space-y-6">
+          <figure class="lg:col-span-5 order-2 lg:order-1 space-y-3">
+            <div class="border border-white/10 overflow-hidden shadow-2xl">
+              <img
+                src={cmsImage(bioData.bioPianoImage)}
+                alt={bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+              {bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+            </figcaption>
+          </figure>
+
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {mainInstruments.map((inst) => (
                 <div class="border border-white/10 p-6 space-y-2 bg-ocean-900/30">
@@ -265,19 +278,6 @@ const profilePageSchema = {
               </div>
             </div>
           </div>
-
-          <figure class="lg:col-span-5 space-y-3">
-            <div class="border border-white/10 overflow-hidden shadow-2xl">
-              <img
-                src={cmsImage(bioData.bioPianoImage)}
-                alt={bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
-                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
-              />
-            </div>
-            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
-              {bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
-            </figcaption>
-          </figure>
         </div>
       </div>
     </section>
