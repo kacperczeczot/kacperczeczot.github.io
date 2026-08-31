@@ -12,7 +12,7 @@ highlights:
   - "Udział w uroczystościach okolicznościowych i inicjatywach artystycznych w regionie"
 photos:
   - src: "/images/kacper-fortepian-mlawa.jpg"
-    caption: "Park Miejski w Mławie — fortepian"
+    caption: "Park Miejski w Mławie"
 order: 4
 ---
 
