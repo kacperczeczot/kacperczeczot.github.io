@@ -7,13 +7,15 @@ import { base, cmsImage } from '../utils/cms';
 const higherEducation = bioData.higherEducation || [];
 const musicSchoolEducation = bioData.musicSchoolEducation || [];
 const individualAwards = bioData.individualAwards || [];
+const mainInstruments = bioData.mainInstruments || [];
+const additionalInstruments = bioData.additionalInstruments || [];
 const currentRoles = bioData.currentRoles || [];
 
 const profilePageSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
   name: 'Życiorys artystyczny — Kacper Czeczot',
-  description: 'Biografia artystyczna: dyrygentura, wykonawstwo sceniczne, praca z orkiestrami dętymi i chórami oraz wykształcenie na UWM i w PSM w Mławie.',
+  description: 'Biografia artystyczna, edukacja, instrumentarium, nagrody i pełnione funkcje dyrygenckie Kacpra Czeczota.',
   mainEntity: {
     '@type': 'Person',
     name: 'Kacper Czeczot',
@@ -25,7 +27,7 @@ const profilePageSchema = {
 
 <BaseLayout
   title="Życiorys artystyczny — Kacper Czeczot"
-  description="Biografia artystyczna: dyrygentura, wykonawstwo sceniczne, praca z orkiestrami dętymi i chórami oraz wykształcenie na UWM i w PSM w Mławie."
+  description="Biografia artystyczna, edukacja, instrumentarium, nagrody i pełnione funkcje dyrygenckie Kacpra Czeczota."
   jsonLd={profilePageSchema}
 >
   <!-- Hero Section -->
@@ -44,7 +46,8 @@ const profilePageSchema = {
     <!-- Wprowadzenie & Portret Główny -->
     <section class="py-16 md:py-24 border-b border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:g          <div class="lg:col-span-7 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7 space-y-6">
             <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Sylwetka</p>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-white leading-tight">
               Dyrygentura, wykonawstwo i edukacja muzyczna
@@ -56,6 +59,19 @@ const profilePageSchema = {
               <p>
                 Wyróżniony tytułem <strong class="text-white font-medium">Najlepszego Absolwenta Wydziału Sztuki UWM w Olsztynie (2024/2025)</strong> oraz Nagrodą Dziekana za dyplomowe dzieło artystyczne, prowadzi działalność kapelmistrzowską w orkiestrach dętych Mazowsza, wykonawstwo chóralne oraz projekty z zakresu produkcji muzycznej i realizacji dźwięku.
               </p>
+            </div>
+
+            <!-- Pełnione funkcje -->
+            <div class="pt-4 border-t border-white/10">
+              <p class="text-xs font-sans uppercase tracking-widest text-sky-400 mb-3">Aktualne stanowiska i funkcje</p>
+              <ul class="divide-y divide-white/10 text-sm">
+                {currentRoles.map((post) => (
+                  <li class="py-3 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                    <span class="font-display text-base text-white">{post.title}</span>
+                    <span class="text-xs text-slate-400 font-sans">{post.detail}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -83,7 +99,7 @@ const profilePageSchema = {
             <div class="border border-white/10 overflow-hidden shadow-xl">
               <img
                 src={cmsImage(bioData.bioTheatreImage)}
-                alt={bioData.bioTheatreCaption || "Scena operetkowa — PSM w Mławie"}
+                alt={bioData.bioTheatreCaption || "„Cud mniemany, czyli Krakowiacy i Górale” (2022) — PSM w Mławie"}
                 class="w-full aspect-[16/9] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -215,7 +231,58 @@ const profilePageSchema = {
       </div>
     </section>
 
-    <!-- Zestawienie: Edukacja & Kluczowe Wyróżnienia -->
+    <!-- Instrumentarium & Warsztat Muzyczny -->
+    <section class="py-16 md:py-24 border-b border-white/10 bg-ocean-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="space-y-2">
+          <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">Warsztat</p>
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white">
+            Instrumentarium & dyscypliny muzyczne
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {mainInstruments.map((inst) => (
+                <div class="border border-white/10 p-6 space-y-2 bg-ocean-900/30">
+                  <p class="text-[11px] font-sans uppercase tracking-widest text-sky-400">{inst.category}</p>
+                  <h4 class="text-xl font-display text-white">{inst.name}</h4>
+                  <p class="text-xs text-slate-300 font-sans font-light leading-relaxed">{inst.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div class="border border-white/10 p-6 space-y-4 bg-ocean-900/20">
+              <h4 class="text-xs font-sans uppercase tracking-[0.22em] text-white">Instrumentarium dodatkowe</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {additionalInstruments.map((item) => (
+                  <div class="space-y-1 border-l border-white/10 pl-3">
+                    <h5 class="text-sm font-display text-white">{item.name}</h5>
+                    <p class="text-xs text-slate-400 font-sans font-light">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <figure class="lg:col-span-5 space-y-3">
+            <div class="border border-white/10 overflow-hidden shadow-2xl">
+              <img
+                src={cmsImage(bioData.bioPianoImage)}
+                alt={bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+                class="w-full aspect-[3/2] object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <figcaption class="text-[11px] font-sans uppercase tracking-widest text-slate-500">
+              {bioData.bioPianoCaption || "Park Miejski w Mławie — fortepian"}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zestawienie: Edukacja & Nagrody -->
     <section class="py-16 md:py-24 border-b border-white/10 bg-ocean-900/30">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div class="text-center max-w-2xl mx-auto space-y-3">
@@ -234,18 +301,19 @@ const profilePageSchema = {
               <p class="text-xs text-slate-400 font-sans">Wydział Sztuki · Instytut Muzyki</p>
             </div>
             <ul class="space-y-4 text-sm text-slate-300 font-sans font-light divide-y divide-white/5">
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2025 – obecnie</span>
-                <strong>Studia II stopnia (Magisterskie)</strong> — Edukacja artystyczna w zakresie sztuki muzycznej
-              </li>
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2023 – obecnie</span>
-                <strong>Studia I stopnia (Licencjackie, równoległe)</strong> — Produkcja Muzyczna i Realizacja Dźwięku
-              </li>
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2021 – 2025</span>
-                <strong>Dyplom z Wyróżnieniem (Licencjat)</strong> — Edukacja artystyczna w zakresie sztuki muzycznej (Tytuł Najlepszego Absolwenta Wydziału Sztuki)
-              </li>
+              {higherEducation.map((item) => (
+                <li class="pt-3 space-y-1">
+                  <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">{item.period}</span>
+                  <div class="text-white font-medium">{item.degree} — <span class="text-slate-300 font-normal">{item.specialization}</span></div>
+                  {item.highlights && item.highlights.length > 0 && (
+                    <ul class="text-xs text-slate-400 list-disc list-inside pt-1 space-y-0.5">
+                      {item.highlights.map((h: string) => (
+                        <li>{h}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -257,18 +325,19 @@ const profilePageSchema = {
               <p class="text-xs text-slate-400 font-sans">Kształcenie instrumentalne i wokalne</p>
             </div>
             <ul class="space-y-4 text-sm text-slate-300 font-sans font-light divide-y divide-white/5">
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2018 – 2022</span>
-                <strong>Dyplom z Wyróżnieniem (II Stopień)</strong> — Wydział Wokalny (tytuł zawodowy muzyka, klasa śpiewu M. Gogolewskiego)
-              </li>
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2010 – 2016</span>
-                <strong>Świadectwo z Wyróżnieniem (I Stopień)</strong> — Klasa fortepianu (I. Wereda) oraz skrzypce
-              </li>
-              <li class="pt-3">
-                <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">2019 – 2022</span>
-                Przewodniczący Samorządu Uczniowskiego PSM i inicjator Orkiestry Samorządu
-              </li>
+              {musicSchoolEducation.map((item) => (
+                <li class="pt-3 space-y-1">
+                  <span class="text-sky-400 font-medium block text-xs uppercase tracking-wider">{item.period}</span>
+                  <div class="text-white font-medium">{item.degree} — <span class="text-slate-300 font-normal">{item.specialization}</span></div>
+                  {item.highlights && item.highlights.length > 0 && (
+                    <ul class="text-xs text-slate-400 list-disc list-inside pt-1 space-y-0.5">
+                      {item.highlights.map((h: string) => (
+                        <li>{h}</li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
