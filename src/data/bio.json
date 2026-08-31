@@ -111,14 +111,14 @@
       "desc": "Dyrygentura orkiestrowa (dęta i symfoniczna) oraz chóralna. Przygotowanie aparatu wykonawczego i prowadzenie koncertów."
     },
     {
-      "name": "Klarnet",
-      "category": "Instrument główny",
-      "desc": "Wykonawstwo w orkiestrach dętych i składach kameralnych."
-    },
-    {
       "name": "Fortepian",
       "category": "Instrument główny",
       "desc": "Wykształcenie w klasie fortepianu, akompaniament oraz praca z wyciągami fortepianowymi."
+    },
+    {
+      "name": "Klarnet",
+      "category": "Drugi instrument",
+      "desc": "Wykonawstwo w orkiestrach dętych i składach kameralnych."
     },
     {
       "name": "Śpiew / Wokalistyka",
@@ -127,8 +127,11 @@
     }
   ],
   "additionalInstruments": [
-    { "name": "Organy liturgiczne", "desc": "Oprawa muzyczna i akompaniament liturgiczny." },
-    { "name": "Perkusja / Kotły", "desc": "Sekcja perkusyjna w składach orkiestrowych." },
-    { "name": "Skrzypce / Akordeon", "desc": "Edukacja wczesnoszkolna i instrumentarium dodatkowe." }
+    "Organy liturgiczne",
+    "Perkusja",
+    "Kotły",
+    "Gitara",
+    "Skrzypce",
+    "Akordeon"
   ]
 }

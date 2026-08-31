@@ -266,14 +266,13 @@ const profilePageSchema = {
               ))}
             </div>
 
-            <div class="border border-white/10 p-6 space-y-4 bg-ocean-900/20">
+            <div class="border border-white/10 p-6 space-y-3 bg-ocean-900/20">
               <h4 class="text-xs font-sans uppercase tracking-[0.22em] text-white">Instrumentarium dodatkowe</h4>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {additionalInstruments.map((item) => (
-                  <div class="space-y-1 border-l border-white/10 pl-3">
-                    <h5 class="text-sm font-display text-white">{item.name}</h5>
-                    <p class="text-xs text-slate-400 font-sans font-light">{item.desc}</p>
-                  </div>
+              <div class="flex flex-wrap gap-2.5 pt-1">
+                {additionalInstruments.map((item: any) => (
+                  <span class="px-3.5 py-1.5 border border-white/10 text-xs font-sans text-slate-300 bg-ocean-950/60">
+                    {typeof item === 'string' ? item : item.name}
+                  </span>
                 ))}
               </div>
             </div>
