@@ -113,7 +113,7 @@
     {
       "name": "Fortepian",
       "category": "Instrument główny",
-      "desc": "Wykształcenie w klasie fortepianu, akompaniament oraz praca z wyciągami fortepianowymi."
+      "desc": "Wykształcenie w klasie fortepianu (I st. PSM z wyróżnieniem), akompaniament oraz wykonawstwo sceniczne."
     },
     {
       "name": "Klarnet",
@@ -123,7 +123,7 @@
     {
       "name": "Śpiew / Wokalistyka",
       "category": "Śpiew solowy & zespołowy",
-      "desc": "Dyplom z wokalistyki z wyróżnieniem. Role operetkowe, musicalowe oraz wykonawstwo w chórach i zespołach wokalnych."
+      "desc": "Dyplom z wokalistyki z wyróżnieniem, role operetkowe i musicalowe oraz śpiew chóralny."
     }
   ],
   "additionalInstruments": [
