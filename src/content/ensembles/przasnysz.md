@@ -12,7 +12,7 @@ photos:
   - src: "/images/ensembles/przasnysz-kolno-2025.jpg"
     event: "Festiwal"
     date: "2025"
-    location: "Kolnie"
+    location: "Kolno"
 order: 8
 ---
 

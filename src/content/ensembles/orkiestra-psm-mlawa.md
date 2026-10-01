@@ -14,7 +14,7 @@ photos:
   - src: "/images/ensembles/psm-mlawa-wiosenny-2022.jpg"
     event: "Koncert Wiosenny"
     date: "2022"
-    location: "Mławie"
+    location: "Mława"
 order: 6
 ---
 

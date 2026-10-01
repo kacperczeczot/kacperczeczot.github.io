@@ -13,7 +13,7 @@ photos:
   - src: "/images/ensembles/pora-jeziora-2022.jpg"
     event: "Musical „Pora Jeziora”"
     date: "2022"
-    location: "Olsztynie"
+    location: "Olsztyn"
 order: 3
 ---
 

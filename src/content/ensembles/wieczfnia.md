@@ -14,7 +14,7 @@ photos:
   - src: "/images/ensembles/wieczfnia-szydlowo-2026.jpg"
     event: "Koncert"
     date: "2026"
-    location: "Szydłowie"
+    location: "Szydłowo"
 order: 4
 ---
 
