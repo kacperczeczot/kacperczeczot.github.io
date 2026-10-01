@@ -3,7 +3,7 @@ name: "Orkiestra Dęta OSP Bogate"
 pillar: "orkiestry"
 role: "Zastępca Kapelmistrza / Klarnecista / Instruktor"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
-concertCount: "3 występy"
+concertCount: "4 występy"
 years: "2025–obecnie"
 highlights:
   - "Dożynki w Bogatem (2026)"

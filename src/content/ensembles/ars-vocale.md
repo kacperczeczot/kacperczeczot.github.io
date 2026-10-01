@@ -3,7 +3,7 @@ name: "Chór „Ars Vocale” Instytutu Muzyki"
 pillar: "chory"
 role: "Śpiewak / Klarnecista"
 leader: "dr hab. Karol Kisiel, prof. UWM"
-concertCount: "8 występów"
+concertCount: "9 występów"
 years: "2022–2025"
 highlights:
   - "Złoty Dyplom na XIX Festiwalu „O, Warmio moja miła” w Olsztynie (2023)"
@@ -12,6 +12,10 @@ highlights:
 photos:
   - src: "/images/ensembles/ars-vocale-pomerania-2024.jpg"
     caption: "VII Bałtycki Konkurs Chórów „Pomerania Cantat”, Słupsk (2024) — Chór „Ars Vocale”"
+  - src: "/images/ensembles/ars-vocale-warmio-moja-mila-2026.jpeg"
+    caption: "Koncert „O Warmio moja miła” (2026) — Chór „Ars Vocale”"
+  - src: "/images/ensembles/ars-vocale-koledy-2024.jpg"
+    caption: "Koncert „Śpiewajmy kolędy” w Bazylice Katedralnej (2024) — Chór „Ars Vocale”"
 order: 3
 ---
 

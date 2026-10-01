@@ -3,7 +3,7 @@ name: "Orkiestra Dęta OSP Chociszewo"
 pillar: "orkiestry"
 role: "Zastępca Kapelmistrza / Klarnecista"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
-concertCount: "11 występów"
+concertCount: "13 występów"
 years: "2024–obecnie"
 highlights:
   - "Koncerty i uroczystości plenerowe, m.in. Dożynki w Czerwińsku nad Wisłą (2026)"

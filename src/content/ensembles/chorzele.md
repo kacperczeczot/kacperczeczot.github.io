@@ -3,7 +3,7 @@ name: "Miejska Młodzieżowa Orkiestra Dęta w Chorzelach"
 pillar: "orkiestry"
 role: "Klarnecista / Organista / Śpiewak"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
-concertCount: "15 występów"
+concertCount: "16 występów"
 years: "2022–obecnie"
 highlights:
   - "I Miejsce na Międzynarodowym Festiwalu „Karnolsky Summer Camp” w Bułgarii (2024)"

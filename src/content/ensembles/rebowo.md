@@ -3,7 +3,7 @@ name: "Orkiestra Dęta OSP w Rębowie"
 pillar: "orkiestry"
 role: "Zastępca Kapelmistrza / Instruktor"
 leader: "Tomasz Wesołowski (Kapelmistrz)"
-concertCount: "18 występów"
+concertCount: "24 występy"
 years: "2024–obecnie"
 highlights:
   - "Koncerty i występy plenerowe, m.in. Dni Wisły w Wyszogrodzie (2025)"
