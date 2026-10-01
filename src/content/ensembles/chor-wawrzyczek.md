@@ -24,6 +24,7 @@ photos:
   - src: "/images/ensembles/wawrzyczek-korzenie-zapamietane-2026.jpeg"
     event: "Koncert „Korzenie zapamiętane”"
     date: "20 czerwca 2026"
+    location: "Filharmonia Warmińsko-Mazurska"
   - src: "/images/ensembles/wawrzyczek-symfonia-mahlera-2026.jpg"
     event: "II Symfonia Gustawa Mahlera"
     date: "21 marca 2026"
