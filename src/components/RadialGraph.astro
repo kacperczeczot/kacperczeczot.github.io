@@ -930,7 +930,7 @@ const categoriesPayload = categories.map(cat => ({
       if (photos.length === 0) {
         level3Photos.innerHTML = `<p class="text-xs text-slate-500 col-span-2">Brak materiałów archiwalnych dla tej formacji.</p>`;
       } else {
-        photos.forEach((p) => {
+        photos.forEach((p, index) => {
           const pSrc = typeof p === 'string' ? p : p.src;
           const pEvent = typeof p === 'string' ? '' : (p.event || '');
           const pDate = typeof p === 'string' ? '' : (p.date || '');
@@ -950,10 +950,30 @@ const categoriesPayload = categories.map(cat => ({
           btn.setAttribute('data-lightbox-src', pSrc);
           btn.setAttribute('data-lightbox-alt', plainAlt);
           btn.setAttribute('data-lightbox-caption', formattedCaption);
-          btn.className = 'group relative aspect-[16/10] overflow-hidden rounded-xl border border-white/15 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left shadow-lg';
+          
+          let extraClasses = '';
+          let overlayHTML = '';
+          
+          if (index > 3) {
+             extraClasses = ' hidden';
+          }
+          
+          if (index === 3 && photos.length > 4) {
+             const remaining = photos.length - 4;
+             overlayHTML = `
+               <div class="absolute inset-0 bg-ocean-950/80 backdrop-blur-[2px] flex flex-col items-center justify-center text-white z-10 transition-colors group-hover:bg-ocean-950/60">
+                 <span class="text-2xl sm:text-3xl font-bold">+${remaining}</span>
+                 <span class="text-xs sm:text-sm font-medium tracking-wide">zobacz więcej</span>
+               </div>
+             `;
+          }
+
+          btn.className = 'group relative aspect-[16/10] overflow-hidden rounded-xl border border-white/15 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left shadow-lg' + extraClasses;
+          
           btn.innerHTML = `
             <img src="${pSrc}" alt="${plainAlt}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
-            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-transparent flex flex-col justify-end p-2.5">
+            ${overlayHTML}
+            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-transparent flex flex-col justify-end p-2.5 z-0">
               <div class="flex items-center gap-1.5 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                 <span>Powiększ zdjęcie</span>
