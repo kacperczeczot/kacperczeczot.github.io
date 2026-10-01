@@ -10,6 +10,10 @@ highlights:
   - "Projekty wokalno-instrumentalne Filharmonii Warmińsko-Mazurskiej"
   - "Repertuar m.in. „Mapa demokracji” oraz „Pejzaże muzyczne Warmii i Mazur”"
 photos:
+  - src: "/images/ensembles/cantores-mapa-demokracji-2023.jpg"
+    event: "Koncert symfoniczny „Mapa demokracji”"
+    date: "8 grudnia 2023"
+    location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
   - src: "/images/ensembles/cantores-jubileusz-2024.jpg"
     event: "Koncert z okazji 15-lecia chóru Cantores Varmienses"
     date: "17 maja 2024"
