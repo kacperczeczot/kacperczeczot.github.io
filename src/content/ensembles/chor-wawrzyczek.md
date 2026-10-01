@@ -13,6 +13,10 @@ highlights:
   - "Udział w Montenegro Music Fest w Budvie, Czarnogóra (2026)"
   - "Zarządzanie archiwum nutowym i biblioteką chóru, dyrygowanie projektami dyplomowymi"
 photos:
+  - src: "/images/ensembles/wawrzyczek-wlochy-2024.webp"
+    event: "XIV Międzynarodowy Festiwal Chórów i Orkiestr"
+    date: "17-21 lipca 2024"
+    location: "Montecatini Terme, Włochy"
   - src: "/images/ensembles/wawrzyczek-wilno-2025.jpg"
     event: "Koncert w Państwowej Filharmonii w Wilnie"
     date: "24 maja 2025"
