@@ -12,8 +12,8 @@ highlights:
   - "Aranżacje na aparat dęty; wykonawstwo na klarnecie, perkusji i wokalnie"
 photos:
   - src: "/images/ensembles/wieczfnia-szydlowo-2026.jpg"
-    event: "Koncert"
-    date: "2026"
+    event: "Koncert Noworoczny"
+    date: "11 stycznia 2026"
     location: "Szydłowo"
 order: 4
 ---

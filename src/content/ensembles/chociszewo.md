@@ -11,9 +11,9 @@ highlights:
   - "Wykonawstwo w sekcji klarnetów"
 photos:
   - src: "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
-    event: "Dożynki"
-    date: "2026"
-    location: "Czerwińsku nad Wisłą"
+    event: "Dożynki Dekanalne"
+    date: "15 sierpnia 2026"
+    location: "Czerwińsk nad Wisłą"
 order: 3
 ---
 
