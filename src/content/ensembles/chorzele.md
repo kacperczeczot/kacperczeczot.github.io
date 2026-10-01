@@ -11,7 +11,9 @@ highlights:
   - "Koncerty okolicznościowe i festiwalowe w kraju i za granicą"
 photos:
   - src: "/images/ensembles/chorzele-karnolsky-2024.jpg"
-    caption: "Karnolsky Summer Camp 2024 (Bułgaria) — Miejska Młodzieżowa Orkiestra Dęta w Chorzelach"
+    event: "Karnolsky Summer Camp"
+    date: "2024"
+    location: "Bułgaria"
 order: 5
 ---
 

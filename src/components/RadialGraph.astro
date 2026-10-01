@@ -82,13 +82,16 @@ const categoriesPayload = categories.map(cat => ({
     photos: (ens.data.photos || []).filter(Boolean).map(p => {
       if (typeof p === 'string') {
         const fullSrc = p.startsWith('/') ? `${base}${p}` : p;
-        return { src: fullSrc, caption: '', alt: ens.data.name };
+        return { src: fullSrc, caption: '', alt: ens.data.name, event: '', date: '', location: '' };
       }
       const fullSrc = p.src.startsWith('/') ? `${base}${p.src}` : p.src;
       return {
         src: fullSrc,
         caption: p.caption || '',
         alt: p.caption || p.alt || ens.data.name,
+        event: p.event || '',
+        date: p.date || '',
+        location: p.location || '',
       };
     }),
   })),
@@ -446,15 +449,29 @@ const categoriesPayload = categories.map(cat => ({
                   {ens.data.photos.slice(0, 2).map((p) => {
                     const pSrc = typeof p === 'string' ? p : p.src;
                     const fullPhotoUrl = pSrc.startsWith('/') ? `${base}${pSrc}` : pSrc;
-                    const captionText = (typeof p !== 'string' && (p.caption || p.alt)) ? (p.caption || p.alt) : `${ens.data.name}`;
+                    
+                    let pEvent = typeof p !== 'string' ? p.event : '';
+                    let pDate = typeof p !== 'string' ? p.date : '';
+                    let pLocation = typeof p !== 'string' ? p.location : '';
+                    let pCaption = typeof p !== 'string' ? (p.caption || p.alt || '') : '';
+                    
+                    let plainAlt = pEvent ? `${pEvent} - ${ens.data.name}` : (pCaption || ens.data.name);
+                    let formattedCaption = '';
+                    if (pEvent) {
+                       formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div><div class="text-xs mt-1 text-slate-300 opacity-80">${ens.data.name}</div>`;
+                    } else {
+                       formattedCaption = pCaption || ens.data.name;
+                    }
+
                     return (
                       <button
                         type="button"
                         data-lightbox-src={fullPhotoUrl}
-                        data-lightbox-alt={captionText}
+                        data-lightbox-alt={plainAlt}
+                        data-lightbox-caption={formattedCaption}
                         class="aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400"
                       >
-                        <img src={fullPhotoUrl} alt={captionText} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
+                        <img src={fullPhotoUrl} alt={plainAlt} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
                       </button>
                     );
                   })}
@@ -895,14 +912,27 @@ const categoriesPayload = categories.map(cat => ({
       } else {
         photos.slice(0, 4).forEach((p) => {
           const pSrc = typeof p === 'string' ? p : p.src;
-          const pAlt = typeof p === 'string' ? `${ensemble.name}` : (p.caption || p.alt || `${ensemble.name}`);
+          const pEvent = typeof p === 'string' ? '' : (p.event || '');
+          const pDate = typeof p === 'string' ? '' : (p.date || '');
+          const pLocation = typeof p === 'string' ? '' : (p.location || '');
+          const pCaption = typeof p === 'string' ? '' : (p.caption || p.alt || '');
+          
+          let plainAlt = pEvent ? `${pEvent} - ${ensemble.name}` : (pCaption || ensemble.name);
+          let formattedCaption = '';
+          if (pEvent) {
+             formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div><div class="text-xs mt-1 text-slate-300 opacity-80">${ensemble.name}</div>`;
+          } else {
+             formattedCaption = pCaption || ensemble.name;
+          }
+          
           const btn = document.createElement('button');
           btn.type = 'button';
           btn.setAttribute('data-lightbox-src', pSrc);
-          btn.setAttribute('data-lightbox-alt', pAlt);
+          btn.setAttribute('data-lightbox-alt', plainAlt);
+          btn.setAttribute('data-lightbox-caption', formattedCaption);
           btn.className = 'group relative aspect-[16/10] overflow-hidden rounded-xl border border-white/15 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left shadow-lg';
           btn.innerHTML = `
-            <img src="${pSrc}" alt="${pAlt}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
+            <img src="${pSrc}" alt="${plainAlt}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/90 via-transparent to-transparent flex flex-col justify-end p-2.5">
               <div class="flex items-center gap-1.5 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg class="w-3.5 h-3.5 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>

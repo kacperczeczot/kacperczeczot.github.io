@@ -11,9 +11,9 @@ highlights:
   - "„Smerfowisko, czyli Gargamel złapany” (2022) — Smerf Zgrywus"
 photos:
   - src: "/images/ensembles/teatr-muzyczny-disney-2023.jpg"
-    caption: "Gala Disney (2023) w Centrum Konferencyjnym UWM — Teatr Muzyczny UWM"
+    event: "Gala Disney (2023) w Centrum Konferencyjnym UWM"
   - src: "/images/ensembles/teatr-muzyczny-smerfowisko-2022.jpg"
-    caption: "„Smerfowisko, czyli Gargamel złapany” (2022) w Kwidzyńskim Centrum Kultury — Teatr Muzyczny UWM"
+    event: "„Smerfowisko, czyli Gargamel złapany” (2022) w Kwidzyńskim Centrum Kultury"
 order: 2
 ---
 

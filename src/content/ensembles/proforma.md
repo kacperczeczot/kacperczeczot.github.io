@@ -11,9 +11,9 @@ highlights:
   - "Koncert świąteczny „Stare telefony działają cuda” (Manufaktura, Łódź)"
 photos:
   - src: "/images/ensembles/proforma-era-spiewu-2023.jpg"
-    caption: "„Era śpiewu. Warmia Mazury — Gwiazdy i Chóry” (2023) w Filharmonii Warmińsko-Mazurskiej — Chór ProForma Project"
+    event: "„Era śpiewu. Warmia Mazury"
   - src: "/images/ensembles/proforma-afryka-2024.jpg"
-    caption: "Plakat spektaklu „Opowieści z Afryki” (2024) w Centrum Konferencyjnym UWM — Chór ProForma Project"
+    event: "Plakat spektaklu „Opowieści z Afryki” (2024) w Centrum Konferencyjnym UWM"
 order: 4
 ---
 

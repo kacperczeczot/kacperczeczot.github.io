@@ -10,7 +10,9 @@ highlights:
   - "Reprezentowanie orkiestry podczas festiwali i przeglądów regionalnych"
 photos:
   - src: "/images/ensembles/przasnysz-kolno-2025.jpg"
-    caption: "Festiwal w Kolnie (2025) — Orkiestra Dęta OSP Przasnysz"
+    event: "Festiwal"
+    date: "2025"
+    location: "Kolnie"
 order: 8
 ---
 

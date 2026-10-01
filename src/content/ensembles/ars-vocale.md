@@ -11,11 +11,15 @@ highlights:
   - "Udział konkursowy w VII Bałtyckim Konkursie Chórów „Pomerania Cantat” w Słupsku (2024)"
 photos:
   - src: "/images/ensembles/ars-vocale-pomerania-2024.jpg"
-    caption: "VII Bałtycki Konkurs Chórów „Pomerania Cantat”, Słupsk (2024) — Chór „Ars Vocale”"
+    event: "VII Bałtycki Konkurs Chórów „Pomerania Cantat”, Słupsk"
+    date: "2024"
   - src: "/images/ensembles/ars-vocale-warmio-moja-mila-2026.jpeg"
-    caption: "Koncert „O Warmio moja miła” (2026) — Chór „Ars Vocale”"
+    event: "Koncert „O Warmio moja miła”"
+    date: "2026"
   - src: "/images/ensembles/ars-vocale-koledy-2024.jpg"
-    caption: "Koncert „Śpiewajmy kolędy” w Bazylice Katedralnej (2024) — Chór „Ars Vocale”"
+    event: "Koncert „Śpiewajmy kolędy”"
+    date: "2024"
+    location: "Bazylice Katedralnej"
 order: 3
 ---
 

@@ -12,7 +12,9 @@ highlights:
   - "Wykonawstwo na klarnecie i perkusji"
 photos:
   - src: "/images/ensembles/psm-mlawa-wiosenny-2022.jpg"
-    caption: "Koncert Wiosenny (2022) — Orkiestra PSM I i II st. w Mławie"
+    event: "Koncert Wiosenny"
+    date: "2022"
+    location: "Mławie"
 order: 6
 ---
 

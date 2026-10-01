@@ -12,7 +12,9 @@ highlights:
   - "Aranżacje na aparat dęty; wykonawstwo na klarnecie, perkusji i wokalnie"
 photos:
   - src: "/images/ensembles/wieczfnia-szydlowo-2026.jpg"
-    caption: "Koncert w Szydłowie (2026) — Młodzieżowa Orkiestra Dęta Wieczfnia Kościelna"
+    event: "Koncert"
+    date: "2026"
+    location: "Szydłowie"
 order: 4
 ---
 

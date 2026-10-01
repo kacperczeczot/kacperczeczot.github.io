@@ -11,7 +11,9 @@ highlights:
   - "Wykonawstwo w sekcji klarnetów"
 photos:
   - src: "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
-    caption: "Dożynki w Czerwińsku nad Wisłą (2026) — Orkiestra Dęta OSP Chociszewo"
+    event: "Dożynki"
+    date: "2026"
+    location: "Czerwińsku nad Wisłą"
 order: 3
 ---
 

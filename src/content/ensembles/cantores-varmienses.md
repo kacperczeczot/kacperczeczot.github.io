@@ -11,7 +11,8 @@ highlights:
   - "Repertuar m.in. „Mapa demokracji” oraz „Pejzaże muzyczne Warmii i Mazur”"
 photos:
   - src: "/images/ensembles/cantores-jubileusz-2024.jpg"
-    caption: "Koncert z okazji 15-lecia chóru Cantores Varmienses (2024) — Filharmonia Warmińsko-Mazurska"
+    event: "Koncert z okazji 15-lecia chóru Cantores Varmienses"
+    date: "2024"
 order: 2
 ---
 

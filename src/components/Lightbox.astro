@@ -47,11 +47,11 @@ import { X } from 'lucide-astro';
 
     if (!lightbox || !lightboxImg || !lightboxCaption || !closeBtn) return;
 
-    function openLightbox(src: string, alt: string) {
+    function openLightbox(src: string, alt: string, captionHTML: string) {
       if (!lightbox || !lightboxImg || !lightboxCaption) return;
       lightboxImg.src = src;
       lightboxImg.alt = alt || 'Zdjęcie archiwalne';
-      lightboxCaption.textContent = alt || 'Podgląd fotografii';
+      lightboxCaption.innerHTML = captionHTML || alt || 'Podgląd fotografii';
       
       lightbox.classList.remove('hidden');
       // Trigger animation
@@ -95,15 +95,16 @@ import { X } from 'lucide-astro';
         e.preventDefault();
         const src = target.getAttribute('data-lightbox-src') || '';
         const alt = target.getAttribute('data-lightbox-alt') || '';
-        if (src) openLightbox(src, alt);
+        const caption = target.getAttribute('data-lightbox-caption') || alt;
+        if (src) openLightbox(src, alt, caption);
       }
     });
 
     // Listen to custom event
     window.addEventListener('open-lightbox-event', (e: Event) => {
-      const customEvent = e as CustomEvent<{ src: string; alt: string }>;
+      const customEvent = e as CustomEvent<{ src: string; alt: string; caption?: string }>;
       if (customEvent.detail?.src) {
-        openLightbox(customEvent.detail.src, customEvent.detail.alt);
+        openLightbox(customEvent.detail.src, customEvent.detail.alt, customEvent.detail.caption || customEvent.detail.alt);
       }
     });
   }

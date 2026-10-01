@@ -11,7 +11,9 @@ highlights:
   - "Opracowanie i wdrożenie nowych aranżacji marszowych do stałego repertuaru"
 photos:
   - src: "/images/ensembles/rebowo-wyszogrod-2025.jpg"
-    caption: "Dni Wisły w Wyszogrodzie (2025) — Orkiestra Dęta OSP w Rębowie"
+    event: "Dni Wisły w Wyszogrodzie"
+    date: "2025"
+    location: "Rębowie"
 order: 2
 ---
 

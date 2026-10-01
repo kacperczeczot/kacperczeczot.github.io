@@ -12,7 +12,9 @@ highlights:
   - "Reorganizacja sekcji instrumentów dętych drewnianych i blaszanych"
 photos:
   - src: "/images/ensembles/opinogora-piknik-2026.jpg"
-    caption: "Piknik rodzinny w Opinogórze Górnej (2026) — Orkiestra GOK w Opinogórze Górnej"
+    event: "Piknik rodzinny w Opinogórze Górnej"
+    date: "2026"
+    location: "Opinogórze Górnej"
 order: 1
 ---
 

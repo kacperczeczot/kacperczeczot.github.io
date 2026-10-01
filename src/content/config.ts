@@ -6,6 +6,9 @@ const photoItemSchema = z.union([
     src: z.string(),
     caption: z.string().optional(),
     alt: z.string().optional(),
+    event: z.string().optional(),
+    date: z.string().optional(),
+    location: z.string().optional(),
   }),
 ]);
 

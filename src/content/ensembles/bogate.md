@@ -11,7 +11,7 @@ highlights:
   - "Instruktaż oraz wsparcie wykonawcze"
 photos:
   - src: "/images/ensembles/bogate-dozynki-2026.jpg"
-    caption: "Dożynki w Bogatem 2026 — Orkiestra Dęta OSP Bogate"
+    event: "Dożynki w Bogatem 2026"
 order: 7
 ---
 
