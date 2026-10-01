@@ -10,6 +10,10 @@ highlights:
   - "Trio fortepianowe z Pauliną Szczech (2023, 2025)"
   - "Śpiew w nonecie — dyplom Jakuba Maślanki (2025)"
 photos:
+  - src: "/images/ensembles/dyplom-wozniak-2026.png"
+    event: "Dyplom Martyny Woźniak"
+    date: "20 maja 2026"
+    location: "Centrum Konferencyjne UWM w Olsztynie"
   - src: "/images/ensembles/dyplom-szczech-2025.jpg"
     event: "Dyplom Pauliny Szczech (trio fortepianowe)"
     date: "13 maja 2025"
