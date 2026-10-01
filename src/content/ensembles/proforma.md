@@ -12,11 +12,11 @@ highlights:
 photos:
   - src: "/images/ensembles/proforma-era-spiewu-2023.jpg"
     event: "Era śpiewu. Warmia Mazury"
-    date: "2023"
+    date: "13 października 2023"
     location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
   - src: "/images/ensembles/proforma-afryka-2024.jpg"
     event: "Spektakl „Opowieści z Afryki”"
-    date: "2024"
+    date: "3 marca 2024"
     location: "Centrum Konferencyjne UWM w Olsztynie"
 order: 4
 ---

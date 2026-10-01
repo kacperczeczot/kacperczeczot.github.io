@@ -11,7 +11,7 @@ highlights:
 photos:
   - src: "/images/ensembles/przasnysz-kolno-2025.jpg"
     event: "Festiwal"
-    date: "2025"
+    date: "9 listopada 2025"
     location: "Kolno"
 order: 8
 ---

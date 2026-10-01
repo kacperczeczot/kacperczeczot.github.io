@@ -12,7 +12,7 @@ highlights:
 photos:
   - src: "/images/ensembles/rebowo-wyszogrod-2025.jpg"
     event: "Dni Wisły w Wyszogrodzie"
-    date: "2025"
+    date: "14 czerwca 2025"
     location: "Rębowo"
 order: 2
 ---

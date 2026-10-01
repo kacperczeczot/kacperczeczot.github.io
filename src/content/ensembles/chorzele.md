@@ -12,7 +12,7 @@ highlights:
 photos:
   - src: "/images/ensembles/chorzele-karnolsky-2024.jpg"
     event: "Karnolsky Summer Camp"
-    date: "2024"
+    date: "27-28 sierpnia 2024"
     location: "Bułgaria"
 order: 5
 ---
