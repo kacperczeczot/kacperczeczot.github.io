@@ -18,7 +18,7 @@ photos:
     date: "20 czerwca 2026"
   - src: "/images/ensembles/ars-vocale-koledy-2024.jpg"
     event: "Koncert „Śpiewajmy kolędy”"
-    date: "Styczeń 2024"
+    date: "7 stycznia 2024"
     location: "Bazylika Katedralna"
 order: 3
 ---
