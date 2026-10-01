@@ -10,6 +10,10 @@ highlights:
   - "Trio fortepianowe z Pauliną Szczech (2023, 2025)"
   - "Śpiew w nonecie — dyplom Jakuba Maślanki (2025)"
 photos:
+  - src: "/images/ensembles/dyplom-szczech-2025.jpg"
+    event: "Dyplom Pauliny Szczech (trio fortepianowe)"
+    date: "13 maja 2025"
+    location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
   - src: "/images/ensembles/dyplom-maslanka-2025.jpg"
     event: "Dyplom Jakuba Maślanki (nonet wokalny)"
     date: "13 maja 2025"
