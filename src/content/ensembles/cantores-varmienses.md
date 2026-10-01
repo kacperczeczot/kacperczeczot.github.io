@@ -12,7 +12,8 @@ highlights:
 photos:
   - src: "/images/ensembles/cantores-jubileusz-2024.jpg"
     event: "Koncert z okazji 15-lecia chóru Cantores Varmienses"
-    date: "2024"
+    date: "17 maja 2024"
+    location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
 order: 2
 ---
 

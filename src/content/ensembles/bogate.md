@@ -11,7 +11,9 @@ highlights:
   - "Instruktaż oraz wsparcie wykonawcze"
 photos:
   - src: "/images/ensembles/bogate-dozynki-2026.jpg"
-    event: "Dożynki w Bogatem 2026"
+    event: "Dożynki w Bogatem"
+    date: "5 września 2026"
+    location: "Bogate"
 order: 7
 ---
 

@@ -12,9 +12,12 @@ highlights:
 photos:
   - src: "/images/ensembles/muzoteka-patriotyczny-2022.jpg"
     event: "Koncert Pieśni Patriotycznych"
-    date: "2022"
+    date: "17 listopada 2022"
+    location: "Muzoteka w Olsztynie"
   - src: "/images/ensembles/piraci-uwm.jpg"
     event: "Projekt edukacyjny „Muzyczna przygoda z piratami”"
+    date: "2023"
+    location: "Wydział Sztuki UWM"
 order: 1
 ---
 

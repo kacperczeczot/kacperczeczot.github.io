@@ -17,6 +17,7 @@ photos:
   - src: "/images/ensembles/ars-vocale-warmio-moja-mila-2026.jpeg"
     event: "Koncert „O Warmio moja miła”"
     date: "20 czerwca 2026"
+    location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
   - src: "/images/ensembles/ars-vocale-koledy-2024.jpg"
     event: "Koncert „Śpiewajmy kolędy”"
     date: "7 stycznia 2024"
