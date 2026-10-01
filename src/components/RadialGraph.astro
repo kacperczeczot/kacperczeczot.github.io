@@ -910,7 +910,7 @@ const categoriesPayload = categories.map(cat => ({
       if (photos.length === 0) {
         level3Photos.innerHTML = `<p class="text-xs text-slate-500 col-span-2">Brak materiałów archiwalnych dla tej formacji.</p>`;
       } else {
-        photos.slice(0, 4).forEach((p) => {
+        photos.forEach((p) => {
           const pSrc = typeof p === 'string' ? p : p.src;
           const pEvent = typeof p === 'string' ? '' : (p.event || '');
           const pDate = typeof p === 'string' ? '' : (p.date || '');
