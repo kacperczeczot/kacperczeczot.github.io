@@ -17,7 +17,7 @@ photos:
     location: "Państwowa Szkoła Muzyczna w Mławie"
   - src: "/images/ensembles/bal-w-savoyu-2023.jpg"
     event: "Operetka „Bal w Savoyu”"
-    date: "2023"
+    date: "Maj 2023"
     location: "Państwowa Szkoła Muzyczna w Mławie"
 order: 1
 ---

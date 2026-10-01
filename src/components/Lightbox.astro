@@ -1,5 +1,5 @@
 ---
-import { X } from 'lucide-astro';
+import { X, ChevronLeft, ChevronRight } from 'lucide-astro';
 ---
 
 <!-- Global Accessible Lightbox Component -->
@@ -18,6 +18,15 @@ import { X } from 'lucide-astro';
     class="absolute top-6 right-6 z-10 p-3 border border-white/15 bg-ocean-950/90 text-slate-300 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-sky-400"
   >
     <X class="w-6 h-6" />
+  </button>
+
+  
+  <!-- Navigation -->
+  <button id="lightbox-prev-btn" type="button" aria-label="Poprzednie zdjęcie" class="absolute left-4 z-10 p-3 bg-ocean-950/80 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400 hidden sm:block">
+    <ChevronLeft class="w-8 h-8" />
+  </button>
+  <button id="lightbox-next-btn" type="button" aria-label="Następne zdjęcie" class="absolute right-4 z-10 p-3 bg-ocean-950/80 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400 hidden sm:block">
+    <ChevronRight class="w-8 h-8" />
   </button>
 
   <!-- Image Container -->
@@ -44,6 +53,12 @@ import { X } from 'lucide-astro';
     const lightboxImg = document.getElementById('lightbox-image') as HTMLImageElement | null;
     const lightboxCaption = document.getElementById('lightbox-caption');
     const closeBtn = document.getElementById('lightbox-close-btn');
+    const prevBtn = document.getElementById('lightbox-prev-btn');
+    const nextBtn = document.getElementById('lightbox-next-btn');
+
+    let currentImages: HTMLElement[] = [];
+    let currentIndex = -1;
+
 
     if (!lightbox || !lightboxImg || !lightboxCaption || !closeBtn) return;
 
@@ -60,7 +75,15 @@ import { X } from 'lucide-astro';
         lightbox.classList.add('opacity-100');
       });
       document.body.style.overflow = 'hidden';
+      
+      updateNavButtons();
     }
+    
+    function updateNavButtons() {
+       if (prevBtn) prevBtn.style.display = (currentIndex > 0) ? 'block' : 'none';
+       if (nextBtn) nextBtn.style.display = (currentIndex >= 0 && currentIndex < currentImages.length - 1) ? 'block' : 'none';
+    }
+
 
     function closeLightbox() {
       if (!lightbox || !lightboxImg) return;
@@ -75,6 +98,35 @@ import { X } from 'lucide-astro';
     }
 
     closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex > 0) {
+          currentIndex--;
+          showCurrent();
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentIndex < currentImages.length - 1) {
+          currentIndex++;
+          showCurrent();
+        }
+      });
+    }
+    
+    function showCurrent() {
+        if (currentIndex >= 0 && currentIndex < currentImages.length) {
+            const el = currentImages[currentIndex];
+            const src = el.getAttribute('data-lightbox-src') || '';
+            const alt = el.getAttribute('data-lightbox-alt') || '';
+            const cap = el.getAttribute('data-lightbox-caption') || alt;
+            if (src) openLightbox(src, alt, cap);
+        }
+    }
+
 
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox || (e.target as HTMLElement).closest('#global-lightbox > div') === null) {
@@ -83,16 +135,37 @@ import { X } from 'lucide-astro';
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-        closeLightbox();
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            currentIndex--; showCurrent();
+        }
+        if (e.key === 'ArrowRight' && currentIndex < currentImages.length - 1) {
+            currentIndex++; showCurrent();
+        }
       }
     });
 
-    // Delegate clicks for elements with data-lightbox-src
+    // Delegate clicks
     document.addEventListener('click', (e) => {
       const target = (e.target as HTMLElement).closest('[data-lightbox-src]') as HTMLElement | null;
       if (target) {
         e.preventDefault();
+        
+        // Find all visible images to allow navigation
+        currentImages = Array.from(document.querySelectorAll('[data-lightbox-src]')).filter(el => {
+           // We only want images in the current active grid
+           // The easiest way is to scope to the closest container, but since there are multiple levels, 
+           // let's grab all from the same parent or closest identifiable section.
+           const container = target.closest('#level-3-photos-grid, .grid');
+           if (container) {
+              return container.contains(el);
+           }
+           return true;
+        }) as HTMLElement[];
+        
+        currentIndex = currentImages.indexOf(target);
+        
         const src = target.getAttribute('data-lightbox-src') || '';
         const alt = target.getAttribute('data-lightbox-alt') || '';
         const caption = target.getAttribute('data-lightbox-caption') || alt;

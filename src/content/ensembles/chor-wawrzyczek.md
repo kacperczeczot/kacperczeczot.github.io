@@ -15,7 +15,7 @@ highlights:
 photos:
   - src: "/images/ensembles/wawrzyczek-finale-2025.jpg"
     event: "Koncert Dyplomowy „Finale”"
-    date: "2025"
+    date: "Maj 2025"
     location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
   - src: "/images/ensembles/wawrzyczek-czarnogora-2026.jpeg"
     event: "Montenegro Music Fest"

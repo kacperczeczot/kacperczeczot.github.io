@@ -1,4 +1,24 @@
 ---
+
+const monthMap: Record<string, number> = { 'stycznia': 1, 'styczeń': 1, 'lutego': 2, 'luty': 2, 'marca': 3, 'marzec': 3, 'kwietnia': 4, 'kwiecień': 4, 'maja': 5, 'maj': 5, 'czerwca': 6, 'czerwiec': 6, 'lipca': 7, 'lipiec': 7, 'sierpnia': 8, 'sierpień': 8, 'września': 9, 'wrzesień': 9, 'października': 10, 'październik': 10, 'listopada': 11, 'listopad': 11, 'grudnia': 12, 'grudzień': 12 };
+
+function parseDate(dStr: string): number {
+  if (!dStr) return 0;
+  // If it's just a year
+  if (/^\d{4}$/.test(dStr.trim())) {
+     return new Date(parseInt(dStr.trim()), 0, 1).getTime();
+  }
+  const match = dStr.toLowerCase().match(/(\d+)?\s*([a-ząćęłńóśźż]+)?\s*(\d{4})/);
+  if (match) {
+     const day = match[1] ? parseInt(match[1]) : 1;
+     const monthStr = match[2];
+     const month = monthStr && monthMap[monthStr] ? monthMap[monthStr] : (dStr.toLowerCase().includes('styczeń') ? 1 : 1);
+     const year = parseInt(match[3]);
+     return new Date(year, month - 1, day).getTime();
+  }
+  return 0;
+}
+
 import { getCollection } from 'astro:content';
 import {
   Sparkles,
@@ -93,7 +113,7 @@ const categoriesPayload = categories.map(cat => ({
         date: p.date || '',
         location: p.location || '',
       };
-    }),
+    }).sort((a, b) => parseDate(b.date) - parseDate(a.date)),
   })),
 }));
 ---
