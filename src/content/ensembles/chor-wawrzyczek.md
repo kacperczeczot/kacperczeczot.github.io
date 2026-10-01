@@ -33,7 +33,8 @@ photos:
     date: "28 stycznia 2026"
   - src: "/images/ensembles/wawrzyczek-symfonia-beethovena.jpg"
     event: "IX Symfonia L. van Beethovena"
-    date: "Brak dokładnej daty"
+    date: "12 maja 2024"
+    location: "Hala Urania"
 order: 1
 ---
 
