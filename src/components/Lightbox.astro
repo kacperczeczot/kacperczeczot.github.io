@@ -74,6 +74,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-astro';
         lightbox.classList.remove('opacity-0');
         lightbox.classList.add('opacity-100');
       });
+      
+      // Fix scrollbar jump
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.style.overflow = 'hidden';
       
       updateNavButtons();
@@ -94,6 +98,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-astro';
         lightbox.classList.add('hidden');
         lightboxImg.src = '';
         document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
       }, 250);
     }
 
