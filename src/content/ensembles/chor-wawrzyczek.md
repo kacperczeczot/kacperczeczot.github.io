@@ -18,7 +18,7 @@ photos:
     date: "17-21 lipca 2024"
     location: "Montecatini Terme, Włochy"
   - src: "/images/ensembles/wawrzyczek-wilno-2025.jpg"
-    event: "Koncert w Państwowej Filharmonii w Wilnie"
+    event: ""
     date: "24 maja 2025"
     location: "Wilno, Litwa"
   - src: "/images/ensembles/wawrzyczek-finale-2025.jpg"

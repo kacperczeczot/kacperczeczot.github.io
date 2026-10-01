@@ -10,7 +10,7 @@ highlights:
   - "Reprezentowanie orkiestry podczas festiwali i przeglądów regionalnych"
 photos:
   - src: "/images/ensembles/przasnysz-kolno-2025.jpg"
-    event: "Festiwal"
+    event: "Festiwal Orkiestr Dętych"
     date: "9 listopada 2025"
     location: "Kolno"
 order: 8

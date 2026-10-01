@@ -12,7 +12,7 @@ highlights:
   - "Udział w uroczystościach okolicznościowych i inicjatywach artystycznych w regionie"
 photos:
   - src: "/images/kacper-fortepian-mlawa.jpg"
-    event: "Występ plenerowy"
+    event: ""
     location: "Park Miejski w Mławie"
 order: 4
 ---
