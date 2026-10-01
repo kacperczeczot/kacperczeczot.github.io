@@ -8,7 +8,11 @@ years: "2023–obecnie"
 highlights:
   - "Dwa wyróżnienia na Estradzie Studenckiej UWM (2023) — trio fortepianowe oraz zespół rozrywkowy"
   - "Występy w kolejnych edycjach: fortepian (2023), wokal (2024, 2025)"
-photos: []
+photos:
+  - src: "/images/ensembles/estrada-rozrywkowy-2023.jpg"
+    event: "Estrada Studencka (zespół rozrywkowy)"
+    date: "17 maja 2023"
+    location: "Wydział Sztuki UWM w Olsztynie"
 order: 2
 ---
 
