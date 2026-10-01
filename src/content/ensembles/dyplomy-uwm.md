@@ -10,6 +10,10 @@ highlights:
   - "Trio fortepianowe z Pauliną Szczech (2023, 2025)"
   - "Śpiew w nonecie — dyplom Jakuba Maślanki (2025)"
 photos:
+  - src: "/images/ensembles/dyplom-cellmer-2026.png"
+    event: "Dyplom Jakuba Cellmera"
+    date: "18 maja 2026"
+    location: "Aula Widowiskowa im. Anny Wasilewskiej w Olsztynie"
   - src: "/images/ensembles/dyplom-romaszewska-2026.png"
     event: "Dyplom Kingi Romaszewskiej (orkiestra)"
     date: "20 maja 2026"
