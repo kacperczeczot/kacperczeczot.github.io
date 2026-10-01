@@ -8,8 +8,12 @@ years: "2023–obecnie"
 highlights:
   - "Akompaniament fortepianowy na dyplomach m.in. Adama Mielnickiego, Pauliny Kaczorowskiej, Kamila Brydzińskiego, Patrycji Rogalskiej i Wiktorii Karneckiej"
   - "Trio fortepianowe z Pauliną Szczech (2023, 2025)"
-  - "Śpiew w oktetcie — dyplom Jakuba Maślanki (2025)"
-photos: []
+  - "Śpiew w nonecie — dyplom Jakuba Maślanki (2025)"
+photos:
+  - src: "/images/ensembles/dyplom-maslanka-2025.jpg"
+    event: "Dyplom Jakuba Maślanki (nonet wokalny)"
+    date: "13 maja 2025"
+    location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
 order: 3
 ---
 
