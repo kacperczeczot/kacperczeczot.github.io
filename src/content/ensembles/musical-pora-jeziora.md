@@ -11,9 +11,9 @@ highlights:
   - "Wystawienie w Operze Krakowskiej (21–22.12.2022)"
 photos:
   - src: "/images/ensembles/pora-jeziora-2022.jpg"
-    event: "Musical „Pora Jeziora”"
-    date: "Grudzień 2022"
-    location: "Olsztyn"
+    event: "Spektakl w Operze Krakowskiej"
+    date: "21–22 grudnia 2022"
+    location: "Opera Krakowska, Kraków"
 order: 3
 ---
 

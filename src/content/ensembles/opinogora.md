@@ -7,9 +7,9 @@ concertCount: "Inauguracja sezonu 2025/2026"
 years: "2025–obecnie"
 highlights:
   - "Przygotowanie i poprowadzenie Koncertu Noworocznego oraz cyklu galowego 2025/2026"
-  - "Koncerty plenerowe, m.in. Piknik rodzinny w Opinogórze Górnej (2026)"
-  - "Wdrożenie nowego profilu repertuarowego: standardy muzyki filmowej i estradowej"
-  - "Reorganizacja sekcji instrumentów dętych drewnianych i blaszanych"
+  - "Koncerty plenerowe, m.in. Piknik Rodzinny w Opinogórze Górnej (2026)"
+  - "Rozbudowa repertuaru orkiestry o standardy muzyki filmowej i rozrywkowej"
+  - "Praca warsztatowa z sekcjami instrumentów dętych"
 photos:
   - src: "/images/ensembles/opinogora-piknik-2026.jpg"
     event: "Piknik Rodzinny"
@@ -18,4 +18,4 @@ photos:
 order: 1
 ---
 
-Kierownictwo artystyczne i dyrygentura orkiestry dętej: prowadzenie prób całego aparatu orkiestrowego, praca nad intonacją i zgraniem sekcyjnym oraz kompleksowa realizacja bieżącego programu koncertowego.
+Kierownictwo artystyczne i dyrygentura orkiestry dętej: prowadzenie prób sekcyjnych i generalnych, praca nad brzmieniem i intonacją oraz przygotowanie koncertów galowych i plenerowych.

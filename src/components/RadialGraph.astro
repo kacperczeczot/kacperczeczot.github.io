@@ -54,7 +54,7 @@ const categories = [
     name: 'Orkiestry',
     subtitle: 'Składy dęte i symfoniczne',
     count: countLabel(orkiestry.length, 'formacja', 'formacje', 'formacji'),
-    pos: { x: 25, y: 28 },
+    pos: { x: 26, y: 30 },
     ensembles: orkiestry,
   },
   {
@@ -62,7 +62,7 @@ const categories = [
     name: 'Chóry & Zespoły',
     subtitle: 'Składy wokalne & polifonia',
     count: countLabel(chory.length, 'skład', 'składy', 'składów'),
-    pos: { x: 75, y: 28 },
+    pos: { x: 74, y: 30 },
     ensembles: chory,
   },
   {
@@ -70,7 +70,7 @@ const categories = [
     name: 'Scena & Teatr',
     subtitle: 'Operetka & musical',
     count: countLabel(teatr.length, 'produkcja', 'produkcje', 'produkcji'),
-    pos: { x: 75, y: 72 },
+    pos: { x: 74, y: 70 },
     ensembles: teatr,
   },
   {
@@ -78,7 +78,7 @@ const categories = [
     name: 'Kameralistyka & Estrada',
     subtitle: 'Live sound & składy estradowe',
     count: countLabel(estrada.length, 'zespół', 'zespoły', 'zespołów'),
-    pos: { x: 25, y: 72 },
+    pos: { x: 26, y: 70 },
     ensembles: estrada,
   },
 ];
@@ -243,7 +243,7 @@ const categoriesPayload = categories.map(cat => ({
         </div>
 
         <!-- Level 2 Floating Ensembles Organic Cluster -->
-        <div id="level-2-bubbles-container" class="relative flex-1 w-full h-full overflow-hidden">
+        <div id="level-2-bubbles-container" class="relative flex-1 w-full h-full overflow-visible">
           <!-- Dynamically populated ensemble bubbles in constellation layout -->
         </div>
       </div>
@@ -453,7 +453,7 @@ const categoriesPayload = categories.map(cat => ({
                 <!-- Highlights on Mobile -->
                 {ens.data.highlights && ens.data.highlights.length > 0 && (
                   <ul class="pt-2 border-t border-white/10 space-y-1.5 text-sm text-slate-300">
-                    {ens.data.highlights.slice(0, 2).map((h) => (
+                    {ens.data.highlights.map((h) => (
                       <li class="flex items-start gap-2">
                         <span class="text-sky-400 font-bold">✦</span>
                         <span>{h}</span>
@@ -463,38 +463,50 @@ const categoriesPayload = categories.map(cat => ({
                 )}
               </div>
 
-              <!-- Photos Grid on Mobile -->
+              <!-- Photos Grid on Mobile (All Photos) -->
               {ens.data.photos && ens.data.photos.length > 0 && (
-                <div class="mt-4 pt-3 border-t border-white/10 grid grid-cols-2 gap-2">
-                  {ens.data.photos.slice(0, 2).map((p) => {
-                    const pSrc = typeof p === 'string' ? p : p.src;
-                    const fullPhotoUrl = pSrc.startsWith('/') ? `${base}${pSrc}` : pSrc;
-                    
-                    let pEvent = typeof p !== 'string' ? p.event : '';
-                    let pDate = typeof p !== 'string' ? p.date : '';
-                    let pLocation = typeof p !== 'string' ? p.location : '';
-                    let pCaption = typeof p !== 'string' ? (p.caption || p.alt || '') : '';
-                    
-                    let plainAlt = pEvent ? `${pEvent} - ${ens.data.name}` : (pCaption || ens.data.name);
-                    let formattedCaption = '';
-                    if (pEvent) {
-                       formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div><div class="text-xs mt-1 text-slate-300 opacity-80">${ens.data.name}</div>`;
-                    } else {
-                       formattedCaption = pCaption || ens.data.name;
-                    }
+                <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                  <div class="flex items-center justify-between text-xs font-sans text-slate-400">
+                    <span class="font-semibold uppercase tracking-wider text-[11px] text-sky-400">
+                      Fotografie ({ens.data.photos.length})
+                    </span>
+                    <span class="text-[10px] text-slate-500">Powiększ</span>
+                  </div>
+                  <div class={`grid gap-2 ${ens.data.photos.length === 1 ? 'grid-cols-1' : 'grid-cols-2 sm:grid-cols-3'}`}>
+                    {ens.data.photos.map((p) => {
+                      const pSrc = typeof p === 'string' ? p : p.src;
+                      const fullPhotoUrl = pSrc.startsWith('/') ? `${base}${pSrc}` : pSrc;
+                      
+                      let pEvent = typeof p !== 'string' ? p.event : '';
+                      let pDate = typeof p !== 'string' ? p.date : '';
+                      let pLocation = typeof p !== 'string' ? p.location : '';
+                      let pCaption = typeof p !== 'string' ? (p.caption || p.alt || '') : '';
+                      
+                      let plainAlt = pEvent ? (pEvent.toLowerCase().trim() === ens.data.name.toLowerCase().trim() ? pEvent : `${pEvent} - ${ens.data.name}`) : (pCaption || ens.data.name);
+                      let formattedCaption = '';
+                      const showEnsSubtitle = ens.data.name && pEvent && pEvent.toLowerCase().trim() !== ens.data.name.toLowerCase().trim();
+                      if (pEvent) {
+                         formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div>`;
+                         if (showEnsSubtitle) {
+                            formattedCaption += `<div class="text-xs mt-1 text-slate-300 opacity-80">${ens.data.name}</div>`;
+                         }
+                      } else {
+                         formattedCaption = pCaption || ens.data.name;
+                      }
 
-                    return (
-                      <button
-                        type="button"
-                        data-lightbox-src={fullPhotoUrl}
-                        data-lightbox-alt={plainAlt}
-                        data-lightbox-caption={formattedCaption}
-                        class="aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400"
-                      >
-                        <img src={fullPhotoUrl} alt={plainAlt} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
-                      </button>
-                    );
-                  })}
+                      return (
+                        <button
+                          type="button"
+                          data-lightbox-src={fullPhotoUrl}
+                          data-lightbox-alt={plainAlt}
+                          data-lightbox-caption={formattedCaption}
+                          class="aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left"
+                        >
+                          <img src={fullPhotoUrl} alt={plainAlt} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
             </div>
@@ -750,12 +762,15 @@ const categoriesPayload = categories.map(cat => ({
       const w = Math.max(level2BubblesContainer.clientWidth || container?.clientWidth || 800, 320);
       const h = Math.max(level2BubblesContainer.clientHeight || (container?.clientHeight ?? 0) - 96, 280);
       const size = Math.round(Math.max(110, Math.min(
-        210,
-        Math.min(w / Math.max(count, 1) * 1.15, h * 0.42),
-        Math.sqrt((w * h) / count) * 0.5
+        195,
+        Math.min((w / Math.max(count, 1)) * 1.1, h * 0.40),
+        Math.sqrt((w * h) / count) * 0.46
       )));
-      const margin = size / 2 + 18;
-      const minDist = size * 1.32;
+      // Generous safety margin from edges (size/2 + 50px) so bubbles, their hover scaling,
+      // and their glowing shadows never hit or clip against any invisible boundary.
+      const marginX = Math.round(size / 2 + 50);
+      const marginY = Math.round(size / 2 + 45);
+      const minDist = size * 1.25;
 
       const pts = [];
       if (count === 1) {
@@ -764,9 +779,10 @@ const categoriesPayload = categories.map(cat => ({
         const startLow = count % 2 === 1;
         for (let i = 0; i < count; i++) {
           const t = (i + 0.5) / count;
-          const x = margin + t * (w - 2 * margin);
+          const x = marginX + t * (w - 2 * marginX);
           const high = startLow ? (i % 2 === 1) : (i % 2 === 0);
-          const y = high ? h * 0.32 : h * 0.68;
+          // Gentle organic stagger centered within the canvas height
+          const y = high ? h * 0.38 : h * 0.62;
           pts.push({ x, y });
         }
       }
@@ -787,15 +803,16 @@ const categoriesPayload = categories.map(cat => ({
               fy += (dy / d) * push;
             }
           }
-          fx += 28 / Math.max(pts[i].x - margin, 6);
-          fx -= 28 / Math.max(w - margin - pts[i].x, 6);
-          fy += 28 / Math.max(pts[i].y - margin, 6);
-          fy -= 28 / Math.max(h - margin - pts[i].y, 6);
+          // Smooth boundary repulsion buffer
+          fx += 36 / Math.max(pts[i].x - marginX, 6);
+          fx -= 36 / Math.max(w - marginX - pts[i].x, 6);
+          fy += 36 / Math.max(pts[i].y - marginY, 6);
+          fy -= 36 / Math.max(h - marginY - pts[i].y, 6);
 
           pts[i].x += fx * damp;
           pts[i].y += fy * damp;
-          pts[i].x = Math.min(w - margin, Math.max(margin, pts[i].x));
-          pts[i].y = Math.min(h - margin, Math.max(margin, pts[i].y));
+          pts[i].x = Math.min(w - marginX, Math.max(marginX, pts[i].x));
+          pts[i].y = Math.min(h - marginY, Math.max(marginY, pts[i].y));
         }
       }
 
@@ -937,10 +954,14 @@ const categoriesPayload = categories.map(cat => ({
           const pLocation = typeof p === 'string' ? '' : (p.location || '');
           const pCaption = typeof p === 'string' ? '' : (p.caption || p.alt || '');
           
-          let plainAlt = pEvent ? `${pEvent} - ${ensemble.name}` : (pCaption || ensemble.name);
+          let plainAlt = pEvent ? (pEvent.toLowerCase().trim() === ensemble.name.toLowerCase().trim() ? pEvent : `${pEvent} - ${ensemble.name}`) : (pCaption || ensemble.name);
           let formattedCaption = '';
+          const showEnsSubtitle = ensemble.name && pEvent && pEvent.toLowerCase().trim() !== ensemble.name.toLowerCase().trim();
           if (pEvent) {
-             formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div><div class="text-xs mt-1 text-slate-300 opacity-80">${ensemble.name}</div>`;
+             formattedCaption = `<div class="font-bold text-sky-400 text-base mb-1">${pEvent}</div><div class="text-xs text-slate-400 font-normal">${[pDate, pLocation].filter(Boolean).join(' &bull; ')}</div>`;
+             if (showEnsSubtitle) {
+                formattedCaption += `<div class="text-xs mt-1 text-slate-300 opacity-80">${ensemble.name}</div>`;
+             }
           } else {
              formattedCaption = pCaption || ensemble.name;
           }

@@ -8,7 +8,7 @@ years: "2025–obecnie"
 highlights:
   - "Dożynki Gminno-Parafialne (2026)"
   - "Uroczystości plenerowe i koncerty okolicznościowe"
-  - "Instruktaż oraz wsparcie wykonawcze"
+  - "Prowadzenie prób sekcyjnych i przygotowanie oprawy muzycznej"
 photos:
   - src: "/images/ensembles/bogate-dozynki-2026.jpg"
     event: "Dożynki Gminno-Parafialne"

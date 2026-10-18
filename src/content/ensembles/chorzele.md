@@ -7,8 +7,8 @@ concertCount: "16 występów"
 years: "2022–obecnie"
 highlights:
   - "I Miejsce na Międzynarodowym Festiwalu „Karnolsky Summer Camp” w Bułgarii (2024)"
-  - "Wykonawstwo w sekcji klarnetów, partie wokalne oraz oprawa organowa"
-  - "Koncerty okolicznościowe i festiwalowe w kraju i za granicą"
+  - "Koncerty festiwalowe i wyjazdowe w kraju i za granicą"
+  - "Oprawa organowa i wokalna uroczystości okolicznościowych"
 photos:
   - src: "/images/ensembles/chorzele-karnolsky-2024.jpg"
     event: "Karnolsky Summer Camp"

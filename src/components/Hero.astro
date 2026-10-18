@@ -17,13 +17,22 @@ const heroImage = cmsImage(homeData.heroImage, `${base}/images/hero-portrait.svg
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
 
       <div class="lg:col-span-7 space-y-6">
-        <div>
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-sans text-white tracking-tight">
-            <span>{homeData.heroName || 'Kacper Czeczot'}</span>
-            <span class="block text-2xl sm:text-3xl lg:text-4xl font-bold text-sky-400 tracking-tight mt-3">
-              {homeData.heroRole || 'Dyrygent · Multiinstrumentalista · Aranżer'}
-            </span>
-          </h1>
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="lg:hidden w-20 h-20 rounded-2xl overflow-hidden border border-white/15 bg-ocean-900 shadow-xl shrink-0">
+            <img
+              src={heroImage}
+              alt="Kacper Czeczot"
+              class="w-full h-full object-cover object-[center_15%]"
+            />
+          </div>
+          <div>
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold font-sans text-white tracking-tight">
+              <span>{homeData.heroName || 'Kacper Czeczot'}</span>
+              <span class="block text-xl sm:text-2xl lg:text-4xl font-bold text-sky-400 tracking-tight mt-1 sm:mt-2">
+                {homeData.heroRole || 'Dyrygent · Multiinstrumentalista · Aranżer'}
+              </span>
+            </h1>
+          </div>
         </div>
 
         <p class="max-w-xl text-base sm:text-lg text-slate-300 font-sans font-light leading-relaxed">
@@ -41,13 +50,13 @@ const heroImage = cmsImage(homeData.heroImage, `${base}/images/hero-portrait.svg
         </div>
       </div>
 
-      <div class="lg:col-span-5">
+      <div class="hidden lg:block lg:col-span-5">
         <figure class="space-y-3">
           <div class="relative border border-white/10 rounded-2xl overflow-hidden bg-ocean-900 shadow-2xl">
             <img
               src={heroImage}
               alt="Kacper Czeczot — dyrygent z batutą dyrygencką w sali koncertowej"
-              class="w-full aspect-[16/9] sm:aspect-[3/2] lg:aspect-[4/5] object-cover object-[center_20%]"
+              class="w-full aspect-[4/5] object-cover object-[center_20%]"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/80 via-transparent to-transparent pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-ocean-950/40 via-transparent to-transparent pointer-events-none"></div>
