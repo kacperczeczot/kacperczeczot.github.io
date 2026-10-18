@@ -463,17 +463,17 @@ const categoriesPayload = categories.map(cat => ({
                 )}
               </div>
 
-              <!-- Photos Grid on Mobile (All Photos) -->
+              <!-- Photos Grid on Mobile (Standardized 2-col preview, all accessible in lightbox) -->
               {ens.data.photos && ens.data.photos.length > 0 && (
                 <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
                   <div class="flex items-center justify-between text-xs font-sans text-slate-400">
                     <span class="font-semibold uppercase tracking-wider text-[11px] text-sky-400">
-                      Fotografie ({ens.data.photos.length})
+                      {ens.data.photos.length === 1 ? 'Fotografia' : `Fotografie (${ens.data.photos.length})`}
                     </span>
                     <span class="text-[10px] text-slate-500">Powiększ</span>
                   </div>
-                  <div class={`grid gap-2 ${ens.data.photos.length === 1 ? 'grid-cols-1' : 'grid-cols-2 sm:grid-cols-3'}`}>
-                    {ens.data.photos.map((p) => {
+                  <div class="grid grid-cols-2 gap-2">
+                    {ens.data.photos.map((p, pIdx) => {
                       const pSrc = typeof p === 'string' ? p : p.src;
                       const fullPhotoUrl = pSrc.startsWith('/') ? `${base}${pSrc}` : pSrc;
                       
@@ -494,15 +494,27 @@ const categoriesPayload = categories.map(cat => ({
                          formattedCaption = pCaption || ens.data.name;
                       }
 
+                      const isHidden = pIdx > 1;
+                      const isLastVisible = pIdx === 1 && ens.data.photos.length > 2;
+                      const remainingCount = ens.data.photos.length - 2;
+
                       return (
                         <button
                           type="button"
                           data-lightbox-src={fullPhotoUrl}
                           data-lightbox-alt={plainAlt}
                           data-lightbox-caption={formattedCaption}
-                          class="aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left"
+                          class={`group relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-ocean-900 focus:outline-none focus:ring-2 focus:ring-sky-400 text-left ${
+                            isHidden ? 'hidden' : 'block'
+                          }`}
                         >
-                          <img src={fullPhotoUrl} alt={plainAlt} class="w-full h-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy" />
+                          <img src={fullPhotoUrl} alt={plainAlt} class="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" loading="lazy" />
+                          {isLastVisible && (
+                            <div class="absolute inset-0 bg-ocean-950/80 backdrop-blur-[2px] flex flex-col items-center justify-center text-white z-10 transition-colors group-hover:bg-ocean-950/60">
+                              <span class="text-lg font-bold">+{remainingCount}</span>
+                              <span class="text-[10px] font-medium tracking-wide uppercase text-sky-200">zobacz więcej</span>
+                            </div>
+                          )}
                         </button>
                       );
                     })}
