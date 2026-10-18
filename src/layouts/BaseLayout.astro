@@ -37,7 +37,7 @@ const defaultPersonSchema = {
   givenName: 'Kacper',
   familyName: 'Czeczot',
   url: siteUrl,
-  image: `${siteUrl}/images/dyplomhero.jpeg`,
+  image: `${siteUrl}${homeData.heroImage || '/images/kacper-czeczot-dyrygent-hero.jpg'}`,
   jobTitle: ['Dyrygent', 'Kapelmistrz', 'Multiinstrumentalista', 'Aranżer', 'Kierownik muzyczny', 'Realizator dźwięku'],
   description: 'Oficjalne portfolio artystyczne Kacpra Czeczota: dyrygentura symfoniczna i chóralna, prowadzenie orkiestr i chórów, wykonawstwo sceniczne, opracowania partytur oraz realizacja dźwięku.',
   email: homeData.contactEmail,
