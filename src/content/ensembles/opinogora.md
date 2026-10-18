@@ -3,7 +3,7 @@ name: "Orkiestra GOK w Opinogórze Górnej"
 pillar: "orkiestry"
 role: "Kapelmistrz"
 leader: "Kacper Czeczot (Kapelmistrz)"
-concertCount: "1 występ"
+concertCount: "4 występy"
 years: "2025–obecnie"
 highlights:
   - "Piknik Rodzinny w Opinogórze Górnej (2026)"
