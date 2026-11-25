@@ -139,6 +139,54 @@ content:
         label: Instrumentarium dodatkowe
         type: string
         list: true
+      - name: pressKit
+        label: Materiały dla organizatorów (Press Kit)
+        type: object
+        fields:
+          - { name: intro, label: Krótkie wprowadzenie, type: text }
+          - { name: shortBio, label: Biogram krótki (zapowiedzi / plakaty), type: text }
+          - { name: longBio, label: Biogram pełny (programy koncertowe), type: text }
+          - name: photos
+            label: Oficjalne zdjęcia prasowe
+            type: object
+            list: true
+            fields:
+              - { name: src, label: Plik zdjęcia, type: image }
+              - { name: title, label: Tytuł kadru, type: string }
+              - { name: caption, label: Opis / kontekst, type: string }
+              - { name: filename, label: Nazwa pliku przy pobieraniu, type: string }
+
+  - name: arrangements
+    label: Aranżacje i partytury
+    type: file
+    path: src/data/arrangements.json
+    format: json
+    operations: { create: false, rename: false, delete: false }
+    fields:
+      - { name: sectionBadge, label: Etykieta sekcji, type: string }
+      - { name: sectionTitle, label: Tytuł sekcji, type: string }
+      - { name: sectionSubtitle, label: Podtytuł sekcji, type: text }
+      - name: items
+        label: Lista opracowań i partytur
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Tytuł utworu, type: string }
+          - { name: originalAuthor, label: Kompozytor / oryginał, type: string }
+          - name: category
+            label: Kategoria obsady
+            type: select
+            options:
+              values:
+                - { value: symfoniczno-choralne, label: Symfoniczno-chóralne }
+                - { value: orkiestra-deta, label: Orkiestry dęte }
+                - { value: choralne, label: Chóralne }
+                - { value: kameralne, label: Kameralne / Inne }
+          - { name: ensemble, label: Obsada szczegółowa, type: string }
+          - { name: year, label: Rok opracowania, type: string }
+          - { name: notes, label: Nota wykonawcza, type: text }
+          - { name: youtubeUrl, label: Link do nagrania YouTube (opcjonalny), type: string }
+          - { name: musescoreUrl, label: Link do partytury MuseScore (opcjonalny), type: string }
 
   - name: ensembles
     label: Formacje

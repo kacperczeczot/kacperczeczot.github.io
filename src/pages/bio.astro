@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import PressKitSection from '../components/PressKitSection.astro';
 import bioData from '../data/bio.json';
 import { cmsImage } from '../utils/cms';
 
@@ -247,5 +248,7 @@ const profilePageSchema = {
         </div>
       </div>
     </section>
+
+    <PressKitSection />
   </article>
 </BaseLayout>

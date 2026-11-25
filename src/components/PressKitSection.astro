@@ -1,0 +1,212 @@
+---
+import { Copy, Check, Download, Maximize2, FileText } from 'lucide-astro';
+import bioData from '../data/bio.json';
+import { cmsImage } from '../utils/cms';
+
+interface PressPhoto {
+  src: string;
+  title: string;
+  caption?: string;
+  filename?: string;
+}
+
+const pressKit = bioData.pressKit;
+const shortBio = pressKit?.shortBio || '';
+const longBio = pressKit?.longBio || '';
+const photos: PressPhoto[] = pressKit?.photos || [];
+
+const countWords = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+const shortWords = countWords(shortBio);
+const longWords = countWords(longBio);
+---
+
+{pressKit && (
+  <section id="press-kit" class="py-16 md:py-24 border-b border-white/10 bg-ocean-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <!-- Header -->
+      <div class="max-w-3xl space-y-3">
+        <p class="text-xs font-sans uppercase tracking-[0.28em] text-sky-400">
+          Dla organizatorów & mediów
+        </p>
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white tracking-tight">
+          Materiały dla organizatorów (Press Kit)
+        </h3>
+        <p class="text-base text-slate-300 font-sans font-light leading-relaxed">
+          {pressKit.intro}
+        </p>
+      </div>
+
+      <!-- Ready-to-copy Biographies -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Short Bio -->
+        <div class="border border-white/10 bg-ocean-900/40 p-6 sm:p-8 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div class="flex items-center gap-2.5">
+                <FileText class="w-4 h-4 text-sky-400 flex-shrink-0" />
+                <div>
+                  <h4 class="font-display text-base font-semibold text-white">Biogram krótki</h4>
+                  <p class="text-[11px] font-sans text-slate-400">Zapowiedzi konferansjerskie, plakaty, media społecznościowe</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-mono text-sky-300/90 tabular-nums flex-shrink-0">
+                ~{shortWords} słów
+              </span>
+            </div>
+            <p class="text-sm text-slate-300 font-sans font-light leading-relaxed select-all">
+              {shortBio}
+            </p>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button
+              type="button"
+              data-copy-text={shortBio}
+              class="presskit-copy-btn inline-flex items-center gap-2 px-4 py-2.5 text-xs font-sans font-semibold uppercase tracking-wider text-white border border-white/15 bg-ocean-950 hover:border-sky-400/50 hover:text-sky-200 transition-all"
+            >
+              <Copy class="w-3.5 h-3.5 text-sky-400 copy-icon" />
+              <Check class="w-3.5 h-3.5 text-emerald-400 hidden check-icon" />
+              <span class="copy-label">Kopiuj biogram krótki</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Long Bio -->
+        <div class="border border-white/10 bg-ocean-900/40 p-6 sm:p-8 flex flex-col justify-between gap-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div class="flex items-center gap-2.5">
+                <FileText class="w-4 h-4 text-sky-400 flex-shrink-0" />
+                <div>
+                  <h4 class="font-display text-base font-semibold text-white">Biogram pełny</h4>
+                  <p class="text-[11px] font-sans text-slate-400">Programy koncertowe, foldery festiwalowe, noty prasowe</p>
+                </div>
+              </div>
+              <span class="text-[11px] font-mono text-sky-300/90 tabular-nums flex-shrink-0">
+                ~{longWords} słów
+              </span>
+            </div>
+            <p class="text-sm text-slate-300 font-sans font-light leading-relaxed select-all">
+              {longBio}
+            </p>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button
+              type="button"
+              data-copy-text={longBio}
+              class="presskit-copy-btn inline-flex items-center gap-2 px-4 py-2.5 text-xs font-sans font-semibold uppercase tracking-wider text-white border border-white/15 bg-ocean-950 hover:border-sky-400/50 hover:text-sky-200 transition-all"
+            >
+              <Copy class="w-3.5 h-3.5 text-sky-400 copy-icon" />
+              <Check class="w-3.5 h-3.5 text-emerald-400 hidden check-icon" />
+              <span class="copy-label">Kopiuj biogram pełny</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Press Photos -->
+      {photos.length > 0 && (
+        <div class="space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+              <h4 class="text-xs font-sans uppercase tracking-[0.22em] text-sky-400 font-semibold">
+                Oficjalne zdjęcia prasowe
+              </h4>
+              <p class="text-xs text-slate-400 font-sans mt-1">
+                Do bezpłatnego wykorzystania w materiałach promocyjnych koncertów i wydarzeń z udziałem Kacpra Czeczota.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {photos.map((photo) => {
+              const url = cmsImage(photo.src);
+              const altText = photo.caption ? `${photo.title} — ${photo.caption}` : photo.title;
+              return (
+                <figure class="border border-white/10 bg-ocean-900/30 flex flex-col justify-between overflow-hidden group">
+                  <button
+                    type="button"
+                    data-lightbox-src={url}
+                    data-lightbox-alt={altText}
+                    data-lightbox-caption={`<div class="font-bold text-sky-400 text-base mb-1">${photo.title}</div><div class="text-xs text-slate-300 font-normal">${photo.caption || ''}</div>`}
+                    class="relative aspect-[3/2] overflow-hidden bg-ocean-950 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-400"
+                    aria-label={`Powiększ zdjęcie: ${photo.title}`}
+                  >
+                    <img
+                      src={url}
+                      alt={altText}
+                      loading="lazy"
+                      decoding="async"
+                      class="w-full h-full object-cover object-[center_20%] opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    />
+                    <span class="absolute bottom-2.5 right-2.5 p-1.5 bg-ocean-950/85 border border-white/15 text-sky-300 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Maximize2 class="w-3.5 h-3.5" />
+                    </span>
+                  </button>
+
+                  <figcaption class="p-4 flex flex-col justify-between gap-3 flex-1">
+                    <div class="space-y-1">
+                      <span class="font-display text-sm font-semibold text-white block leading-snug">
+                        {photo.title}
+                      </span>
+                      {photo.caption && (
+                        <span class="text-xs text-slate-400 font-sans block leading-snug">
+                          {photo.caption}
+                        </span>
+                      )}
+                    </div>
+
+                    <a
+                      href={url}
+                      download={photo.filename || true}
+                      class="inline-flex items-center justify-center gap-2 w-full px-3 py-2 text-[11px] font-sans font-semibold uppercase tracking-wider text-sky-300 border border-white/15 bg-ocean-950/80 hover:border-sky-400/50 hover:text-white transition-all"
+                    >
+                      <Download class="w-3.5 h-3.5" />
+                      <span>Pobierz zdjęcie</span>
+                    </a>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+)}
+
+<script>
+  function initPressKitCopy() {
+    document.querySelectorAll<HTMLButtonElement>('.presskit-copy-btn').forEach((btn) => {
+      if (btn.dataset.bound === 'true') return;
+      btn.dataset.bound = 'true';
+
+      const copyIcon = btn.querySelector('.copy-icon');
+      const checkIcon = btn.querySelector('.check-icon');
+      const label = btn.querySelector('.copy-label');
+      const originalLabel = label?.textContent || 'Kopiuj';
+
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-copy-text') || '';
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          copyIcon?.classList.add('hidden');
+          checkIcon?.classList.remove('hidden');
+          if (label) label.textContent = 'Skopiowano do schowka';
+
+          setTimeout(() => {
+            copyIcon?.classList.remove('hidden');
+            checkIcon?.classList.add('hidden');
+            if (label) label.textContent = originalLabel;
+          }, 2800);
+        } catch (err) {
+          console.error('Nie udało się skopiować biogramu:', err);
+        }
+      });
+    });
+  }
+
+  document.addEventListener('astro:page-load', initPressKitCopy);
+</script>

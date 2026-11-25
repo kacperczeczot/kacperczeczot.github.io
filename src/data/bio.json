@@ -192,5 +192,36 @@
     "Gitara",
     "Skrzypce",
     "Akordeon"
-  ]
+  ],
+  "pressKit": {
+    "intro": "Gotowe biogramy do zapowiedzi konferansjerskich, plakatów i programów koncertowych oraz oficjalne fotografie prasowe do wykorzystania przy promocji wydarzeń z udziałem artysty.",
+    "shortBio": "Kacper Czeczot — dyrygent, multiinstrumentalista, aranżer i realizator dźwięku. Kapelmistrz Orkiestry Dętej GOK w Opinogórze Górnej oraz Zastępca Kapelmistrza orkiestr OSP Rębowo, Chociszewo i Bogate. Najlepszy Absolwent Wydziału Sztuki UWM w Olsztynie (2024/2025) i laureat Nagrody Dziekana za Koncert Dyplomowy „Finale” w Filharmonii Warmińsko-Mazurskiej. Ma w dorobku ponad 300 występów w kraju i za granicą.",
+    "longBio": "Kacper Czeczot to dyrygent, kierownik muzyczny, wokalista, multiinstrumentalista i aranżer, łączący akademicki warsztat dyrygencki z praktyką estradową, chóralną i studyjną. Absolwent studiów licencjackich z wyróżnieniem na kierunku Edukacja artystyczna w zakresie sztuki muzycznej (aktualnie na studiach magisterskich) oraz kierunku Produkcja Muzyczna i Realizacja Dźwięku na Wydziale Sztuki UWM w Olsztynie. Uhonorowany tytułem Najlepszego Absolwenta Wydziału Sztuki UWM (2024/2025) oraz Nagrodą Dziekana za wybitne dzieło dyplomowe — Koncert „Finale” w Filharmonii Warmińsko-Mazurskiej. Absolwent z wyróżnieniem PSM I i II st. im. A. Krzanowskiego w Mławie (fortepian, wokalistyka). Pełni funkcję Kapelmistrza Orkiestry GOK w Opinogórze Górnej oraz Zastępcy Kapelmistrza orkiestr dętych OSP Rębowo, Chociszewo i Bogate. W dorobku scenicznym posiada ponad 300 występów z ponad 20 zespołami w 6 krajach Europy, w tym w Filharmonii Warmińsko-Mazurskiej i Operze Krakowskiej.",
+    "photos": [
+      {
+        "src": "/images/kacper-czeczot-dyrygent-hero.webp",
+        "title": "Portret dyrygencki (pionowy)",
+        "caption": "Kacper Czeczot — portret z batutą w sali koncertowej",
+        "filename": "kacper-czeczot-portret-dyrygent.webp"
+      },
+      {
+        "src": "/images/kacper-dyplom-finale.webp",
+        "title": "Koncert Dyplomowy „Finale”",
+        "caption": "Filharmonia Warmińsko-Mazurska w Olsztynie (2025)",
+        "filename": "kacper-czeczot-filharmonia-finale.webp"
+      },
+      {
+        "src": "/images/kacper-dyrygent-mlawa-jubileusz.webp",
+        "title": "Dyrygentura estradowa",
+        "caption": "120-lecie I LO w Mławie",
+        "filename": "kacper-czeczot-dyrygent-estrada.webp"
+      },
+      {
+        "src": "/images/kacper-fortepian-mlawa.webp",
+        "title": "Kadr fortepianowy",
+        "caption": "Park Miejski w Mławie",
+        "filename": "kacper-czeczot-fortepian.webp"
+      }
+    ]
+  }
 }
