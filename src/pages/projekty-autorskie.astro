@@ -23,7 +23,7 @@ const typeLabel = {
 const worksPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Dzieła Autorskie, Projekty Dyplomowe & Aranżacje — Kacper Czeczot',
+  name: 'Dzieła Autorskie i Aranżacje — Kacper Czeczot',
   description: 'Dzieła dyplomowe Kacpra Czeczota (Koncert Dyplomowy „Finale”, „Echo Epok”) oraz katalog autorskich aranżacji i partytur.',
   hasPart: [
     ...works.map((w) => ({
@@ -53,14 +53,14 @@ const worksPageSchema = {
 ---
 
 <BaseLayout
-  title="Dzieła Autorskie & Projekty Dyplomowe — Kacper Czeczot"
-  description="Dzieła dyplomowe Kacpra Czeczota: Koncert Dyplomowy „Finale” (dyrygentura) oraz „Echo Epok” (produkcja muzyczna i realizacja dźwięku)."
+  title="Dzieła Autorskie i Aranżacje — Kacper Czeczot"
+  description="Dzieła dyplomowe Kacpra Czeczota (Koncert Dyplomowy „Finale”, „Echo Epok”) oraz katalog autorskich aranżacji i partytur."
   jsonLd={worksPageSchema}
 >
   <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 border-b border-white/10 bg-ocean-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
-        badge="Dzieła Autorskie & Dyplomowe"
+        badge="Dzieła autorskie i dyplomowe"
         title="Dzieła Autorskie"
         subtitle="Dyrygentura symfoniczno-chóralna, autorska produkcja muzyczna oraz katalog opracowań i partytur."
         align="left"

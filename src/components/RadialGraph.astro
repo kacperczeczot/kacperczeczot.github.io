@@ -59,24 +59,24 @@ const categories = [
   },
   {
     id: 'chory',
-    name: 'Chóry & Zespoły',
-    subtitle: 'Składy wokalne & polifonia',
+    name: 'Chóry i Zespoły',
+    subtitle: 'Składy wokalne i polifonia',
     count: countLabel(chory.length, 'skład', 'składy', 'składów'),
     pos: { x: 74, y: 30 },
     ensembles: chory,
   },
   {
     id: 'teatr',
-    name: 'Scena & Teatr',
-    subtitle: 'Operetka & musical',
+    name: 'Scena i Teatr',
+    subtitle: 'Operetka i musical',
     count: countLabel(teatr.length, 'produkcja', 'produkcje', 'produkcji'),
     pos: { x: 74, y: 70 },
     ensembles: teatr,
   },
   {
     id: 'estrada',
-    name: 'Kameralistyka & Estrada',
-    subtitle: 'Live sound & składy estradowe',
+    name: 'Kameralistyka i Estrada',
+    subtitle: 'Projekty kameralne i estradowe',
     count: countLabel(estrada.length, 'zespół', 'zespoły', 'zespołów'),
     pos: { x: 26, y: 70 },
     ensembles: estrada,
@@ -349,11 +349,11 @@ const categoriesPayload = categories.map(cat => ({
                   Metryka działalności
                 </h4>
                 <div class="grid grid-cols-2 gap-2 text-xs font-sans">
-                  <div class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1">
+                  <div id="level-3-meta-years-container" class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1">
                     <span class="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">Lata</span>
                     <span id="level-3-meta-years" class="text-slate-100 font-medium text-xs block truncate">—</span>
                   </div>
-                  <div class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1">
+                  <div id="level-3-meta-concerts-container" class="p-3 rounded-xl bg-sky-950/40 border border-white/10 space-y-1">
                     <span class="text-slate-400 block text-[10px] uppercase tracking-wider font-semibold">Występy</span>
                     <span id="level-3-meta-concerts" class="text-sky-300 font-medium text-xs block truncate">—</span>
                   </div>
@@ -986,12 +986,23 @@ const categoriesPayload = categories.map(cat => ({
       }
 
       const metaYears = document.getElementById('level-3-meta-years');
+      const metaYearsContainer = document.getElementById('level-3-meta-years-container');
       const metaConcerts = document.getElementById('level-3-meta-concerts');
+      const metaConcertsContainer = document.getElementById('level-3-meta-concerts-container');
       const metaLeader = document.getElementById('level-3-meta-leader');
       const metaLeaderContainer = document.getElementById('level-3-meta-leader-container');
 
       if (metaYears) metaYears.textContent = ensemble.years || 'Współpraca bieżąca';
-      if (metaConcerts) metaConcerts.textContent = ensemble.concertCount || 'Działalność sceniczna';
+      if (metaConcerts && metaConcertsContainer) {
+        if (ensemble.concertCount) {
+          metaConcerts.textContent = ensemble.concertCount;
+          metaConcertsContainer.classList.remove('hidden');
+          metaYearsContainer?.classList.remove('col-span-2');
+        } else {
+          metaConcertsContainer.classList.add('hidden');
+          metaYearsContainer?.classList.add('col-span-2');
+        }
+      }
       if (metaLeader && metaLeaderContainer) {
         if (ensemble.leader) {
           metaLeader.innerHTML = '';

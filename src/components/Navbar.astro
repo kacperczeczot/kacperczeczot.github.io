@@ -5,9 +5,9 @@ import { base } from '../utils/cms';
 const pathname = new URL(Astro.request.url).pathname;
 
 const navItems = [
-  { label: 'Scena & Zespoły', href: `${base}/scena-i-zespoly`, icon: Music, active: pathname.startsWith(`${base}/scena-i-zespoly`) },
+  { label: 'Scena i Zespoły', href: `${base}/scena-i-zespoly`, icon: Music, active: pathname.startsWith(`${base}/scena-i-zespoly`) },
   { label: 'Dzieła Autorskie', href: `${base}/projekty-autorskie`, icon: Radio, active: pathname.startsWith(`${base}/projekty-autorskie`) },
-  { label: 'Bio & Edukacja', href: `${base}/bio`, icon: User, active: pathname.startsWith(`${base}/bio`) },
+  { label: 'Bio i Edukacja', href: `${base}/bio`, icon: User, active: pathname.startsWith(`${base}/bio`) },
 ];
 ---
 
@@ -96,7 +96,7 @@ const navItems = [
         class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold text-white border border-white/15"
       >
         <Mail class="w-4 h-4" />
-        <span>Nawiąż Kontakt</span>
+        <span>Kontakt</span>
       </a>
     </div>
   </div>

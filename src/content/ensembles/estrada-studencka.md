@@ -2,8 +2,8 @@
 name: "Estrada Studencka Wydziału Sztuki UWM"
 pillar: "estrada"
 role: "Solista / Kameralista (fortepian / śpiew)"
-leader: "Wydział Sztuki UWM"
-concertCount: "Cykliczne edycje"
+leader: ""
+concertCount: ""
 years: "2023–obecnie"
 highlights:
   - "Dwa wyróżnienia na Estradzie Studenckiej UWM (2023): D. Szostakowicz — Pięć utworów na dwoje skrzypiec i fortepian oraz Mrozu — Napad"

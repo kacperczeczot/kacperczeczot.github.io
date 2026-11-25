@@ -6,8 +6,7 @@ leader: "Piotr Zalewski (Kapelmistrz)"
 concertCount: "1 występ"
 years: "2025–obecnie"
 highlights:
-  - "Festiwal Pieśni Patriotycznej w Kolnie (2025)"
-  - "Reprezentowanie orkiestry podczas festiwali i przeglądów regionalnych"
+  - "Festiwal Pieśni Patriotycznej w Kolnie (9 listopada 2025)"
 photos:
   - src: "/images/ensembles/przasnysz-kolno-2025.webp"
     event: "Festiwal Orkiestr Dętych"
@@ -16,4 +15,4 @@ photos:
 order: 8
 ---
 
-Udział w sekcji klarnetów podczas festiwali, przeglądów orkiestr dętych oraz reprezentacyjnych uroczystości miejskich.
+Występ gościnny w sekcji klarnetów podczas Festiwalu Pieśni Patriotycznej w Kolnie.

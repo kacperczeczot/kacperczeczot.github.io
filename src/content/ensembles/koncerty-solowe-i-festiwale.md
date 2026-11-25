@@ -2,9 +2,9 @@
 name: "Występy solowe, kameralne i festiwale"
 pillar: "estrada"
 role: "Solista / Kameralista (śpiew / fortepian)"
-leader: "Inicjatywy własne i zaproszenia koncertowe"
-concertCount: "Koncerty i festiwale"
-years: "2024–obecnie"
+leader: ""
+concertCount: ""
+years: "2023–obecnie"
 highlights:
   - "Koncert plenerowy w Parku Miejskim w Mławie (fortepian, 2023)"
   - "Koncert „Podróż po muzyce” — Bursa Szkolna w Mławie, wykonawstwo wokalno-instrumentalne z Olgą Sobolewską (2024)"

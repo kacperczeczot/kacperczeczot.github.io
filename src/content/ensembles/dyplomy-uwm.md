@@ -2,8 +2,8 @@
 name: "Współprace dyplomowe UWM"
 pillar: "estrada"
 role: "Pianista-akompaniator / Wokalista"
-leader: "Dyplomanci i promotorzy Wydziału Sztuki UWM"
-concertCount: "Koncerty dyplomowe"
+leader: ""
+concertCount: ""
 years: "2023–obecnie"
 highlights:
   - "Akompaniament fortepianowy na dyplomach m.in. Adama Mielnickiego, Pauliny Kaczorowskiej, Kamila Brydzińskiego, Patrycji Rogalskiej i Wiktorii Karneckiej"

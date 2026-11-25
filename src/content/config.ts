@@ -18,7 +18,7 @@ const ensemblesCollection = defineCollection({
     name: z.string(),
     pillar: z.enum(['orkiestry', 'chory', 'teatr', 'estrada']),
     role: z.string(),
-    concertCount: z.string(),
+    concertCount: z.string().optional().default(''),
     years: z.string().optional().default(''),
     leader: z.string().optional().default(''),
     highlights: z.array(z.string()).default([]),

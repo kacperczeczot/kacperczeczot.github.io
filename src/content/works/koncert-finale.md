@@ -3,21 +3,22 @@ title: Koncert Dyplomowy „Finale”
 subtitle: Filharmonia Warmińsko-Mazurska w Olsztynie
 type: conducting
 year: "2025"
-description: Koncert Dyplomowy „Finale” zrealizowany 13 maja 2025 roku w sali
+description: Koncert Dyplomowy „Finale” odbył się 13 maja 2025 roku w sali
   koncertowej Filharmonii Warmińsko-Mazurskiej im. Feliksa Nowowiejskiego w
-  Olsztynie. Dyrygentura oraz autorskie opracowania symfoniczno-chóralne
-  wykonane przez Chór im. prof. Wiktora Wawrzyczka UWM oraz orkiestrę (Nagroda
-  Dziekana Wydziału Sztuki UWM za wybitne artystyczne dzieło dyplomowe).
+  Olsztynie. Złożyły się na niego autorskie opracowania symfoniczno-chóralne
+  wykonane przez Chór im. prof. Wiktora Wawrzyczka UWM oraz orkiestrę złożoną ze
+  studentów UWM i muzyków z Mławy i okolic. Projekt otrzymał Nagrodę Dziekana
+  Wydziału Sztuki UWM za wybitne artystyczne dzieło dyplomowe.
 cover: /images/works/dyplom6.webp
 order: 1
 metrics:
-  - label: Orkiestra
-    value: Studenci UWM oraz muzycy z Mławy i okolic
-  - label: Chór
-    value: Chór im. prof. Wawrzyczka UWM
-  - label: Dyrygent
-    value: Kacper Czeczot
-  - label: Promotor dzieła
+  - label: Uczelnia
+    value: Wydział Sztuki UWM
+  - label: Kierunek
+    value: Edukacja artystyczna w zakresie sztuki muzycznej
+  - label: Rola
+    value: Dyrygentura, aranżacje
+  - label: Promotor
     value: dr hab. Katarzyna Bojaruniec, prof. UWM
     url: https://ws.uwm.edu.pl/pracownicy-ogloszenia-i-aktualnosci/dr-hab-katarzyna-bojaruniec-prof-uwm
 youtubeVideos:
@@ -29,11 +30,4 @@ youtubeVideos:
     youtubeId: cCIYrbOIUHE
 videoHeading: Nagrania z koncertu
 ---
-
-
-### Repertuar i realizacja
-
-- **Program:** Autorskie opracowania symfoniczno-chóralne hymnu *Nearer My God to Thee*, *Bohemian Rhapsody* oraz *Psalmu dla Ciebie*.
-- **Wyróżnienie:** Nagroda Dziekana Wydziału Sztuki UWM za *„Wybitne artystyczne dzieło dyplomowe”*.
-- **Zakres prac:** Opracowanie partytur orkiestrowych i chóralnych, prowadzenie prób sekcyjnych oraz dyrygentura podczas koncertu galowego 13 maja 2025 r.
 
