@@ -2,8 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import YoutubeEmbed from '../components/YoutubeEmbed.astro';
-import ArrangementsCatalog from '../components/ArrangementsCatalog.astro';
-import arrangementsData from '../data/arrangements.json';
 import { getCollection } from 'astro:content';
 import { cmsImage } from '../utils/cms';
 
@@ -23,32 +21,18 @@ const typeLabel = {
 const worksPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'Dzieła Autorskie i Aranżacje — Kacper Czeczot',
-  description: 'Dzieła dyplomowe Kacpra Czeczota (Koncert Dyplomowy „Finale”, „Echo Epok”) oraz katalog autorskich aranżacji i partytur.',
-  hasPart: [
-    ...works.map((w) => ({
-      '@type': 'CreativeWork',
-      name: w.data.title,
-      headline: w.data.subtitle,
-      description: w.data.description,
-      author: {
-        '@type': 'Person',
-        name: 'Kacper Czeczot'
-      }
-    })),
-    ...(arrangementsData.items || []).map((a) => ({
-      '@type': 'MusicComposition',
-      name: a.title,
-      description: a.notes || a.ensemble,
-      musicArrangement: {
-        '@type': 'MusicComposition',
-        composer: {
-          '@type': 'Person',
-          name: 'Kacper Czeczot'
-        }
-      }
-    }))
-  ]
+  name: 'Dzieła Autorskie — Kacper Czeczot',
+  description: 'Dzieła dyplomowe Kacpra Czeczota: Koncert Dyplomowy „Finale” (dyrygentura) oraz „Echo Epok” (produkcja muzyczna i realizacja dźwięku).',
+  hasPart: works.map((w) => ({
+    '@type': 'CreativeWork',
+    name: w.data.title,
+    headline: w.data.subtitle,
+    description: w.data.description,
+    author: {
+      '@type': 'Person',
+      name: 'Kacper Czeczot'
+    }
+  }))
 };
 ---
 
@@ -62,7 +46,7 @@ const worksPageSchema = {
       <SectionHeader
         badge="Dzieła autorskie i dyplomowe"
         title="Dzieła Autorskie"
-        subtitle="Dyrygentura symfoniczno-chóralna, autorska produkcja muzyczna oraz katalog opracowań i partytur."
+        subtitle="Dyrygentura symfoniczno-chóralna oraz autorska produkcja muzyczna."
         align="left"
       />
     </div>
@@ -172,8 +156,6 @@ const worksPageSchema = {
     </section>
     );
   })}
-
-  <ArrangementsCatalog />
 </BaseLayout>
 
 <style>
