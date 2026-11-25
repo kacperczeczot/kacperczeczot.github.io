@@ -5,7 +5,13 @@ import YoutubeEmbed from '../components/YoutubeEmbed.astro';
 import { getCollection } from 'astro:content';
 import { cmsImage } from '../utils/cms';
 
-const works = (await getCollection('works')).sort((a, b) => a.data.order - b.data.order);
+const rawWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.data.order);
+const works = await Promise.all(
+  rawWorks.map(async (work) => {
+    const { Content } = await work.render();
+    return { ...work, Content };
+  })
+);
 
 const typeLabel = {
   conducting: 'Dyrygentura symfoniczno-chóralna',
@@ -46,7 +52,10 @@ const worksPageSchema = {
     </div>
   </section>
 
-  {works.map((work, workIndex) => (
+  {works.map((work, workIndex) => {
+    const WorkContent = work.Content;
+    const hasBody = work.body && work.body.trim().length > 0;
+    return (
     <section class={`py-20 ${workIndex < works.length - 1 ? 'border-b border-white/10' : ''}`}>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -61,6 +70,11 @@ const worksPageSchema = {
             <p class="text-slate-300 font-sans font-light leading-relaxed text-base sm:text-lg">
               {work.data.description}
             </p>
+            {hasBody && (
+              <div class="work-prose pt-4 border-t border-white/10 space-y-3 text-slate-300 font-sans font-light leading-relaxed text-sm sm:text-base">
+                <WorkContent />
+              </div>
+            )}
             {work.data.videoUrl && (
               <p>
                 <a
@@ -80,6 +94,8 @@ const worksPageSchema = {
               <img
                 src={cmsImage(work.data.cover)}
                 alt={`Okładka: ${work.data.title}`}
+                loading="lazy"
+                decoding="async"
                 class="w-full aspect-[16/10] object-cover rounded-2xl border border-white/10"
               />
             )}
@@ -138,5 +154,37 @@ const worksPageSchema = {
         )}
       </div>
     </section>
-  ))}
+    );
+  })}
 </BaseLayout>
+
+<style>
+  .work-prose :global(h2),
+  .work-prose :global(h3) {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    margin-top: 0.75rem;
+  }
+  .work-prose :global(ul) {
+    list-style: disc;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .work-prose :global(strong) {
+    color: #f1f5f9;
+    font-weight: 500;
+  }
+  .work-prose :global(a) {
+    color: #7dd3fc;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgba(56, 189, 248, 0.4);
+  }
+  .work-prose :global(a:hover) {
+    color: #bae6fd;
+  }
+</style>

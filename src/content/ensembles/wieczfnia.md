@@ -11,7 +11,7 @@ highlights:
   - "Prowadzenie prób, warsztaty z młodzieżą oraz dyrygowanie orkiestrą"
   - "Autorskie aranżacje na orkiestrę dętą oraz gra w sekcji klarnetów i perkusji"
 photos:
-  - src: "/images/ensembles/wieczfnia-szydlowo-2026.jpg"
+  - src: "/images/ensembles/wieczfnia-szydlowo-2026.webp"
     event: "Koncert Noworoczny"
     date: "11 stycznia 2026"
     location: "Szydłowo"

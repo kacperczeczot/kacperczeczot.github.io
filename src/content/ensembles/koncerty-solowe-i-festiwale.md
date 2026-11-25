@@ -10,7 +10,7 @@ highlights:
   - "Koncert „Podróż po muzyce” — Bursa Szkolna w Mławie, wykonawstwo wokalno-instrumentalne z Olgą Sobolewską (2024)"
   - "Festiwal Piosenki Powstańczej w Chorzelach (2025)"
 photos:
-  - src: "/images/kacper-fortepian-mlawa.jpg"
+  - src: "/images/kacper-fortepian-mlawa.webp"
     event: "Koncert plenerowy w Parku Miejskim"
     date: "2023"
     location: "Park Miejski w Mławie"

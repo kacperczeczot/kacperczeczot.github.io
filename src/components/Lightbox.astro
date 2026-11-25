@@ -10,90 +10,129 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-astro';
   aria-modal="true"
   aria-label="Podgląd powiększonego zdjęcia"
 >
-  <!-- Close Button -->
+  <!-- Top bar: Counter & Close Button -->
+  <div class="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
+    <span
+      id="lightbox-counter"
+      class="hidden px-3 py-1.5 text-xs font-mono tracking-wider text-sky-200 border border-white/15 bg-ocean-950/90"
+    >
+      1 / 1
+    </span>
+  </div>
+
   <button
     id="lightbox-close-btn"
     type="button"
     aria-label="Zamknij podgląd zdjęcia"
-    class="absolute top-6 right-6 z-10 p-3 border border-white/15 bg-ocean-950/90 text-slate-300 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-sky-400"
+    class="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-3 border border-white/15 bg-ocean-950/90 text-slate-300 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-sky-400"
   >
     <X class="w-6 h-6" />
   </button>
 
-  
   <!-- Navigation -->
-  <button id="lightbox-prev-btn" type="button" aria-label="Poprzednie zdjęcie" class="absolute left-4 z-10 p-3 bg-ocean-950/80 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400 hidden sm:block">
-    <ChevronLeft class="w-8 h-8" />
+  <button
+    id="lightbox-prev-btn"
+    type="button"
+    aria-label="Poprzednie zdjęcie"
+    class="absolute left-2 sm:left-4 z-20 p-2.5 sm:p-3 bg-ocean-950/85 border border-white/15 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400"
+  >
+    <ChevronLeft class="w-6 h-6 sm:w-8 sm:h-8" />
   </button>
-  <button id="lightbox-next-btn" type="button" aria-label="Następne zdjęcie" class="absolute right-4 z-10 p-3 bg-ocean-950/80 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400 hidden sm:block">
-    <ChevronRight class="w-8 h-8" />
+  <button
+    id="lightbox-next-btn"
+    type="button"
+    aria-label="Następne zdjęcie"
+    class="absolute right-2 sm:right-4 z-20 p-2.5 sm:p-3 bg-ocean-950/85 border border-white/15 text-white rounded-full hover:bg-sky-600 transition-colors focus:outline-none focus:ring-2 focus:ring-sky-400"
+  >
+    <ChevronRight class="w-6 h-6 sm:w-8 sm:h-8" />
   </button>
 
   <!-- Image Container -->
-  <div class="relative max-w-5xl max-h-[85vh] w-full flex flex-col items-center justify-center">
-    <div class="relative overflow-hidden border border-white/10 bg-[#050810]">
+  <div class="relative max-w-5xl max-h-[85vh] w-full flex flex-col items-center justify-center px-8 sm:px-14">
+    <div id="lightbox-stage" class="relative overflow-hidden border border-white/10 bg-[#050810] touch-pan-y">
       <img
         id="lightbox-image"
         src=""
         alt="Powiększone zdjęcie"
-        class="max-w-full max-h-[75vh] w-auto h-auto object-contain transition-transform duration-300"
+        class="max-w-full max-h-[72vh] w-auto h-auto object-contain transition-transform duration-300 select-none"
       />
     </div>
 
     <!-- Caption -->
-    <div id="lightbox-caption" class="mt-4 text-center text-sm font-medium text-slate-300 font-sans tracking-wide px-4 py-2 border border-white/10 bg-ocean-950/90">
+    <div id="lightbox-caption" class="mt-4 text-center text-sm font-medium text-slate-300 font-sans tracking-wide px-4 py-2 border border-white/10 bg-ocean-950/90 max-w-2xl">
       Podgląd fotografii
     </div>
   </div>
 </div>
 
 <script>
+  let lightboxAbortController: AbortController | null = null;
+
   function setupLightbox() {
+    if (lightboxAbortController) {
+      lightboxAbortController.abort();
+    }
+    lightboxAbortController = new AbortController();
+    const { signal } = lightboxAbortController;
+
     const lightbox = document.getElementById('global-lightbox');
     const lightboxImg = document.getElementById('lightbox-image') as HTMLImageElement | null;
     const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.getElementById('lightbox-counter');
     const closeBtn = document.getElementById('lightbox-close-btn');
     const prevBtn = document.getElementById('lightbox-prev-btn');
     const nextBtn = document.getElementById('lightbox-next-btn');
 
     let currentImages: HTMLElement[] = [];
     let currentIndex = -1;
-
+    let touchStartX = 0;
+    let touchStartY = 0;
 
     if (!lightbox || !lightboxImg || !lightboxCaption || !closeBtn) return;
+
+    function updateNavButtons() {
+      if (prevBtn) prevBtn.style.display = currentIndex > 0 ? 'block' : 'none';
+      if (nextBtn) {
+        nextBtn.style.display = currentIndex >= 0 && currentIndex < currentImages.length - 1 ? 'block' : 'none';
+      }
+      if (lightboxCounter) {
+        if (currentImages.length > 1 && currentIndex >= 0) {
+          lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+          lightboxCounter.classList.remove('hidden');
+        } else {
+          lightboxCounter.classList.add('hidden');
+        }
+      }
+    }
 
     function openLightbox(src: string, alt: string, captionHTML: string) {
       if (!lightbox || !lightboxImg || !lightboxCaption) return;
       lightboxImg.src = src;
       lightboxImg.alt = alt || 'Zdjęcie archiwalne';
       lightboxCaption.innerHTML = captionHTML || alt || 'Podgląd fotografii';
-      
+
+      const wasHidden = lightbox.classList.contains('hidden');
       lightbox.classList.remove('hidden');
-      // Trigger animation
+
       requestAnimationFrame(() => {
         lightbox.classList.remove('opacity-0');
         lightbox.classList.add('opacity-100');
       });
-      
-      // Fix scrollbar jump
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-      document.body.style.overflow = 'hidden';
-      
+
+      if (wasHidden) {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+        document.body.style.overflow = 'hidden';
+      }
+
       updateNavButtons();
     }
-    
-    function updateNavButtons() {
-       if (prevBtn) prevBtn.style.display = (currentIndex > 0) ? 'block' : 'none';
-       if (nextBtn) nextBtn.style.display = (currentIndex >= 0 && currentIndex < currentImages.length - 1) ? 'block' : 'none';
-    }
-
 
     function closeLightbox() {
       if (!lightbox || !lightboxImg) return;
       lightbox.classList.remove('opacity-100');
       lightbox.classList.add('opacity-0');
-      
+
       setTimeout(() => {
         lightbox.classList.add('hidden');
         lightboxImg.src = '';
@@ -102,92 +141,103 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-astro';
       }, 250);
     }
 
-    closeBtn.addEventListener('click', closeLightbox);
-    if (prevBtn) {
-      prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (currentIndex > 0) {
-          currentIndex--;
-          showCurrent();
-        }
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (currentIndex < currentImages.length - 1) {
-          currentIndex++;
-          showCurrent();
-        }
-      });
-    }
-    
     function showCurrent() {
-        if (currentIndex >= 0 && currentIndex < currentImages.length) {
-            const el = currentImages[currentIndex];
-            const src = el.getAttribute('data-lightbox-src') || '';
-            const alt = el.getAttribute('data-lightbox-alt') || '';
-            const cap = el.getAttribute('data-lightbox-caption') || alt;
-            if (src) openLightbox(src, alt, cap);
-        }
+      if (currentIndex >= 0 && currentIndex < currentImages.length) {
+        const el = currentImages[currentIndex];
+        const src = el.getAttribute('data-lightbox-src') || '';
+        const alt = el.getAttribute('data-lightbox-alt') || '';
+        const cap = el.getAttribute('data-lightbox-caption') || alt;
+        if (src) openLightbox(src, alt, cap);
+      }
     }
 
+    function goPrev() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        showCurrent();
+      }
+    }
+
+    function goNext() {
+      if (currentIndex < currentImages.length - 1) {
+        currentIndex++;
+        showCurrent();
+      }
+    }
+
+    closeBtn.addEventListener('click', closeLightbox, { signal });
+    prevBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goPrev();
+    }, { signal });
+    nextBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goNext();
+    }, { signal });
+
+    // Touch swipe navigation on mobile
+    lightbox.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true, signal });
+
+    lightbox.addEventListener('touchend', (e) => {
+      if (e.changedTouches.length !== 1) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+        if (dx < 0) goNext();
+        else goPrev();
+      }
+    }, { passive: true, signal });
 
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox || (e.target as HTMLElement).closest('#global-lightbox > div') === null) {
+      if (e.target === lightbox) {
         closeLightbox();
       }
-    });
+    }, { signal });
 
     document.addEventListener('keydown', (e) => {
       if (!lightbox.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft' && currentIndex > 0) {
-            currentIndex--; showCurrent();
+        if (e.key === 'Escape') {
+          e.stopPropagation();
+          closeLightbox();
         }
-        if (e.key === 'ArrowRight' && currentIndex < currentImages.length - 1) {
-            currentIndex++; showCurrent();
-        }
+        if (e.key === 'ArrowLeft') goPrev();
+        if (e.key === 'ArrowRight') goNext();
       }
-    });
+    }, { signal });
 
     // Delegate clicks
     document.addEventListener('click', (e) => {
       const target = (e.target as HTMLElement).closest('[data-lightbox-src]') as HTMLElement | null;
       if (target) {
         e.preventDefault();
-        
-        // Find all visible images to allow navigation
-        currentImages = Array.from(document.querySelectorAll('[data-lightbox-src]')).filter(el => {
-           // We only want images in the current active grid
-           // The easiest way is to scope to the closest container, but since there are multiple levels, 
-           // let's grab all from the same parent or closest identifiable section.
-           const container = target.closest('#level-3-photos-grid, .grid');
-           if (container) {
-              return container.contains(el);
-           }
-           return true;
-        }) as HTMLElement[];
-        
+        const container = target.closest('#level-3-photos-grid, .grid');
+        currentImages = Array.from(document.querySelectorAll('[data-lightbox-src]')).filter((el) =>
+          container ? container.contains(el) : true
+        ) as HTMLElement[];
+
         currentIndex = currentImages.indexOf(target);
-        
+
         const src = target.getAttribute('data-lightbox-src') || '';
         const alt = target.getAttribute('data-lightbox-alt') || '';
         const caption = target.getAttribute('data-lightbox-caption') || alt;
         if (src) openLightbox(src, alt, caption);
       }
-    });
+    }, { signal });
 
     // Listen to custom event
     window.addEventListener('open-lightbox-event', (e: Event) => {
       const customEvent = e as CustomEvent<{ src: string; alt: string; caption?: string }>;
       if (customEvent.detail?.src) {
+        currentImages = [];
+        currentIndex = -1;
         openLightbox(customEvent.detail.src, customEvent.detail.alt, customEvent.detail.caption || customEvent.detail.alt);
       }
-    });
+    }, { signal });
   }
 
-  // Setup on initial load and view transitions
-  setupLightbox();
   document.addEventListener('astro:page-load', setupLightbox);
 </script>

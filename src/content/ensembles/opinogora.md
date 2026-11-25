@@ -11,7 +11,7 @@ highlights:
   - "Rozbudowa repertuaru orkiestry o standardy muzyki marszowej i rozrywkowej"
   - "Praca warsztatowa z sekcjami instrumentów dętych"
 photos:
-  - src: "/images/ensembles/opinogora-piknik-2026.jpg"
+  - src: "/images/ensembles/opinogora-piknik-2026.webp"
     event: "Piknik Rodzinny"
     date: "31 maja 2026"
     location: "Opinogóra Górna"

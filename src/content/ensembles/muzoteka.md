@@ -10,11 +10,11 @@ highlights:
   - "Koncert pieśni patriotycznych (listopad 2022)"
   - "Koncert kolęd i pastorałek (styczeń 2023)"
 photos:
-  - src: "/images/ensembles/muzoteka-patriotyczny-2022.jpg"
+  - src: "/images/ensembles/muzoteka-patriotyczny-2022.webp"
     event: "Koncert Pieśni Patriotycznych"
     date: "17 listopada 2022"
     location: "Muzoteka w Olsztynie"
-  - src: "/images/ensembles/piraci-uwm.jpg"
+  - src: "/images/ensembles/piraci-uwm.webp"
     event: "Projekt edukacyjny „Muzyczna przygoda z piratami”"
     date: "2023"
     location: "Wydział Sztuki UWM"

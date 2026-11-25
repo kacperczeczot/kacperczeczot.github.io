@@ -8,6 +8,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
+      filter: (page) => !page.includes('/admin'),
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date(),

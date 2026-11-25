@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { base } from '../utils/cms';
+---
+
+<BaseLayout
+  title="404 — Nie znaleziono strony · Kacper Czeczot"
+  description="Strona o podanym adresie nie istnieje."
+>
+  <section class="relative min-h-[75vh] flex items-center justify-center pt-28 pb-20 bg-ocean-950">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <p class="text-xs font-mono uppercase tracking-[0.3em] text-sky-400">
+        Błąd 404
+      </p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white tracking-tight">
+        Nie znaleziono strony
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 font-sans font-light leading-relaxed">
+        Szukana strona mogła zostać przeniesiona lub adres zawiera literówkę.
+      </p>
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href={base || '/'}
+          class="inline-flex items-center gap-3 border border-white/15 px-7 py-3.5 text-sm font-sans uppercase tracking-[0.2em] font-semibold text-white hover:border-sky-400/50 hover:text-sky-200 editorial-hover transition-all"
+        >
+          <span>Strona główna</span>
+          <span aria-hidden="true" class="text-sky-400">→</span>
+        </a>
+        <a
+          href={`${base}/scena-i-zespoly`}
+          class="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-sans uppercase tracking-[0.18em] text-slate-300 hover:text-sky-300 transition-colors"
+        >
+          <span>Scena i Zespoły</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

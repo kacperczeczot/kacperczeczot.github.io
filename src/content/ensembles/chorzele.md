@@ -10,7 +10,7 @@ highlights:
   - "Koncerty festiwalowe i wyjazdowe w kraju i za granicą"
   - "Oprawa organowa i wokalna uroczystości okolicznościowych"
 photos:
-  - src: "/images/ensembles/chorzele-karnolsky-2024.jpg"
+  - src: "/images/ensembles/chorzele-karnolsky-2024.webp"
     event: "Karnolsky Summer Camp"
     date: "27-28 sierpnia 2024"
     location: "Bułgaria"

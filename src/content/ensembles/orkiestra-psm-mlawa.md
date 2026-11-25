@@ -10,7 +10,7 @@ highlights:
   - "Oprawa muzyczna koncertów szkolnych i jubileuszy"
   - "Autorskie opracowania partytur na orkiestrę dętą"
 photos:
-  - src: "/images/ensembles/psm-mlawa-wiosenny-2022.jpg"
+  - src: "/images/ensembles/psm-mlawa-wiosenny-2022.webp"
     event: "Koncert Wiosenny PSM"
     date: "21 kwietnia 2022"
     location: "Mława"

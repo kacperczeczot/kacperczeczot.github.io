@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Lightbox from '../components/Lightbox.astro';
@@ -17,7 +18,7 @@ interface Props {
 const {
   title = 'Kacper Czeczot — Dyrygent · Multiinstrumentalista · Aranżer',
   description = 'Oficjalne portfolio artystyczne Kacpra Czeczota: dyrygentura symfoniczna i chóralna, wykonawstwo sceniczne, opracowania partytur oraz realizacja dźwięku.',
-  image = `${base}/images/og-cover.svg`,
+  image = `${base}/images/og-cover.png`,
   type = 'website',
   jsonLd,
 } = Astro.props;
@@ -37,7 +38,7 @@ const defaultPersonSchema = {
   givenName: 'Kacper',
   familyName: 'Czeczot',
   url: siteUrl,
-  image: `${siteUrl}${homeData.heroImage || '/images/kacper-czeczot-dyrygent-hero.jpg'}`,
+  image: `${siteUrl}${homeData.heroImage || '/images/kacper-czeczot-dyrygent-hero.webp'}`,
   jobTitle: ['Dyrygent', 'Kapelmistrz', 'Multiinstrumentalista', 'Aranżer', 'Kierownik muzyczny', 'Realizator dźwięku'],
   description: 'Oficjalne portfolio artystyczne Kacpra Czeczota: dyrygentura symfoniczna i chóralna, prowadzenie orkiestr i chórów, wykonawstwo sceniczne, opracowania partytur oraz realizacja dźwięku.',
   email: homeData.contactEmail,
@@ -93,6 +94,7 @@ const defaultPersonSchema = {
     { '@type': 'MusicGroup', name: 'Orkiestra GOK w Opinogórze Górnej' },
     { '@type': 'MusicGroup', name: 'Orkiestra Dęta OSP Rębowo' },
     { '@type': 'MusicGroup', name: 'Orkiestra Dęta OSP Chociszewo' },
+    { '@type': 'MusicGroup', name: 'Orkiestra Dęta OSP Bogate' },
     { '@type': 'MusicGroup', name: 'Chór im. prof. Wiktora Wawrzyczka UWM' },
     { '@type': 'MusicGroup', name: 'Miejska Młodzieżowa Orkiestra Dęta w Chorzelach' },
     { '@type': 'MusicGroup', name: 'Chór Cantores Varmienses' },
@@ -191,6 +193,8 @@ const schemas = [
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absoluteImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={title} />
 
     <!-- Twitter Card -->
@@ -211,6 +215,7 @@ const schemas = [
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
   </head>
   <body class="min-h-screen flex flex-col bg-ocean-950 text-slate-100 selection:bg-sky-500/30 selection:text-sky-200 relative overflow-x-hidden">
 
@@ -229,7 +234,7 @@ const schemas = [
     <Lightbox />
 
     <!-- Cloudflare Web Analytics -->
-    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e2570b27f4834ea49dd7a6bbd500fe09"}'></script>
+    <script is:inline type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e2570b27f4834ea49dd7a6bbd500fe09"}'></script>
     <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

@@ -120,13 +120,17 @@ const musescoreUrl = homeData.musescoreUrl || 'https://musescore.com/user/484148
 </footer>
 
 <script>
-  const copyBtn = document.getElementById('copy-email-btn');
-  const copyIcon = document.getElementById('copy-icon');
-  const checkIcon = document.getElementById('check-icon');
-  const feedback = document.getElementById('copy-feedback');
-  const emailText = document.getElementById('footer-email-text')?.textContent || '';
+  function initFooterCopy() {
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyIcon = document.getElementById('copy-icon');
+    const checkIcon = document.getElementById('check-icon');
+    const feedback = document.getElementById('copy-feedback');
+    const emailText = document.getElementById('footer-email-text')?.textContent || '';
 
-  if (copyBtn && copyIcon && checkIcon && feedback) {
+    if (!copyBtn || !copyIcon || !checkIcon || !feedback) return;
+    if (copyBtn.dataset.bound === 'true') return;
+    copyBtn.dataset.bound = 'true';
+
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText(emailText.trim());
@@ -144,4 +148,6 @@ const musescoreUrl = homeData.musescoreUrl || 'https://musescore.com/user/484148
       }
     });
   }
+
+  document.addEventListener('astro:page-load', initFooterCopy);
 </script>

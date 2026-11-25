@@ -10,7 +10,7 @@ highlights:
   - "Regularne dyrygowanie podczas uroczystości lokalnych i religijnych (m.in. procesja na wodzie na Wiśle)"
   - "Wykonawstwo w sekcji klarnetów"
 photos:
-  - src: "/images/ensembles/chociszewo-czerwinsk-2026.jpg"
+  - src: "/images/ensembles/chociszewo-czerwinsk-2026.webp"
     event: "Dożynki Dekanalne"
     date: "15 sierpnia 2026"
     location: "Czerwińsk nad Wisłą"

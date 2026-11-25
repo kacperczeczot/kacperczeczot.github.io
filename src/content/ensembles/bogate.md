@@ -10,7 +10,7 @@ highlights:
   - "Uroczystości plenerowe i koncerty okolicznościowe"
   - "Prowadzenie prób sekcyjnych i przygotowanie oprawy muzycznej"
 photos:
-  - src: "/images/ensembles/bogate-dozynki-2026.jpg"
+  - src: "/images/ensembles/bogate-dozynki-2026.webp"
     event: "Dożynki Gminno-Parafialne"
     date: "5 września 2026"
     location: "Bogate"

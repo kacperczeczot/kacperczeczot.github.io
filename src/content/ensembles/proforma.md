@@ -10,11 +10,11 @@ highlights:
   - "Koncert „Opowieści z Afryki” (Centrum Konferencyjne UWM, 2024)"
   - "Koncert świąteczny „Stare telefony działają cuda” (Manufaktura, Łódź)"
 photos:
-  - src: "/images/ensembles/proforma-era-spiewu-2023.jpg"
+  - src: "/images/ensembles/proforma-era-spiewu-2023.webp"
     event: "Era śpiewu. Warmia Mazury"
     date: "13 października 2023"
     location: "Filharmonia Warmińsko-Mazurska w Olsztynie"
-  - src: "/images/ensembles/proforma-afryka-2024.jpg"
+  - src: "/images/ensembles/proforma-afryka-2024.webp"
     event: "Koncert „Opowieści z Afryki”"
     date: "3 marca 2024"
     location: "Centrum Konferencyjne UWM w Olsztynie"

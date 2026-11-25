@@ -10,7 +10,7 @@ highlights:
   - "Warsztaty instrumentalne i nauka gry na instrumentach dętych dla młodzieży"
   - "Nowe autorskie aranżacje marszowe w stałym repertuarze orkiestry"
 photos:
-  - src: "/images/ensembles/rebowo-wyszogrod-2025.jpg"
+  - src: "/images/ensembles/rebowo-wyszogrod-2025.webp"
     event: "Dni Wisły w Wyszogrodzie"
     date: "14 czerwca 2025"
     location: "Wyszogród"

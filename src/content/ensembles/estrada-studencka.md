@@ -9,11 +9,11 @@ highlights:
   - "Dwa wyróżnienia na Estradzie Studenckiej UWM (2023): D. Szostakowicz — Pięć utworów na dwoje skrzypiec i fortepian oraz Mrozu — Napad"
   - "Występy w kolejnych edycjach: fortepian (2023), wokal (2024, 2025)"
 photos:
-  - src: "/images/ensembles/estrada-trio-2023.jpg"
+  - src: "/images/ensembles/estrada-trio-2023.webp"
     event: "D. Szostakowicz — Pięć utworów na dwoje skrzypiec i fortepian"
     date: "17 maja 2023"
     location: "Wydział Sztuki UWM w Olsztynie"
-  - src: "/images/ensembles/estrada-rozrywkowy-2023.jpg"
+  - src: "/images/ensembles/estrada-rozrywkowy-2023.webp"
     event: "Mrozu — Napad"
     date: "17 maja 2023"
     location: "Wydział Sztuki UWM w Olsztynie"

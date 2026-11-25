@@ -10,11 +10,11 @@ highlights:
   - "Szalone Lata Retro — aktor, pianista na żywo, obsługa techniczna"
   - "„Smerfowisko, czyli Gargamel złapany” (2022) — Smerf Zgrywus"
 photos:
-  - src: "/images/ensembles/teatr-muzyczny-disney-2023.jpg"
+  - src: "/images/ensembles/teatr-muzyczny-disney-2023.webp"
     event: "Gala Disney"
     date: "2 października 2023"
     location: "Centrum Konferencyjne UWM w Olsztynie"
-  - src: "/images/ensembles/teatr-muzyczny-smerfowisko-2022.jpg"
+  - src: "/images/ensembles/teatr-muzyczny-smerfowisko-2022.webp"
     event: "„Smerfowisko, czyli Gargamel złapany”"
     date: "5 grudnia 2022"
     location: "Kwidzyńskie Centrum Kultury"

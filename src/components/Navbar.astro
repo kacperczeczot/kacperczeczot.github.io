@@ -103,29 +103,40 @@ const navItems = [
 </header>
 
 <script>
-  const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const openIcon = document.getElementById('menu-open-icon');
-  const closeIcon = document.getElementById('menu-close-icon');
+  function initNavbar() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('menu-open-icon');
+    const closeIcon = document.getElementById('menu-close-icon');
 
-  if (menuButton && mobileMenu && openIcon && closeIcon) {
+    if (!menuButton || !mobileMenu || !openIcon || !closeIcon) return;
+    if (menuButton.dataset.bound === 'true') return;
+    menuButton.dataset.bound = 'true';
+
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      openIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    };
+
     menuButton.addEventListener('click', () => {
-      const isExpanded = mobileMenu.classList.toggle('hidden');
-      if (isExpanded) {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
         openIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
       } else {
         openIcon.classList.add('hidden');
         closeIcon.classList.remove('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
       }
     });
 
     mobileMenu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        openIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      });
+      link.addEventListener('click', closeMenu);
     });
   }
+
+  document.addEventListener('astro:page-load', initNavbar);
 </script>

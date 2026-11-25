@@ -24,10 +24,10 @@ settings:
   commit:
     identity: user
     templates:
-      create: "treść: dodaj {path}"
-      update: "treść: aktualizuj {path}"
-      delete: "treść: usuń {path}"
-      rename: "treść: zmień {oldPath} -> {newPath}"
+      create: "content(cms): create {path}"
+      update: "content(cms): update {path}"
+      delete: "content(cms): delete {path}"
+      rename: "content(cms): rename {oldPath} -> {newPath}"
 
 content:
   - name: home
@@ -65,8 +65,11 @@ content:
           - { name: imageAlt, label: Tekst alternatywny zdjęcia, type: string }
       - { name: contactEmail, label: Adres e-mail, type: string }
       - { name: contactInvitation, label: Tekst zaproszenia do kontaktu, type: text }
-      - { name: githubUrl, label: Link do profilu GitHub, type: string }
       - { name: youtubeUrl, label: Link do kanału YouTube, type: string }
+      - { name: musescoreUrl, label: Link do profilu MuseScore, type: string }
+      - { name: facebookUrl, label: Link do profilu Facebook, type: string }
+      - { name: instagramUrl, label: Link do profilu Instagram, type: string }
+      - { name: githubUrl, label: Link do profilu GitHub, type: string }
 
   - name: bio
     label: Bio
@@ -77,10 +80,28 @@ content:
     fields:
       - { name: bioTitle, label: Tytuł strony, type: string }
       - { name: bioSubtitle, label: Podtytuł, type: text }
-      - { name: bioHeadline, label: Nagłówek biogramu, type: string }
-      - { name: bioLeadText, label: Wprowadzenie biogramu, type: text }
-      - { name: bioSecondaryText, label: Rozwinięcie biogramu, type: text }
-      - { name: stageText, label: Działalność sceniczna, type: text }
+      - name: chapters
+        label: Rozdziały biogramu
+        type: object
+        list: true
+        fields:
+          - { name: badge, label: Etykieta rozdziału, type: string }
+          - { name: title, label: Nagłówek rozdziału, type: string }
+          - name: paragraphs
+            label: Akapity (obsługuje **pogrubienie** i *kursywę*)
+            type: text
+            list: true
+          - name: image
+            label: Fotografia rozdziału
+            type: image
+          - { name: caption, label: Podpis fotografii, type: string }
+          - name: aspect
+            label: Proporcje zdjęcia
+            type: select
+            options:
+              values:
+                - { value: "3/2", label: "3:2 (klasyczne)" }
+                - { value: "16/9", label: "16:9 (panoramiczne)" }
       - name: currentRoles
         label: Aktualne stanowiska i role
         type: object
@@ -88,14 +109,10 @@ content:
         fields:
           - { name: title, label: Zespół / Instytucja, type: string }
           - { name: detail, label: Stanowisko i lata, type: string }
-      - name: bioStageImage
-        label: Fotografia sceniczna
+      - name: bioPianoImage
+        label: Fotografia sekcji Instrumentarium
         type: image
-      - { name: bioStageCaption, label: Podpis fotografii scenicznej, type: string }
-      - name: bioScoreImage
-        label: Fotografia partytury
-        type: image
-      - { name: bioScoreCaption, label: Podpis fotografii partytury, type: string }
+      - { name: bioPianoCaption, label: Podpis fotografii Instrumentarium, type: string }
       - name: higherEducation
         label: Szkolnictwo wyższe (UWM)
         component: education
@@ -120,11 +137,8 @@ content:
           - { name: desc, label: Opis, type: text }
       - name: additionalInstruments
         label: Instrumentarium dodatkowe
-        type: object
+        type: string
         list: true
-        fields:
-          - { name: name, label: Nazwa instrumentu, type: string }
-          - { name: desc, label: Opis, type: text }
 
   - name: ensembles
     label: Formacje
@@ -161,11 +175,18 @@ content:
         list: true
       - name: photos
         label: Fotografie archiwalne
-        type: image
-        options:
-          path: public/images/ensembles
-          multiple:
-            max: 24
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Plik zdjęcia
+            type: image
+            options:
+              path: public/images/ensembles
+          - { name: event, label: Wydarzenie, type: string }
+          - { name: date, label: Data (np. 13 maja 2025), type: string }
+          - { name: location, label: Miejsce, type: string }
+          - { name: caption, label: Podpis alternatywny (opcjonalny), type: string }
       - name: body
         label: Opis szczegółowy
         type: rich-text

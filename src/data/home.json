@@ -2,7 +2,7 @@
   "heroName": "Kacper Czeczot",
   "heroRole": "Dyrygent · Multiinstrumentalista · Aranżer",
   "heroIntro": "Dyrygentura symfoniczna i chóralna, wykonawstwo sceniczne oraz autorskie opracowania partytur. Warsztat łączący salę koncertową, teatr muzyczny i studio nagraniowe.",
-  "heroImage": "/images/kacper-czeczot-dyrygent-hero.jpg",
+  "heroImage": "/images/kacper-czeczot-dyrygent-hero.webp",
   "credentials": [
     {
       "value": "300+",
@@ -34,7 +34,7 @@
       "category": "Wykonawstwo",
       "title": "Scena i Zespoły",
       "link": "/scena-i-zespoly",
-      "image": "/images/ensembles/opinogora-piknik-2026.jpg",
+      "image": "/images/ensembles/opinogora-piknik-2026.webp",
       "imageAlt": "Scena i zespoły"
     },
     {
@@ -42,7 +42,7 @@
       "category": "Dyrygentura & Kompozycja",
       "title": "Dzieła Autorskie & Dyplomowe",
       "link": "/projekty-autorskie",
-      "image": "/images/works/dyplom6.jpg",
+      "image": "/images/works/dyplom6.webp",
       "imageAlt": "Koncert Finale"
     },
     {
@@ -50,7 +50,7 @@
       "category": "Edukacja & Instrumentarium",
       "title": "Bio & Doświadczenie",
       "link": "/bio",
-      "image": "/images/kacper-dyrygent-mlawa-jubileusz.jpg",
+      "image": "/images/kacper-dyrygent-mlawa-jubileusz.webp",
       "imageAlt": "Kacper Czeczot — Życiorys i edukacja"
     }
   ]

@@ -8,7 +8,7 @@ description: Koncert Dyplomowy „Finale” zrealizowany 13 maja 2025 roku w sal
   Olsztynie. Dyrygentura oraz autorskie opracowania symfoniczno-chóralne
   wykonane przez Chór im. prof. Wiktora Wawrzyczka UWM oraz orkiestrę (Nagroda
   Dziekana Wydziału Sztuki UWM za wybitne artystyczne dzieło dyplomowe).
-cover: /images/works/dyplom6.jpg
+cover: /images/works/dyplom6.webp
 order: 1
 metrics:
   - label: Orkiestra
@@ -31,13 +31,9 @@ videoHeading: Nagrania z koncertu
 ---
 
 
-## Koncert Dyplomowy w Filharmonii Warmińsko-Mazurskiej
+### Repertuar i realizacja
 
-Wydarzenie zrealizowane 13 maja 2025 roku w Filharmonii Warmińsko-Mazurskiej w Olsztynie jako zwieńczenie dyplomu artystycznego na Wydziale Sztuki UWM:
-
-- **Kierownictwo muzyczne, dyrygentura & aranżacje:** Kacper Czeczot
-- **Promotor dzieła:** [dr hab. Katarzyna Bojaruniec, prof. UWM](https://ws.uwm.edu.pl/pracownicy-ogloszenia-i-aktualnosci/dr-hab-katarzyna-bojaruniec-prof-uwm)
-- **Wykonawcy:** Chór im. prof. Wiktora Wawrzyczka UWM oraz Orkiestra
-- **Wyróżnienie:** Nagroda Dziekana za „Wybitne artystyczne dzieło dyplomowe”
-- **Repertuar:** Aranżacje symfoniczno-chóralne hymnu *Nearer My God to Thee*, *Bohemian Rhapsody* oraz *Psalmu dla Ciebie*.
+- **Program:** Autorskie opracowania symfoniczno-chóralne hymnu *Nearer My God to Thee*, *Bohemian Rhapsody* oraz *Psalmu dla Ciebie*.
+- **Wyróżnienie:** Nagroda Dziekana Wydziału Sztuki UWM za *„Wybitne artystyczne dzieło dyplomowe”*.
+- **Zakres prac:** Opracowanie partytur orkiestrowych i chóralnych, prowadzenie prób sekcyjnych oraz dyrygentura podczas koncertu galowego 13 maja 2025 r.
 

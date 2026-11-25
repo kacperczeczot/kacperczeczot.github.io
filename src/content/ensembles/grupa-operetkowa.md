@@ -11,11 +11,11 @@ highlights:
   - "„Bal w Savoyu” (2023), „A kim ty naprawdę jesteś?” (2019), „Gondolierzy” (2016)"
   - "Trasy i występy w Mławie, Działdowie, Opinogórze, Radzanowie i Szreńsku"
 photos:
-  - src: "/images/ensembles/krakowiacy-i-gorale-2022.jpg"
+  - src: "/images/ensembles/krakowiacy-i-gorale-2022.webp"
     event: "„Cud mniemany, czyli Krakowiacy i Górale”"
     date: "2022"
     location: "Państwowa Szkoła Muzyczna w Mławie"
-  - src: "/images/ensembles/bal-w-savoyu-2023.jpg"
+  - src: "/images/ensembles/bal-w-savoyu-2023.webp"
     event: "Operetka „Bal w Savoyu”"
     date: "Maj 2023"
     location: "Państwowa Szkoła Muzyczna w Mławie"
