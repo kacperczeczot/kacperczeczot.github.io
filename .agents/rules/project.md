@@ -1,6 +1,7 @@
 ---
 name: Reguły Domenowe Portfolio
 description: Zasady architektoniczne i domenowe dla serwisu portfolio artystycznego Astro 5.
+trigger: always_on
 ---
 
 # Reguły Domenowe: Portfolio Artystyczne
